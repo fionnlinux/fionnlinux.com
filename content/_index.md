@@ -10,16 +10,16 @@ description: "Linux systems administration, homelabs, and open source"
   loop=true
   lifeLike=true
 >}}
-CompTIA ITF+ & A+ Certified
+CompTIA A+ Certified
 Network+ In Progress
-Security+ On The Horizon
 RHCSA — The Goal
-Embracing Open Source
-Learning through homelabs
+Learning Linux by doing
 {{< /typeit >}}
 
+{{< lead >}}
 Building foundational knowledge through the CompTIA pathway
 toward Red Hat Enterprise Linux and RHCSA certification.
-Daily driving Fedora and Rocky Linux while documenting
-the journey through homelabs, open source tools,
-and systems administration — from the ground up.
+Daily driving Fedora and Rocky Linux while documenting the
+journey through homelabs, open source tools, and systems
+administration — from the ground up.
+{{< /lead >}}

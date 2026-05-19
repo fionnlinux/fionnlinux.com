@@ -9,10 +9,9 @@ showTableOfContents: true
 
 ## Who I Am
 
-Linux enthusiast building toward a career in enterprise Linux
-and the Red Hat ecosystem. The path isn't rigidly mapped yet —
-whether that means general IT, SOC work, or deeper systems
-administration, the foundation is the same. Learn the fundamentals
+Linux enthusiast building toward a career in enterprise IT, with a long-term 
+goal of working within the Red Hat ecosystem. The path isn't rigidly mapped yet —
+whether that means IT helpdesk, SOC analyst work, or junior linux administration work, the foundation is the same. Learn the fundamentals
 properly, understand how things actually work rather than just
 following steps, and build from there.
 
@@ -21,14 +20,14 @@ concern but as part of how I approach every system and decision.
 
 Four year electrical installation apprenticeship gave me a
 methodical approach to systems and problem solving. Years running
-production lines in FMCG manufacturing taught me how real
+production lines in manufacturing taught me how real
 operational environments work under pressure. That grounding
 informs how I think about Linux, infrastructure, and reliability
 — systems that have to work, not just work in the lab.
 
 ## What This Site Is
 
-A working journal. Every cert studied, lab built, and tool
+A working journal. Every certificate studied, homelab built, and command line tool
 configured gets documented here. Written for anyone following
 a similar path — and for future me when I forget how I did something.
 
@@ -52,6 +51,8 @@ troubleshooting, that's reason enough to write it up.
 - **Homelab goals:** Wazuh, OPNsense, WireGuard, Podman
 - **Learning:** Ansible, Python, and the tools that matter
 - **Philosophy:** Self-hosted, open source, privacy first
+- **This site:** Hugo static site generator + Blowfish theme, source on GitHub, 
+  deployed automatically via GitHub Actions to GitHub Pages
 
 ## Find Me
 

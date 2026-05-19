@@ -6,12 +6,13 @@
 # https://blowfish.page/docs/configuration/#theme-parameters
 
 colorScheme = "terminal"
+customCSS = ["css/custom.css"]
 defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
 [author]
   name = "fionnlinux"
-  headline = "Certs, homelabs, and the road to RHCSA."
+  headline = "Certificates, homelabs, and the road to RHCSA."
   bio = "Building foundational knowledge through CompTIA toward Red Hat Enterprise Linux and RHCSA. Documenting the journey."
   links = [
     {github = "https://github.com/fionnlinux"},
@@ -76,13 +77,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showMoreLink = false
   showMoreLinkDest = "/posts/"
   cardView = true
-  cardViewScreenWidth = true
+  cardViewScreenWidth = false
   layoutBackgroundBlur = false # only used when layout equals background
   disableHeroImageFilter = false # only used when layout equals hero
 
 [article]
   showDate = true
-  showViews = true
+  showViews = false
   showLikes = false
   showDateOnlyInArticle = true
   showDateUpdated = false
@@ -105,7 +106,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showTableOfContents = false
   # showRelatedContent = false
   # relatedContentLimit = 3
-  showTaxonomies = false # Enable the display of taxonomies for the related article.
+  showTaxonomies = true # Enable the display of taxonomies for the related article.
   showCategories = true # These will show if showTaxonomies is true.
   showTags = true # These will show if showTaxonomies is true.
   showCategoriesInSecondaryColor = false # This will change the color of category badges, so the user can better distinguish between the two. Only if showTaxonomies is true.
@@ -116,21 +117,22 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
 
 [list]
-  showHero = "background"
+  showHero = "true"
    heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
   showSummary = true
-  showViews = true
+  showViews = false
   showLikes = false
   showTableOfContents = true
   showCards = true
   orderByWeight = false
   groupByYear = true
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
-  constrainItemsWidth = false
+  constrainItemsWidth = true
+  showTaxonomies = true
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
