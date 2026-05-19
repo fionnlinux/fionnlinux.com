@@ -1,0 +1,58 @@
+---
+title: "About"
+date: 2026-05-19
+draft: false
+showDate: false
+showReadingTime: false
+showTableOfContents: true
+---
+
+## Who I Am
+
+Linux enthusiast building toward a career in enterprise Linux
+and the Red Hat ecosystem. The path isn't rigidly mapped yet —
+whether that means general IT, SOC work, or deeper systems
+administration, the foundation is the same. Learn the fundamentals
+properly, understand how things actually work rather than just
+following steps, and build from there.
+
+Security thinking runs through everything I do — not as a separate
+concern but as part of how I approach every system and decision.
+
+Four year electrical installation apprenticeship gave me a
+methodical approach to systems and problem solving. Years running
+production lines in FMCG manufacturing taught me how real
+operational environments work under pressure. That grounding
+informs how I think about Linux, infrastructure, and reliability
+— systems that have to work, not just work in the lab.
+
+## What This Site Is
+
+A working journal. Every cert studied, lab built, and tool
+configured gets documented here. Written for anyone following
+a similar path — and for future me when I forget how I did something.
+
+If something I document saves someone else an hour of
+troubleshooting, that's reason enough to write it up.
+
+## The Journey
+
+| Status | Certification |
+|--------|--------------|
+| ✅ Complete | CompTIA ITF+ |
+| ✅ Complete | CompTIA A+ |
+| 🔄 In Progress | CompTIA Network+ (N10-009) |
+| 📋 Planned | CompTIA Security+ |
+| 📋 Planned | RHCSA EX200 |
+
+## What I Run
+
+- **Daily driver:** Fedora KDE
+- **Servers:** Rocky Linux
+- **Homelab goals:** Wazuh, OPNsense, WireGuard, Podman
+- **Learning:** Ansible, Python, and the tools that matter
+- **Philosophy:** Self-hosted, open source, privacy first
+
+## Find Me
+
+- **GitHub:** [github.com/fionnlinux](https://github.com/fionnlinux)
