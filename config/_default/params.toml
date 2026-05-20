@@ -12,7 +12,7 @@ autoSwitchAppearance = true
 
 [author]
   name = "fionnlinux"
-  headline = "Certificates, homelabs, and the road to RHCSA."
+  headline = ""
   bio = "Building foundational knowledge through CompTIA toward Red Hat Enterprise Linux and RHCSA. Documenting the journey."
   links = [
     {github = "https://github.com/fionnlinux"},
@@ -71,7 +71,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/rain.svg" # used in: hero, and card
+  homepageImage = "img/background.svg" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = false

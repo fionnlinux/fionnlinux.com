@@ -1,5 +1,5 @@
 ---
-title: "~/fionnlinux"
+title: "fionnlinux"
 description: "Linux systems administration, homelabs, and open source"
 ---
 
@@ -13,13 +13,9 @@ description: "Linux systems administration, homelabs, and open source"
 CompTIA A+ Certified
 Network+ In Progress
 RHCSA — The Goal
-Learning Linux by doing
+From the terminal up.
 {{< /typeit >}}
 
 {{< lead >}}
-Building foundational knowledge through the CompTIA pathway
-toward Red Hat Enterprise Linux and RHCSA certification.
-Daily driving Fedora and Rocky Linux while documenting the
-journey through homelabs, open source tools, and systems
-administration — from the ground up.
+Documenting the journey from CompTIA to RHCSA — one lab, one cert, one post at a time.
 {{< /lead >}}
