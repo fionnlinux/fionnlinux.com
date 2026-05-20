@@ -5,6 +5,7 @@ draft: false
 showDate: false
 showReadingTime: false
 showTableOfContents: true
+showWordCount: false
 ---
 
 ## Who I Am

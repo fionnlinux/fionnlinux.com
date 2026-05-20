@@ -5,6 +5,7 @@ draft: false
 showDate: false
 showReadingTime: false
 showTableOfContents: false
+showWordCount: false
 ---
 
 This page documents the projects I am actively building and learning from.
