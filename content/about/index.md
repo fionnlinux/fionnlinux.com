@@ -6,6 +6,8 @@ showDate: false
 showReadingTime: false
 showTableOfContents: true
 showWordCount: false
+showHero: true
+heroStyle: "background"
 ---
 
 ## Who I Am
@@ -61,3 +63,4 @@ troubleshooting, that's reason enough to write it up.
 
 - **GitHub:** [github.com/fionnlinux](https://github.com/fionnlinux)
 - **Codeberg:** [codeberg.org/fionnlinux](https://codeberg.org/fionnlinux)
+- **Email:** [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com)

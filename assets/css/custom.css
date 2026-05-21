@@ -14,10 +14,7 @@ body, p, li, td, th {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-a.text-base.font-medium {
-    font-family: 'Fira Mono', monospace;
-}
-
+/* Header title and nav links */
 a.text-base.font-medium,
 span.text-base.font-medium {
     font-family: 'Fira Mono', monospace;

@@ -7,6 +7,8 @@ showReadingTime: false
 showTableOfContents: false
 showWordCount: false
 showAuthor: false
+showHero: true
+heroStyle: "background"
 ---
 
 This page documents the projects I am actively building and learning from.
