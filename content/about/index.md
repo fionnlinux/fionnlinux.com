@@ -52,9 +52,12 @@ troubleshooting, that's reason enough to write it up.
 - **Homelab goals:** Wazuh, OPNsense, WireGuard, Podman
 - **Learning:** Ansible, Python, and the tools that matter
 - **Philosophy:** Self-hosted, open source, privacy first
-- **This site:** Hugo static site generator + Blowfish theme, source on GitHub, 
+- **This site:** Hugo static site generator + Blowfish theme, source on
+  [GitHub](https://github.com/fionnlinux/fionnlinux.com) and
+  [Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com),
   deployed automatically via GitHub Actions to GitHub Pages
 
 ## Find Me
 
 - **GitHub:** [github.com/fionnlinux](https://github.com/fionnlinux)
+- **Codeberg:** [codeberg.org/fionnlinux](https://codeberg.org/fionnlinux)

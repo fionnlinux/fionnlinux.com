@@ -16,7 +16,7 @@ autoSwitchAppearance = true
   bio = "Building foundational knowledge through CompTIA toward Red Hat Enterprise Linux and RHCSA. Documenting the journey."
   links = [
     {github = "https://github.com/fionnlinux"},
-   # {codeberg = "https://codeberg.org/fionnlinux"},
+    {codeberg = "https://codeberg.org/fionnlinux"},
   ]
 
 enableA11y = false

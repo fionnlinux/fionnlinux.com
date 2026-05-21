@@ -15,11 +15,12 @@ and real problems to solve. As my skills grow so will this page.
 
 ## fionnlinux.com
 
-This site itself. Built with Hugo static site generator and the Blowfish theme,
-deployed automatically via GitHub Actions to GitHub Pages. Source available
-on GitHub and mirrored to Codeberg.
+This site itself. Built with Hugo static site generator and the Blowfish
+theme, source mirrored on GitHub and Codeberg, deployed automatically
+via GitHub Actions to GitHub Pages.
 
 - **GitHub:** [github.com/fionnlinux/fionnlinux.com](https://github.com/fionnlinux/fionnlinux.com)
+- **Codeberg:** [codeberg.org/fionnlinux/fionnlinux.com](https://codeberg.org/fionnlinux/fionnlinux.com)
 - **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
 
 More projects coming as the homelab and certification journey progresses.
