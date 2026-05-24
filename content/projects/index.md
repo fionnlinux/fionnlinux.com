@@ -33,6 +33,14 @@ My personal dotfiles, version controlled and publicly mirrored on GitHub and Cod
 - **Codeberg:** [codeberg.org/fionnlinux/dotfiles](https://codeberg.org/fionnlinux/dotfiles)
 - **Stack:** Vim, Bash, Git
 
+## python-projects
+
+A collection of Python projects written while learning to program. Started small and building over time toward scripting, automation, and security tooling. First project written with my son.
+
+- **GitHub:** [github.com/fionnlinux/python-projects](https://github.com/fionnlinux/python-projects)
+- **Codeberg:** [codeberg.org/fionnlinux/python-projects](https://codeberg.org/fionnlinux/python-projects)
+- **Language:** Python 3
+
 {{< lead >}}
 *More projects coming as the homelab and certification journey progresses.*
 {{< /lead >}}
