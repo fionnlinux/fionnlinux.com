@@ -25,4 +25,14 @@ via GitHub Actions to GitHub Pages.
 - **Codeberg:** [codeberg.org/fionnlinux/fionnlinux.com](https://codeberg.org/fionnlinux/fionnlinux.com)
 - **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
 
-More projects coming as the homelab and certification journey progresses.
+## dotfiles
+
+My personal dotfiles, version controlled and publicly mirrored on GitHub and Codeberg. The goal is a stateless, reproducible environment — any machine running Fedora or Rocky Linux can be brought to my exact configuration from a single clone. Documents how I work, how my tools are configured, and evolves alongside my Linux studies.
+
+- **GitHub:** [github.com/fionnlinux/dotfiles](https://github.com/fionnlinux/dotfiles)
+- **Codeberg:** [codeberg.org/fionnlinux/dotfiles](https://codeberg.org/fionnlinux/dotfiles)
+- **Stack:** Vim, Bash, Git
+
+{{< lead >}}
+*More projects coming as the homelab and certification journey progresses.*
+{{< /lead >}}
