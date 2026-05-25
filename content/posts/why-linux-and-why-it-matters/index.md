@@ -89,4 +89,4 @@ If you are sitting on the fence about Linux — curious but not sure it is for y
 
 I would rather invest my time and energy in this ecosystem than hand it over to systems built behind paywalls and closed doors. And in whatever small way I can — through this site, through the things I build, through the things I share — I would rather be part of the movement trying to show people what Linux can be than sit quietly on the sidelines.
 
-*Linux is the foundation. Everything else I am building is on top of it.
+Linux is the foundation. Everything else I am building is on top of it.
