@@ -8,7 +8,7 @@
 colorScheme = "terminal"
 customCSS = ["css/custom.css"]
 defaultAppearance = "dark" # valid options: light or dark
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 
 [author]
   name = "fionnlinux"
@@ -17,8 +17,8 @@ autoSwitchAppearance = true
   links = [
     {github = "https://github.com/fionnlinux"},
     {codeberg = "https://codeberg.org/fionnlinux"},
-    {email = "mailto:contact@mail.fionnlinux.com"}
-    {rss = "https://fionnlinux.com/index.xml"
+    {email = "mailto:contact@mail.fionnlinux.com"},
+    {rss = "https://fionnlinux.com/index.xml"}
   ]
 
 enableA11y = false
