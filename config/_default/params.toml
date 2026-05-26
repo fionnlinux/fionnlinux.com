@@ -18,6 +18,7 @@ autoSwitchAppearance = true
     {github = "https://github.com/fionnlinux"},
     {codeberg = "https://codeberg.org/fionnlinux"},
     {email = "mailto:contact@mail.fionnlinux.com"}
+    {rss = "https://fionnlinux.com/index.xml"
   ]
 
 enableA11y = false
