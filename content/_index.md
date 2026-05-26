@@ -1,21 +1,19 @@
 ---
 title: "fionnlinux"
-description: "Linux systems administration, homelabs, and open source"
+description: "Linux systems administration, security, and open source"
 ---
 
 {{< typeit
   tag="h2"
-  speed=50
+  speed=80
   deleteSpeed=25
   loop=true
   lifeLike=true
 >}}
-CompTIA A+ Certified
-Network+ In Progress
-RHCSA — The Goal
-From the terminal up.
+A+ | N+ | Security+ | RHCSA
+Building it properly.
 {{< /typeit >}}
 
 {{< lead >}}
-Documenting the journey from CompTIA to RHCSA — one lab, one cert, one post at a time.
+Documenting the journey from the terminal to SOC analyst — Linux foundations, security practice, and everything built along the way.
 {{< /lead >}}
