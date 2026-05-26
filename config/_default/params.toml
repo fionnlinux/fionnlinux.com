@@ -12,8 +12,8 @@ autoSwitchAppearance = true
 
 [author]
   name = "fionnlinux"
-  headline = ""
-  bio = "Building foundational knowledge through CompTIA toward Red Hat Enterprise Linux and RHCSA. Documenting the journey."
+  headline = "Linux & Security | CompTIA A+ | Network+ In Progress"
+  bbio = "Linux foundations, security practice, and the road to SOC analyst. Documenting the journey in public."
   links = [
     {github = "https://github.com/fionnlinux"},
     {codeberg = "https://codeberg.org/fionnlinux"},
