@@ -3,7 +3,7 @@ title: "Why Linux — and Why It Matters More Than You Think"
 date: 2026-05-25T00:00:00-04:00
 draft: false
 description: "Linux has a reputation for being complicated. The reality is more interesting than that."
-tags: ["linux", "open-source", "redhat", "career", "personal"]
+tags: ["linux", "security", "open-source", "redhat", "career", "personal"]
 series: []
 showTableOfContents: true
 showReadingTime: true
