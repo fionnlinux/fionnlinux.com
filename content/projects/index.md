@@ -11,15 +11,11 @@ showHero: true
 heroStyle: "background"
 ---
 
-This page documents the projects I am actively building and learning from.
-Each one is a practical extension of my studies — real tools, real workflows,
-and real problems to solve. As my skills grow so will this page.
+This page documents the projects I am actively building and learning from. Each one is a practical extension of my studies — real tools, real workflows, and real problems to solve. As my skills grow so will this page.
 
 ## fionnlinux.com
 
-This site itself. Built with Hugo static site generator and the Blowfish
-theme, source mirrored on GitHub and Codeberg, deployed automatically
-via GitHub Actions to GitHub Pages.
+This site itself. Built with Hugo static site generator and the Blowfish theme, source mirrored on GitHub and Codeberg, deployed automatically via GitHub Actions to GitHub Pages.
 
 - **GitHub:** [github.com/fionnlinux/fionnlinux.com](https://github.com/fionnlinux/fionnlinux.com)
 - **Codeberg:** [codeberg.org/fionnlinux/fionnlinux.com](https://codeberg.org/fionnlinux/fionnlinux.com)
@@ -35,12 +31,13 @@ My personal dotfiles, version controlled and publicly mirrored on GitHub and Cod
 
 ## python-projects
 
-A collection of Python projects written while learning to program. Started small and building over time toward scripting, automation, and security tooling. First project written with my son.
+A collection of Python projects written while learning to program. Started small and building toward scripting, automation, and eventually security tooling. First project written with my son.
 
 - **GitHub:** [github.com/fionnlinux/python-projects](https://github.com/fionnlinux/python-projects)
 - **Codeberg:** [codeberg.org/fionnlinux/python-projects](https://codeberg.org/fionnlinux/python-projects)
 - **Language:** Python 3
 
-{{< lead >}}
-*More projects coming as the homelab and certification journey progresses.*
-{{< /lead >}}
+## Coming Soon
+
+- **bash-toolkit** — shell scripts for Linux administration and automation, launching after Network+
+- **wazuh-homelab** — full SIEM homelab build on Rocky Linux with Wazuh, launching alongside the blog walkthrough series
