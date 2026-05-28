@@ -13,17 +13,22 @@
 [[main]]
   name = "Blog"
   pageRef = "posts"
-  weight = 10
+  weight = 40
 
 [[main]]
   name = "About"
   pageRef = "about"
-  weight = 30
+  weight = 10
 
 [[main]]
   name = "Projects"
   pageRef = "projects"
   weight = 20
+  
+[[main]]
+  name = "Resources"
+  pageRef = "resources"
+  weight = 30
 
 #[[main]]
 #  name = "example sub-menu 2"
