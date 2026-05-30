@@ -1,14 +1,13 @@
 ---
 title: "Resources"
-date: 2026-05-27
+date: 2026-05-26
 draft: false
 showDate: false
 showReadingTime: false
 showTableOfContents: true
 showWordCount: false
 showAuthor: false
-showHero: true
-heroStyle: "background"
+showHero: false
 ---
 
 A curated list of the tools, documentation, and learning resources I actually use. Nothing here for the sake of a longer list.
@@ -143,12 +142,11 @@ A curated list of the tools, documentation, and learning resources I actually us
 - **[Proton Authenticator](https://proton.me/authenticator)** — open source 2FA app with end to end encrypted backup. Replaces Google Authenticator without the privacy trade-off.
 - **[SimpleLogin](https://simplelogin.io)** — open source email alias service. Every account gets its own alias, compartmentalising exposure if a service is breached.
 - **[NextDNS](https://nextdns.io)** — DNS based content filtering configured per device. Blocks trackers and malicious domains before a connection is made.
-- **[Firefox](https://www.mozilla.org/firefox/)** — open source browser and my daily driver for general use.
-- **[LibreWolf](https://librewolf.net)** — privacy hardened Firefox fork used for anything where tracking is a concern.
+- **[Firefox](https://www.mozilla.org/firefox/)** — open source browser and my daily driver, hardened with uBlock Origin, Multi-Account Containers for session isolation, and telemetry disabled.
+- **[Tor Browser](https://www.torproject.org)** — for genuine anonymity when it is needed, kept separate from daily browsing.
 - **[Signal](https://signal.org)** — end to end encrypted messaging, open source, and the standard for secure communication.
 
 ---
-
 ## Got a Suggestion?
 
-This page reflects what I actually use today. If there is a resource that has genuinely helped you on a similar path, get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com).
+This page reflects what I actually use today. If there is a resource that has genuinely helped you on a similar path, feel free to get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com)
