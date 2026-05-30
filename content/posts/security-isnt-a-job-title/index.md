@@ -51,7 +51,7 @@ Bitwarden is open source. That matters for the same reason it matters across eve
 
 ## Why Open Source Is Part of This
 
-A thread runs through most of the tools I have mentioned — Bitwarden, LibreWolf, Signal, SimpleLogin, Proton Authenticator. Where I can choose open source I do, and the reason is not ideological. It is practical.
+A thread runs through most of the tools I have mentioned — Bitwarden, Firefox, Signal, SimpleLogin, Proton Authenticator. Where I can choose open source I do, and the reason is not ideological. It is practical.
 
 Open source software cannot quietly do things to you that it does not disclose. The code is there. Anyone can read it. That structural transparency is a security property in itself — it is much harder to build in hidden data collection or backdoors when the entire community can inspect your work. Proprietary software asks you to trust the company. Open source lets you verify.
 
