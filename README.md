@@ -1,6 +1,7 @@
 # fionnlinux.com
 
 Personal site and public learning journal documenting my path from electrical apprenticeship and manufacturing worker to SOC analyst and Linux security engineer.
+
 Built with [Hugo](https://gohugo.io) and the [Blowfish](https://blowfish.page) theme. Deployed automatically via GitHub Actions to GitHub Pages with a custom domain via Cloudflare.
 
 ## Stack
@@ -38,14 +39,13 @@ content/
 ├── _index.md        # Homepage
 ├── about/           # About page
 ├── projects/        # Projects page
+├── resources/       # Resources page
 └── posts/           # Blog posts
 ```
 
 ## Deployment
 
-Pushing to `main` triggers a GitHub Actions workflow that builds the site with Hugo and deploys to GitHub Pages automatically. The workflow handles Blowfish theme submodule initialisation before building.
-
-See `.github/workflows/` for the full pipeline configuration.
+Pushing to `main` triggers a GitHub Actions workflow that builds the site with Hugo and deploys to GitHub Pages automatically. The workflow handles Blowfish theme submodule initialisation before building. See `.github/workflows/` for the full pipeline configuration.
 
 > **Note:** This repo is my personal site, not a template. The GitHub Actions workflow requires Pages to be enabled in your repo settings before deployment will work.
 
