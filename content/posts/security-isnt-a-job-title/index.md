@@ -37,9 +37,7 @@ The first was email. I came across Proton Mail through recommendations online �
 
 Two extras have made the Proton ecosystem even stronger over time. SimpleLogin — an open source email alias service Proton acquired in 2022 — lets me create unique aliases on my own domain for every service I sign up for. If one of those services is breached the email exposed has no relationship to anything else I use. Proton Authenticator, launched in 2025 and fully open source under GPLv3, handles my two factor authentication codes across every device with end to end encrypted sync. It deepens the Proton dependency, but because it uses standard TOTP and supports full export, moving away is always an option.
 
-For browsing I switched to LibreWolf — a Firefox fork with privacy hardening built in by default. Dropping Chrome felt significant at the time. Now it just feels obvious.
-
-For communication Signal replaced everything else where the people I was talking to were willing to use it. Not everyone is, which is the reality of trying to use privacy respecting tools — you are dependent on the other person making the same choice. But for the people who matter most it is now the default.
+For browsing I switched to Firefox, hardened with uBlock Origin, Multi-Account Containers for session isolation, and telemetry disabled. Dropping Chrome felt significant at the time. Now it just feels obvious.
 
 ## The One Thing I Would Recommend to Everyone
 
