@@ -7,7 +7,6 @@ description: "Linux systems administration, security, and open source"
   tag="h2"
   speed=80
   deleteSpeed=25
-  loop=true
   lifeLike=true
 >}}
 A+ | N+ | Security+ | RHCSA
