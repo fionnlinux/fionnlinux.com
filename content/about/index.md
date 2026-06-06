@@ -30,13 +30,29 @@ If something I document saves someone else an hour of troubleshooting, that's re
 
 ## The Journey
 
-| Status | Certification |
-|--------|--------------|
-| ✅ Complete | CompTIA ITF+ |
-| ✅ Complete | CompTIA A+ |
-| 🔄 In Progress | CompTIA Network+ (N10-009) |
-| 📋 Planned | CompTIA Security+ |
-| 📋 Planned | RHCSA EX200 |
+{{< timeline >}}
+
+{{< timelineItem icon="check" header="CompTIA ITF+" badge="Completed" >}}
+Foundation certification. The starting point.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="check" header="CompTIA A+" badge="Completed" >}}
+Hardware, operating systems, troubleshooting, and core support skills. The generalist baseline.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="pencil" header="CompTIA Network+" badge="In Progress" >}}
+Networking fundamentals — TCP/IP, subnetting, routing, switching, and network security.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="shield" header="CompTIA Security+" badge="Planned" >}}
+Security concepts, threat analysis, incident response, and cryptography.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="RHCSA EX200" badge="Planned" subheader="RHEL 10" >}}
+Red Hat Certified System Administrator. The Linux foundation for security engineering.
+{{< /timelineItem >}}
+
+{{< /timeline >}}
 
 ## What I Run
 
