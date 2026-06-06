@@ -147,6 +147,7 @@ A curated list of the tools, documentation, and learning resources I actually us
 - **[Signal](https://signal.org)** — end to end encrypted messaging, open source, and the standard for secure communication.
 
 ---
-## Got a Suggestion?
 
-This page reflects what I actually use today. If there is a resource that has genuinely helped you on a similar path, feel free to get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com)
+{{< alert icon="envelope" cardColor="#173d24" iconColor="#4ade80" textColor="#e5e7eb" >}}
+This page reflects what I actually use today. If there is a resource that has genuinely helped you on a similar path, get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com).
+{{< /alert >}}
