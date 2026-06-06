@@ -17,25 +17,34 @@ This page documents the projects I am actively building and learning from. Each 
 
 This site itself. Built with Hugo static site generator and the Blowfish theme, source mirrored on GitHub and Codeberg, deployed automatically via GitHub Actions to GitHub Pages.
 
-- **GitHub:** [github.com/fionnlinux/fionnlinux.com](https://github.com/fionnlinux/fionnlinux.com)
-- **Codeberg:** [codeberg.org/fionnlinux/fionnlinux.com](https://codeberg.org/fionnlinux/fionnlinux.com)
-- **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
+**Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
+
+{{< github repo="fionnlinux/fionnlinux.com" >}}
+[View on Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com)
+
+---
 
 ## dotfiles
 
 My personal dotfiles, version controlled and publicly mirrored on GitHub and Codeberg. The goal is a stateless, reproducible environment — any machine running Fedora or Rocky Linux can be brought to my exact configuration from a single clone. Documents how I work, how my tools are configured, and evolves alongside my Linux studies.
 
-- **GitHub:** [github.com/fionnlinux/dotfiles](https://github.com/fionnlinux/dotfiles)
-- **Codeberg:** [codeberg.org/fionnlinux/dotfiles](https://codeberg.org/fionnlinux/dotfiles)
-- **Stack:** Vim, Bash, Git
+**Stack:** Vim, Bash, Git
+
+{{< github repo="fionnlinux/dotfiles" >}}
+[View on Codeberg](https://codeberg.org/fionnlinux/dotfiles)
+
+---
 
 ## python-projects
 
 A collection of Python projects written while learning to program. Started small and building toward scripting, automation, and eventually security tooling. First project written with my son.
 
-- **GitHub:** [github.com/fionnlinux/python-projects](https://github.com/fionnlinux/python-projects)
-- **Codeberg:** [codeberg.org/fionnlinux/python-projects](https://codeberg.org/fionnlinux/python-projects)
-- **Language:** Python 3
+**Language:** Python 3
+
+{{< github repo="fionnlinux/python-projects" >}}
+[View on Codeberg](https://codeberg.org/fionnlinux/python-projects)
+
+---
 
 ## Coming Soon
 
