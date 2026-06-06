@@ -128,12 +128,12 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showViews = false
   showLikes = false
   showTableOfContents = true
-  showCards = true
+  showCards = false
   orderByWeight = false
   groupByYear = true
-  cardView = true
-  cardViewScreenWidth = false
-  constrainItemsWidth = true
+  cardView = false
+  cardViewScreenWidth = true
+  constrainItemsWidth = false
   showTaxonomies = true
 
 [sitemap]
@@ -160,8 +160,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showViews = false
   showLikes = false
   showTableOfContents = true
-  groupByYear = false
-  cardView = true
+  groupByYear = true
+  cardView = false
   cardViewScreenWidth = false
 
 [firebase]
