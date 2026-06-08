@@ -149,5 +149,7 @@ A curated list of the tools, documentation, and learning resources I actually us
 ---
 
 {{< alert icon="envelope" cardColor="#173d24" iconColor="#4ade80" textColor="#e5e7eb" >}}
-Got a suggestion? This page reflects what I actually use today. If a resource has genuinely helped you on a similar path, get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com).
+**Got a suggestion?**
+
+This page reflects what I actually use today. If a resource has genuinely helped you on a similar path, get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com).
 {{< /alert >}}
