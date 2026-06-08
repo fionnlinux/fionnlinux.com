@@ -6,6 +6,7 @@ showDate: false
 showReadingTime: false
 showTableOfContents: true
 showWordCount: false
+showComments: false
 showAuthor: false
 showHero: false
 ---

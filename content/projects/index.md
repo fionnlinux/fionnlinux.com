@@ -6,6 +6,7 @@ showDate: false
 showReadingTime: false
 showTableOfContents: false
 showWordCount: false
+showComments: false
 showAuthor: false
 showHero: true
 heroStyle: "background"

@@ -7,6 +7,7 @@ showReadingTime: false
 showTableOfContents: true
 showWordCount: false
 showHero: true
+showComments: false
 heroStyle: "background"
 ---
 
