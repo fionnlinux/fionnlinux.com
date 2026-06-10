@@ -1,6 +1,6 @@
 # fionnlinux.com
 
-Personal site and public learning journal documenting my path from electrical apprenticeship and manufacturing worker to SOC analyst and Linux security engineer.
+Personal site and public learning journal documenting my path from electrical apprenticeship and manufacturing worker to cloud engineer — Linux foundations, security thinking, and infrastructure built in public.
 
 Built with [Hugo](https://gohugo.io) and the [Blowfish](https://blowfish.page) theme. Deployed automatically via GitHub Actions to GitHub Pages with a custom domain via Cloudflare.
 
