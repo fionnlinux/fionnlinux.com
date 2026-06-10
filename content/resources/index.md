@@ -39,17 +39,41 @@ A curated list of the tools, documentation, and learning resources I actually us
 
 ---
 
-## Security
+## Cloud
 
-**Documentation and Platforms**
+**Documentation**
 
-- [Wazuh](https://documentation.wazuh.com) — open source SIEM documentation. Comprehensive and well structured. Essential once you are running it in a homelab.
-- [MITRE ATT&CK](https://attack.mitre.org) — the definitive framework for understanding adversary tactics and techniques. Every SOC analyst needs to know this.
-- [LetsDefend](https://letsdefend.io) — hands on SOC analyst training with realistic alert investigations. The closest thing to real SOC work outside of a job.
+- [Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/) — the official Azure docs. Well structured and the authoritative reference for everything Azure.
+- [Microsoft Learn](https://learn.microsoft.com) — free structured learning paths for AZ-900 and AZ-104. The best free resource for Azure certification preparation.
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/docs) — the official Terraform docs. Start with the getting started guide for Azure, then work through modules and state management.
+- [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs) — the reference for every Azure resource you can provision with Terraform. Open constantly when writing IaC.
+- [AWS Documentation](https://docs.aws.amazon.com) — secondary cloud reference. Useful for breadth and cloud-agnostic thinking alongside Azure.
 
 **YouTube**
 
-- [MyDFIR](https://www.youtube.com/@MyDFIR) — SOC analyst content and blue team skills. Practical and directly relevant to entry level security roles.
+- [Adam Marczak — Azure for Everyone](https://www.youtube.com/@AdamMarczakYT) — Azure fundamentals and certification content. Clear explanations without unnecessary complexity.
+- [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana) — Kubernetes, Docker, Terraform, and DevOps fundamentals. One of the best practical channels for infrastructure tooling.
+- [NetworkChuck](https://www.youtube.com/@NetworkChuck) — cloud, networking, and Linux content. Energetic but genuinely useful for getting concepts to land.
+
+**Practice**
+
+- [Azure Free Tier](https://azure.microsoft.com/en-gb/free/) — 12 months of free services plus a credit on sign-up. The starting point for all Azure homelab work.
+- [AWS Free Tier](https://aws.amazon.com/free/) — always-free and 12-month free services for breadth alongside Azure.
+- [KillerCoda](https://killercoda.com) — browser-based Linux and Kubernetes labs. No local setup needed, good for practising kubectl and cluster concepts.
+
+---
+
+## Infrastructure as Code and Automation
+
+**Documentation**
+
+- [Ansible Documentation](https://docs.ansible.com) — the official docs are excellent. Start with the getting started guide and work through the playbook documentation systematically.
+- [Kubernetes Documentation](https://kubernetes.io/docs/) — the official reference for Kubernetes concepts, kubectl, and cluster administration.
+- [K3s Documentation](https://docs.k3s.io) — lightweight Kubernetes for homelab use. The practical starting point before moving to managed Kubernetes on Azure.
+
+**YouTube**
+
+- [The Ansible Playbook](https://www.youtube.com/@TheAnsiblePlaybook) — practical Ansible tutorials focused on real administration use cases.
 
 ---
 
@@ -63,6 +87,15 @@ A curated list of the tools, documentation, and learning resources I actually us
 **Practice Tools**
 
 - [SubnettingPractice.com](https://subnettingpractice.com) — the most thorough free subnetting practice tool I have found. Used heavily during Network+ preparation.
+
+---
+
+## Security
+
+**Documentation and Reference**
+
+- [MITRE ATT&CK](https://attack.mitre.org) — the definitive framework for understanding adversary tactics and techniques. Relevant to cloud security and infrastructure hardening.
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) — hardening guides for Linux, cloud platforms, and infrastructure. The practical reference for secure-by-default configuration.
 
 ---
 
@@ -89,14 +122,6 @@ A curated list of the tools, documentation, and learning resources I actually us
 - [The Bash Guide (Wooledge)](https://mywiki.wooledge.org/BashGuide) — the most thorough free Bash reference available. Go here once the basics make sense.
 - [GNU Bash Manual](https://www.gnu.org/software/bash/manual/) — the official authoritative reference. Dense but complete.
 
-**Ansible**
-
-- [Ansible Documentation](https://docs.ansible.com) — the official docs are excellent. Start with the getting started guide and work through the playbook documentation systematically.
-
-**YouTube**
-
-- [The Ansible Playbook](https://www.youtube.com/@TheAnsiblePlaybook) — practical Ansible tutorials focused on real administration use cases.
-
 ---
 
 ## Containers
@@ -104,6 +129,7 @@ A curated list of the tools, documentation, and learning resources I actually us
 **Documentation**
 
 - [Podman Documentation](https://docs.podman.io) — rootless containers, daemonless architecture, and the right tool for Red Hat environments. Well documented and actively maintained.
+- [Docker Documentation](https://docs.docker.com) — container fundamentals and the wider ecosystem. Useful reference alongside Podman.
 
 ---
 
@@ -144,7 +170,6 @@ A curated list of the tools, documentation, and learning resources I actually us
 - **[SimpleLogin](https://simplelogin.io)** — open source email alias service. Every account gets its own alias, compartmentalising exposure if a service is breached.
 - **[NextDNS](https://nextdns.io)** — DNS based content filtering configured per device. Blocks trackers and malicious domains before a connection is made.
 - **[Firefox](https://www.mozilla.org/firefox/)** — open source browser and my daily driver, hardened with uBlock Origin, Multi-Account Containers for session isolation, and telemetry disabled.
-- **[Tor Browser](https://www.torproject.org)** — for genuine anonymity when it is needed, kept separate from daily browsing.
 - **[Signal](https://signal.org)** — end to end encrypted messaging, open source, and the standard for secure communication.
 
 ---
