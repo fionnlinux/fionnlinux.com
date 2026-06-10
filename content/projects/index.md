@@ -21,6 +21,7 @@ This site itself. Built with Hugo static site generator and the Blowfish theme, 
 **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
 
 {{< github repo="fionnlinux/fionnlinux.com" >}}
+
 [View on Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com)
 
 ---
@@ -32,17 +33,19 @@ My personal dotfiles, version controlled and publicly mirrored on GitHub and Cod
 **Stack:** Vim, Bash, Git
 
 {{< github repo="fionnlinux/dotfiles" >}}
+
 [View on Codeberg](https://codeberg.org/fionnlinux/dotfiles)
 
 ---
 
 ## python-projects
 
-A collection of Python projects written while learning to program. Started small and building toward scripting, automation, and eventually security tooling. First project written with my son.
+A collection of Python projects written while learning to programme. Started small and building toward scripting, automation, and infrastructure tooling. First project written with my son.
 
 **Language:** Python 3
 
 {{< github repo="fionnlinux/python-projects" >}}
+
 [View on Codeberg](https://codeberg.org/fionnlinux/python-projects)
 
 ---
@@ -50,4 +53,5 @@ A collection of Python projects written while learning to program. Started small
 ## Coming Soon
 
 - **bash-toolkit** — shell scripts for Linux administration and automation, launching after Network+
-- **wazuh-homelab** — full SIEM homelab build on Rocky Linux with Wazuh, launching alongside the blog walkthrough series
+- **ansible-homelab** — configuration management for a mixed RHEL/Ubuntu homelab fleet, launching alongside the blog walkthrough series
+- **terraform-lab** — infrastructure as code for provisioning and managing cloud resources on Azure and AWS
