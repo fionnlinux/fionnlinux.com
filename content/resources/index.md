@@ -138,7 +138,7 @@ A curated list of the tools, documentation, and learning resources I actually us
 **Version Control**
 
 - [GitHub Documentation](https://docs.github.com) — covers Git workflows, Actions, Pages, and everything else in the GitHub ecosystem. Clear and well maintained.
-- [Pro Git Book](https://git-scm.com/book/en/v2) — free, comprehensive, and the standard Git reference. Read this properly rather than picking up Git habits from Stack Overflow.
+- [Pro Git Book](https://git-scm.com/book/en/v2) — free, comprehensive, and the standard Git reference. Worth reading properly rather than piecing it together from scattered tutorials.
 
 **Editors**
 
