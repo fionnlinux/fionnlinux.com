@@ -13,7 +13,7 @@ autoSwitchAppearance = false
 [author]
   name = "fionnlinux"
  # headline = "Linux & Security | CompTIA A+ | Network+ In Progress"
-  bio = "Linux foundations, security practice, and the road to SOC analyst. Documenting the journey in public."
+  bio = "Linux foundations, cloud infrastructure, and a security-first mindset. Documenting the journey in public."
   links = [
     {github = "https://github.com/fionnlinux"},
     {codeberg = "https://codeberg.org/fionnlinux"},
