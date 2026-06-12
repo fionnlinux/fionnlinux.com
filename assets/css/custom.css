@@ -6,16 +6,30 @@
 
 /* Headings — Fira Mono */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fira Mono', monospace;
+  font-family: 'Fira Mono', monospace;
 }
 
 /* Body — IBM Plex Sans */
 body, p, li, td, th {
-    font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
-/* Header title and nav links */
-a.text-base.font-medium,
-span.text-base.font-medium {
-    font-family: 'Fira Mono', monospace;
+/* Header nav logo */
+a.text-base.font-medium, span.text-base.font-medium {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+/* Homepage hero title */
+h1.mb-2.text-4xl.font-extrabold {
+  font-family: 'Press Start 2P', monospace !important;
+  line-height: 1.6;
+}
+
+/* 404 heading */
+h1.mb-3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.4rem;
+  line-height: 1.8;
 }
