@@ -8,7 +8,7 @@ showTableOfContents: true
 showWordCount: false
 showComments: false
 showAuthor: false
-showHero: false
+showHero: true
 background: "img/background.svg"
 ---
 
