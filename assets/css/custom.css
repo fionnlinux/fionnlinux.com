@@ -17,7 +17,7 @@ body, p, li, td, th {
 /* Header nav logo */
 a.text-base.font-medium, span.text-base.font-medium {
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.03em;
 }
 
@@ -25,6 +25,7 @@ a.text-base.font-medium, span.text-base.font-medium {
 h1.mb-2.text-4xl.font-extrabold {
   font-family: 'Press Start 2P', monospace !important;
   line-height: 1.6;
+  font-size: 3rem;
 }
 
 /* 404 heading */
