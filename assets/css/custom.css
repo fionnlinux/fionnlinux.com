@@ -21,11 +21,16 @@ a.text-base.font-medium, span.text-base.font-medium {
   letter-spacing: 0.03em;
 }
 
-/* Homepage hero title */
-h1.mb-2.text-4xl.font-extrabold {
+h1.mb-2.font-extrabold {
   font-family: 'Press Start 2P', monospace !important;
-  line-height: 1.6;
   font-size: 2.5rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  h1.mb-2.font-extrabold {
+    font-size: 3rem;
+  }
 }
 
 /* 404 heading */
