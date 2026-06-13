@@ -9,6 +9,7 @@ showWordCount: false
 showComments: false
 showAuthor: false
 showHero: false
+background: "img/background.svg"
 ---
 
 A curated list of the tools, documentation, and learning resources I actually use. Nothing here for the sake of a longer list.
