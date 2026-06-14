@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" shape-rendering="crispEdges">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="450" fill="#00180B"/>
+
+  <!-- Terminal window — larger, more prominent -->
+  <rect x="100" y="60"  width="600" height="40" fill="#38B000"/>
+  <rect x="100" y="100" width="8"   height="280" fill="#50FC00"/>
+  <rect x="692" y="100" width="8"   height="280" fill="#50FC00"/>
+  <rect x="100" y="372" width="600" height="8"   fill="#50FC00"/>
+  <rect x="100" y="60"  width="8"   height="40"  fill="#38B000"/>
+  <rect x="692" y="60"  width="8"   height="40"  fill="#38B000"/>
+
+  <!-- Title bar dots — larger -->
+  <rect x="120" y="72"  width="16" height="16" fill="#84FF4A"/>
+  <rect x="148" y="72"  width="16" height="16" fill="#84FF4A"/>
+  <rect x="176" y="72"  width="16" height="16" fill="#84FF4A"/>
+
+  <!-- Title text blocks -->
+  <rect x="320" y="72"  width="160" height="8"  fill="#84FF4A" opacity="0.6"/>
+
+  <!-- Terminal content — prominent $ and cursor -->
+  <rect x="120" y="132" width="24" height="16" fill="#84FF4A"/>
+  <rect x="152" y="132" width="8"  height="16" fill="#50FC00"/>
+  <!-- Large blinking cursor -->
+  <rect x="168" y="128" width="24" height="24" fill="#50FC00"/>
+
+  <!-- Command lines -->
+  <rect x="120" y="172" width="24" height="8"  fill="#84FF4A"/>
+  <rect x="152" y="172" width="120" height="8" fill="#50FC00"/>
+
+  <!-- Output lines -->
+  <rect x="120" y="196" width="280" height="8" fill="#38B000"/>
+  <rect x="120" y="212" width="220" height="8" fill="#38B000"/>
+  <rect x="120" y="228" width="260" height="8" fill="#38B000"/>
+
+  <!-- Second command -->
+  <rect x="120" y="260" width="24" height="8"  fill="#84FF4A"/>
+  <rect x="152" y="260" width="80" height="8"  fill="#50FC00"/>
+
+  <!-- Output -->
+  <rect x="120" y="284" width="320" height="8" fill="#38B000"/>
+  <rect x="120" y="300" width="200" height="8" fill="#38B000"/>
+
+  <!-- Final prompt with cursor -->
+  <rect x="120" y="332" width="24" height="8"  fill="#84FF4A"/>
+  <rect x="152" y="328" width="24" height="24" fill="#50FC00"/>
+
+</svg>
