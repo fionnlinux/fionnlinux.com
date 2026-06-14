@@ -74,3 +74,14 @@ nav.mx-auto span {
 .dark\:bg-neutral-900\/99 {
   background-color: #00180B !important;
 }
+
+/* Mobile menu close button — square, green border */
+label.fixed.end-8 {
+  border-radius: 0 !important;
+  border: 2px solid #50FC00 !important;
+  background-color: #00180B !important;
+}
+
+label.fixed.end-8 svg {
+  color: #50FC00;
+}
