@@ -2,47 +2,41 @@
   <!-- Background -->
   <rect x="0" y="0" width="800" height="450" fill="#00180B"/>
 
-  <!-- Terminal window — larger, more prominent -->
-  <rect x="100" y="60"  width="600" height="40" fill="#38B000"/>
-  <rect x="100" y="100" width="8"   height="280" fill="#50FC00"/>
-  <rect x="692" y="100" width="8"   height="280" fill="#50FC00"/>
-  <rect x="100" y="372" width="600" height="8"   fill="#50FC00"/>
-  <rect x="100" y="60"  width="8"   height="40"  fill="#38B000"/>
-  <rect x="692" y="60"  width="8"   height="40"  fill="#38B000"/>
+  <!-- Terminal window — centred with safe margin all around -->
+  <!-- Title bar -->
+  <rect x="220" y="120" width="360" height="36" fill="#38B000"/>
+  <rect x="220" y="120" width="8"   height="36"  fill="#38B000"/>
+  <rect x="572" y="120" width="8"   height="36"  fill="#38B000"/>
 
-  <!-- Title bar dots — larger -->
-  <rect x="120" y="72"  width="16" height="16" fill="#84FF4A"/>
-  <rect x="148" y="72"  width="16" height="16" fill="#84FF4A"/>
-  <rect x="176" y="72"  width="16" height="16" fill="#84FF4A"/>
+  <!-- Window body outline -->
+  <rect x="220" y="156" width="8"   height="180" fill="#50FC00"/>
+  <rect x="572" y="156" width="8"   height="180" fill="#50FC00"/>
+  <rect x="220" y="328" width="360" height="8"   fill="#50FC00"/>
 
-  <!-- Title text blocks -->
-  <rect x="320" y="72"  width="160" height="8"  fill="#84FF4A" opacity="0.6"/>
+  <!-- Title bar dots -->
+  <rect x="236" y="130" width="16" height="16" fill="#84FF4A"/>
+  <rect x="260" y="130" width="16" height="16" fill="#84FF4A"/>
+  <rect x="284" y="130" width="16" height="16" fill="#84FF4A"/>
 
-  <!-- Terminal content — prominent $ and cursor -->
-  <rect x="120" y="132" width="24" height="16" fill="#84FF4A"/>
-  <rect x="152" y="132" width="8"  height="16" fill="#50FC00"/>
-  <!-- Large blinking cursor -->
-  <rect x="168" y="128" width="24" height="24" fill="#50FC00"/>
+  <!-- Title bar label block -->
+  <rect x="400" y="134" width="120" height="8" fill="#84FF4A" opacity="0.6"/>
 
-  <!-- Command lines -->
-  <rect x="120" y="172" width="24" height="8"  fill="#84FF4A"/>
-  <rect x="152" y="172" width="120" height="8" fill="#50FC00"/>
+  <!-- Terminal content — prompt and cursor -->
+  <rect x="244" y="180" width="20" height="12" fill="#84FF4A"/>
+  <rect x="272" y="180" width="8"  height="12" fill="#50FC00"/>
+  <rect x="288" y="176" width="20" height="20" fill="#50FC00"/>
+
+  <!-- Command line -->
+  <rect x="244" y="212" width="20" height="8"  fill="#84FF4A"/>
+  <rect x="272" y="212" width="100" height="8" fill="#50FC00"/>
 
   <!-- Output lines -->
-  <rect x="120" y="196" width="280" height="8" fill="#38B000"/>
-  <rect x="120" y="212" width="220" height="8" fill="#38B000"/>
-  <rect x="120" y="228" width="260" height="8" fill="#38B000"/>
+  <rect x="244" y="236" width="240" height="8" fill="#38B000"/>
+  <rect x="244" y="252" width="180" height="8" fill="#38B000"/>
+  <rect x="244" y="268" width="220" height="8" fill="#38B000"/>
 
-  <!-- Second command -->
-  <rect x="120" y="260" width="24" height="8"  fill="#84FF4A"/>
-  <rect x="152" y="260" width="80" height="8"  fill="#50FC00"/>
-
-  <!-- Output -->
-  <rect x="120" y="284" width="320" height="8" fill="#38B000"/>
-  <rect x="120" y="300" width="200" height="8" fill="#38B000"/>
-
-  <!-- Final prompt with cursor -->
-  <rect x="120" y="332" width="24" height="8"  fill="#84FF4A"/>
-  <rect x="152" y="328" width="24" height="24" fill="#50FC00"/>
+  <!-- Second prompt with cursor -->
+  <rect x="244" y="296" width="20" height="8"  fill="#84FF4A"/>
+  <rect x="272" y="292" width="20" height="20" fill="#50FC00"/>
 
 </svg>
