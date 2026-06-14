@@ -46,6 +46,11 @@ h1.mb-3 {
   border-radius: 0 !important;
 }
 
+/* Contain thumbnail img on mobile landscape view */
+.thumbnail img {
+  object-fit: contain !important;
+}
+
 /* Homepage card featured image — pixel border, square corners */
 .article-link--card {
   border: 2px solid #50FC00;
