@@ -85,3 +85,16 @@ label.fixed.end-8 {
 label.fixed.end-8 svg {
   color: #50FC00;
 }
+
+/* Author name — Press Start 2P */
+.flex.author .font-semibold {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+/* Tags — square corners */
+span.rounded-md.border.border-primary-400,
+span.rounded-md.border {
+  border-radius: 0 !important;
+}
