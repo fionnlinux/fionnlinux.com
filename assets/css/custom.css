@@ -62,3 +62,15 @@ h1.mb-3 {
   border: 2px solid #50FC00;
   border-radius: 0 !important;
 }
+
+/* Mobile menu links — Press Start 2P */
+nav.mx-auto span {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.8rem;
+  line-height: 2.5;
+}
+
+/* Mobile menu background — dark green instead of black */
+.dark\:bg-neutral-900\/99 {
+  background-color: #00180B !important;
+}
