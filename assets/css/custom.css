@@ -39,3 +39,21 @@ h1.mb-3 {
   font-size: 1.4rem;
   line-height: 1.8;
 }
+
+/* Blog index page featured image thumbnail — pixel border, square corners */
+.thumbnail {
+  border: 2px solid #50FC00;
+  border-radius: 0 !important;
+}
+
+/* Homepage card featured image — pixel border, square corners */
+.article-link--card {
+  border: 2px solid #50FC00;
+  border-radius: 0 !important;
+}
+
+/* Show more button — square corners and border */
+.mt-10 > a {
+  border: 2px solid #50FC00;
+  border-radius: 0 !important;
+}
