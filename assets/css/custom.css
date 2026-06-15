@@ -98,3 +98,17 @@ span.rounded-md.border.border-primary-400,
 span.rounded-md.border {
   border-radius: 0 !important;
 }
+
+/* Alert boxes — square corners, green border */
+div.flex.px-4.py-3.rounded-md.shadow {
+  border-radius: 0 !important;
+  border: 2px solid #50FC00 !important;
+}
+
+/* Alert box heading — Press Start 2P */
+div.flex.px-4.py-3.rounded-md.shadow p strong,
+div.flex.px-4.py-3.rounded-md.shadow strong {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 1rem;
+  line-height: 2;
+}
