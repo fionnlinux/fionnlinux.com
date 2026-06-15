@@ -35,6 +35,13 @@ h1.mt-5.text-4xl.font-extrabold {
   line-height: 1.8;
 }
 
+@media (max-width: 768px) {
+  h1.mt-0.text-4xl.font-extrabold,
+  h1.mt-5.text-4xl.font-extrabold {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 768px) {
   h1.mb-2.font-extrabold {
     font-size: 3rem;
