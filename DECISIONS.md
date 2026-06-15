@@ -49,7 +49,7 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ## Analytics — Umami
 **Date:** May 2026  
 **Decision:** Use Umami over Google Analytics, Plausible, or no analytics  
-**Reasoning:** Cookie-free by design — no consent banner required, fully compliant with UK GDPR and PECR without additional configuration. Collects no personal data — only anonymous aggregate statistics. Open source under MIT licence — self-hostable on Hetzner as the homelab develops if the cloud tier ever becomes insufficient. Free cloud tier supports three websites and 100,000 monthly events — more than sufficient at this stage. Google Analytics was considered and rejected because its tracking model conflicts with the site's privacy values and would require a cookie consent banner. Plausible was considered but has no free tier.
+**Reasoning:** Cookie-free by design — no consent banner required, fully compliant with UK GDPR and PECR without additional configuration. Collects no personal data — only anonymous aggregate statistics. Open source under MIT licence — self-hostable on Hetzner as the homelab develops if the cloud tier ever becomes insufficient. Free cloud tier supports three websites and 100,000 monthly events — more than sufficient at this stage. Google Analytics was considered and rejected because its tracking model conflicts with the site's privacy values and would require a cookie consent banner.
 
 ---
 
