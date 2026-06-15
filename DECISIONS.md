@@ -84,4 +84,4 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ## Version control — conventional commits
 **Date:** May 2026  
 **Decision:** Use conventional commit format throughout — feat:, fix:, docs:, chore:, ci:  
-**Reasoning:** Professional habit worth building early. Clear commit history is useful when reviewing changes, debugging deployment issues, and demonstrating good practice to anyone reviewing the repository. Consistent from the start is easier than retrofitting the habit later.
+**Reasoning:** Professional habit worth building early. Clear commit history is useful when reviewing changes, debugging deployment issues, and demonstrating good practice to anyone reviewing the repository.
