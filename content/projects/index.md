@@ -4,7 +4,7 @@ date: 2026-05-19
 draft: false
 showDate: false
 showReadingTime: false
-showTableOfContents: false
+showTableOfContents: true
 showWordCount: false
 showComments: false
 showAuthor: false
