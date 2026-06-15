@@ -14,7 +14,7 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ## Theme — Blowfish
 **Date:** May 2026  
 **Decision:** Use Blowfish theme over building from scratch or other themes  
-**Reasoning:** Actively maintained by Nuno Coração and an active contributor community. Excellent documentation covering every configuration option. Terminal colour scheme available out of the box matching the site's visual identity. Built in shortcodes for alerts, lead paragraphs, badges and more. TypeIt animation support. Sensible defaults that produce a professional result immediately. Building a custom theme from scratch was considered but premature at this stage — revisit for the freetolearn.uk project when Hugo knowledge is deeper.
+**Reasoning:** Actively maintained by Nuno Coração and an active contributor community. Excellent documentation covering every configuration option. Terminal colour scheme available out of the box matching the site's visual identity. Built in shortcodes for alerts, lead paragraphs, badges and more. TypeIt animation support. Sensible defaults that produce a professional result immediately. Building a custom theme from scratch was considered but premature at this stage — revisit when Hugo knowledge is deeper.
 
 ---
 
