@@ -21,7 +21,7 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ## Hosting — GitHub Pages with GitHub Actions CI/CD
 **Date:** May 2026  
 **Decision:** Deploy to GitHub Pages via GitHub Actions on every push to main  
-**Reasoning:** Free tier sufficient for a personal site. CI/CD is a core skill appearing consistently in Linux and DevOps job postings — learning it through real use rather than a tutorial is more effective. Every push to main triggers an automatic build and deploy with no manual steps. Netlify was considered and remains an option but GitHub Pages met all requirements without introducing a separate platform dependency. Netlify is reserved for client projects like the planned juniatalaw.com migration where its form handling and build environment are more appropriate.
+**Reasoning:** Free tier sufficient for a personal site. CI/CD is a core skill appearing consistently in Linux and Cloud engineer job postings — learning it through real use rather than a tutorial is more effective. Every push to main triggers an automatic build and deploy with no manual steps. Netlify was considered and remains an option but GitHub Pages met all requirements without introducing a separate platform dependency. Netlify is reserved for client projects like the planned juniatalaw.com migration where its form handling and build environment are more appropriate.
 
 ---
 
