@@ -68,16 +68,16 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ---
 
 ## Feature images — SVG for concepts, screenshots for walkthroughs
-**Date:** May 2026  
-**Decision:** Use animated featured.svg for concept and narrative posts, clean screenshots cropped to 1200x630 in GIMP for walkthrough posts  
-**Reasoning:** Visual distinction between post types before the reader clicks. SVG files are a few KB versus 100-200KB for JPEG — multiple concept posts sharing the same SVG improves page speed. Screenshots signal hands on technical content and set accurate reader expectations. No stock photos, no AI generated images. SVGs are browser cached after first load so the animated featured.svg costs nothing on subsequent page views.
+**Date:** May 2026, updated June 2026
+**Decision:** Use pixel art umbrella featured.svg for concept and narrative posts, pixel art terminal window featured.svg for walkthrough posts.
+**Reasoning:** Visual distinction between post types before the reader clicks. SVG files are a few KB and browser cached after first load — multiple posts sharing the same SVG costs nothing on subsequent page views. The umbrella signals a concept or narrative post; the terminal window signals hands-on technical content. Both are consistent with the pixel art terminal theme across the site.
 
 ---
 
-## Comments — Giscus, deferred until post 10
-**Date:** May 2026  
-**Decision:** Plan to add Giscus comments after post 10, no comments before that point  
-**Reasoning:** Comments on a site with few posts creates maintenance overhead with minimal engagement benefit. GitHub Discussions via Giscus is the right fit for a technical audience — most readers in the Linux and security community already have GitHub accounts. Waiting until post 10 ensures there is enough content for meaningful discussion before the feature is added. Contact via email alias is available for anyone who needs to reach out in the meantime.
+## Comments — Giscus
+**Date:** May 2026, updated June 2026
+**Decision:** Giscus comments are live via GitHub Discussions. Reactions disabled. showComments: false on About, Projects, and Resources pages. Comments active on all post pages.
+**Reasoning:** Installed after post 10 as planned. GitHub Discussions via Giscus is the right fit for a technical audience — most readers in the Linux and security community already have GitHub accounts. Low maintenance overhead, no tracking, no third party comment platform.
 
 ---
 
