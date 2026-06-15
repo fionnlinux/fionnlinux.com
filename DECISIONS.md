@@ -35,7 +35,7 @@ A running log of significant decisions made building and maintaining fionnlinux.
 ## Domain registrar and CDN — Cloudflare
 **Date:** May 2026  
 **Decision:** Register fionnlinux.com through Cloudflare Registrar, use Cloudflare CDN  
-**Reasoning:** Cloudflare handles both domain registration and DNS in one place, reducing attack surface compared to a separate registrar and CDN combination. At-cost domain pricing with no markup. Free CDN tier provides DDoS protection, caching, and SSL termination. Auto-renewal enabled to prevent accidental expiry. Account secured with 2FA.
+**Reasoning:** Cloudflare handles both domain registration and DNS in one place, reducing attack surface compared to a separate registrar and CDN combination. Free CDN tier provides DDoS protection, caching, and SSL termination. Auto-renewal enabled to prevent accidental expiry. Account secured with 2FA.
 
 ---
 
