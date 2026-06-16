@@ -48,6 +48,15 @@ h1.mt-5.text-4xl.font-extrabold {
   }
 }
 
+a[href*="codeberg.org"] {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 1rem;
+}
+
+a[href*="codeberg.org"]:hover {
+  color: white !important;
+}
+
 /* 404 heading */
 h1.mb-3 {
   font-family: 'Press Start 2P', monospace;
