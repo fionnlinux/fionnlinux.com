@@ -116,6 +116,21 @@ label.fixed.end-8 svg {
   color: #50FC00;
 }
 
+/* Search modal — terminal green border, square corners */
+#search-modal {
+  border-color: #50FC00 !important;
+  border-radius: 0 !important;
+}
+
+/* Search input — terminal green focus */
+#search-query,
+#search-query:focus,
+#search-query:focus-visible {
+  border-color: #50FC00 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Author name — Press Start 2P */
 .flex.author .font-semibold {
   font-family: 'Press Start 2P', monospace !important;
