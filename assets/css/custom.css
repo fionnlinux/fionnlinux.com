@@ -38,7 +38,7 @@ h1.mt-5.text-4xl.font-extrabold {
 @media (max-width: 768px) {
   h1.mt-0.text-4xl.font-extrabold,
   h1.mt-5.text-4xl.font-extrabold {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 }
 
