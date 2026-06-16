@@ -157,3 +157,28 @@ div.flex.px-4.py-3.rounded-md.shadow strong {
   font-size: 1rem;
   line-height: 2;
 }
+
+#scroll-to-top a {
+  border-radius: 0 !important;
+  border: 2px solid #50FC00 !important;
+  background-color: #00180B !important;
+  color: #50FC00 !important;
+}
+
+#scroll-to-top a svg {
+  color: #50FC00 !important;
+}
+
+#scroll-to-top a svg path {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+#scroll-to-top a:hover {
+  color: white !important;
+  border-color: #50FC00 !important;
+}
+
+#scroll-to-top a:hover svg {
+  color: white !important;
+}
