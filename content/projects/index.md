@@ -50,8 +50,27 @@ A collection of Python projects written while learning to programme. Started sma
 
 ---
 
+## bash-toolkit
+
+A collection of bash scripts for Linux administration and automation,
+built on Fedora Linux. Scripts are written to be readable,
+well-commented, and RHCSA-aligned. Actively growing alongside
+my Linux studies.
+
+**Stack:** Bash, Linux, GNU coreutils
+
+{{< github repo="fionnlinux/bash-toolkit" >}}
+
+---
+
 ## Coming Soon
 
-- **bash-toolkit** — shell scripts for Linux administration and automation, launching after Network+
-- **ansible-homelab** — configuration management for a mixed RHEL/Ubuntu homelab fleet, launching alongside the blog walkthrough series
-- **terraform-lab** — infrastructure as code for provisioning and managing cloud resources on Azure and AWS
+- **ansible-homelab** — configuration management for a mixed RHEL/Ubuntu
+homelab fleet, launching alongside the blog walkthrough series
+- **terraform-lab** — infrastructure as code for provisioning and managing
+cloud resources on Azure
+
+
+
+
+
