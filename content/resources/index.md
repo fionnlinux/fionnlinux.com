@@ -12,7 +12,7 @@ showHero: true
 background: "img/background.svg"
 ---
 
-A curated list of the tools, documentation, and learning resources I actually use. Nothing here for the sake of a longer list.
+A curated list of highly regarded tools, documentation, and learning resources for Linux, cloud, networking, and security. Some I use daily, some are reference material, and some are on the horizon — all are worth knowing about.
 
 ---
 
@@ -21,8 +21,9 @@ A curated list of the tools, documentation, and learning resources I actually us
 **Documentation**
 
 - [Fedora Documentation](https://docs.fedoraproject.org) — official Fedora docs, well maintained and thorough. My first stop for anything Fedora specific.
-- [Rocky Linux Documentation](https://docs.rockylinux.org) — the go-to reference for the RHEL-compatible ecosystem. Covers everything from installation to administration.
+- [AlmaLinux Wiki](https://wiki.almalinux.org) — the go-to reference for the RHEL-compatible ecosystem. Covers everything from installation to administration.
 - [Red Hat Documentation](https://docs.redhat.com) — official RHEL documentation, the authoritative source for anything that matters in the enterprise Linux world.
+- [Red Hat Developer Subscription](https://developers.redhat.com/products/rhel/download) — free RHEL subscription for individuals. The hands-on environment for RHCSA study.
 - [Arch Wiki](https://wiki.archlinux.org) — the best Linux reference on the internet regardless of which distribution you use. If it is not here, it is probably not documented anywhere.
 
 **YouTube**
@@ -37,6 +38,9 @@ A curated list of the tools, documentation, and learning resources I actually us
 
 - [Linux Matters](https://linuxmatters.sh) — Linux news and discussion. Genuinely good conversation rather than just headlines.
 - [Late Night Linux](https://latenightlinux.com) — Linux and open source discussion worth your time. More opinionated than most.
+- [Hybrid Cloud Show](https://hybridcloudshow.com) — industry professionals talking public cloud, private cloud, and everything in between. Part of the Late Night Linux family.
+- [2.5 Admins](https://2.5admins.com) — two sysadmins and a producer working through real-world administration topics. Practical and no-nonsense.
+- [The Raspberry Pi Podcast](https://www.raspberrypi.com/news/welcome-to-the-raspberry-pi-podcast/) — the official Raspberry Pi podcast, covering hardware, software, and the community around it.
 
 ---
 
@@ -48,19 +52,17 @@ A curated list of the tools, documentation, and learning resources I actually us
 - [Microsoft Learn](https://learn.microsoft.com) — free structured learning paths for AZ-900 and AZ-104. The best free resource for Azure certification preparation.
 - [Terraform Documentation](https://developer.hashicorp.com/terraform/docs) — the official Terraform docs. Start with the getting started guide for Azure, then work through modules and state management.
 - [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs) — the reference for every Azure resource you can provision with Terraform. Open constantly when writing IaC.
-- [AWS Documentation](https://docs.aws.amazon.com) — secondary cloud reference. Useful for breadth and cloud-agnostic thinking alongside Azure.
 
 **YouTube**
 
-- [Adam Marczak — Azure for Everyone](https://www.youtube.com/@AdamMarczakYT) — Azure fundamentals and certification content. Clear explanations without unnecessary complexity.
-- [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana) — Kubernetes, Docker, Terraform, and DevOps fundamentals. One of the best practical channels for infrastructure tooling.
+- [Adam Marczak — Azure for Everyone](https://www.youtube.com/@AdamMarczakYT) — Azure fundamentals and certification content, well regarded for AZ-900 and AZ-104 preparation.
+- [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana) — Kubernetes, Docker, Terraform, and DevOps fundamentals. Widely recommended for infrastructure tooling.
 - [NetworkChuck](https://www.youtube.com/@NetworkChuck) — cloud, networking, and Linux content. Energetic but genuinely useful for getting concepts to land.
 
 **Practice**
 
-- [Azure Free Tier](https://azure.microsoft.com/en-gb/free/) — 12 months of free services plus a credit on sign-up. The starting point for all Azure homelab work.
-- [AWS Free Tier](https://aws.amazon.com/free/) — always-free and 12-month free services for breadth alongside Azure.
-- [KillerCoda](https://killercoda.com) — browser-based Linux and Kubernetes labs. No local setup needed, good for practising kubectl and cluster concepts.
+- [Azure Free Tier](https://azure.microsoft.com/en-gb/free/) — 12 months of free services plus a credit on sign-up. The starting point for Azure homelab work.
+- [KillerCoda](https://killercoda.com) — browser-based Linux and Kubernetes labs. No local setup needed, useful for practising in environments you haven't built yet.
 
 ---
 
@@ -164,6 +166,7 @@ A curated list of the tools, documentation, and learning resources I actually us
 
 ## Tools I Use Daily
 
+- **[Tor Browser](https://www.torproject.org)** — privacy focused browser that routes traffic through the Tor network. Used alongside Firefox for situations requiring stronger anonymity.
 - **[Bitwarden](https://bitwarden.com)** — open source password manager. The single most impactful security tool most people are not using. Self-hostable if you want full control.
 - **[Proton Mail](https://proton.me/mail)** — privacy respecting email with end to end encryption. My primary email provider via a custom domain.
 - **[Proton VPN](https://protonvpn.com)** — open source VPN with a no logs policy. Part of the Proton ecosystem and audited independently.
