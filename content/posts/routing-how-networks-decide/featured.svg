@@ -1,25 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" shape-rendering="crispEdges">
   <defs>
     <style>
-      .bg      { fill: #0d1117; }
-      .hi      { fill: #5bb3ff; }
-      .mid     { fill: #1f71eb; }
-      .shadow  { fill: #2363d1; }
-      .drop-a  { fill: #5bb3ff; }
-      .drop-b  { fill: #1f71eb; }
-      @media (prefers-color-scheme: light) {
-        .bg      { fill: #e2f2ff; }
-        .hi      { fill: #1f71eb; }
-        .mid     { fill: #0092ff; }
-        .shadow  { fill: #1f71eb; }
-        .drop-a  { fill: #1f71eb; }
-        .drop-b  { fill: #0092ff; }
-      }
+      .hi     { fill: #5bb3ff; }
+      .mid    { fill: #1f71eb; }
+      .shadow { fill: #2363d1; }
+      .drop-a { fill: #5bb3ff; }
+      .drop-b { fill: #1f71eb; }
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect x="0" y="0" width="800" height="450" class="bg"/>
 
   <!-- Rain drops — long -->
   <rect x="180" y="75" width="6" height="28" class="drop-a" opacity="0.9" transform="rotate(-15 180 75)">

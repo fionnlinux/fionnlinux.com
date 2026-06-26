@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" shape-rendering="crispEdges">
+  <defs>
+    <style>
+      .hi     { fill: #5bb3ff; }
+      .mid    { fill: #1f71eb; }
+      .shadow { fill: #2363d1; }
+    </style>
+  </defs>
+
+  <!-- Title bar -->
+  <rect x="220" y="120" width="360" height="36" class="shadow"/>
+  <rect x="220" y="120" width="8"   height="36" class="shadow"/>
+  <rect x="572" y="120" width="8"   height="36" class="shadow"/>
+
+  <!-- Window body outline -->
+  <rect x="220" y="156" width="8"   height="180" class="mid"/>
+  <rect x="572" y="156" width="8"   height="180" class="mid"/>
+  <rect x="220" y="328" width="360" height="8"   class="mid"/>
+
+  <!-- Title bar dots -->
+  <rect x="236" y="130" width="16" height="16" class="hi"/>
+  <rect x="260" y="130" width="16" height="16" class="hi"/>
+  <rect x="284" y="130" width="16" height="16" class="hi"/>
+
+  <!-- Title bar label block -->
+  <rect x="400" y="134" width="120" height="8" class="hi" opacity="0.6"/>
+
+  <!-- Line 1: prompt -->
+  <rect x="244" y="180" width="20" height="12" class="hi"/>
+
+  <!-- Line 1: command — appears instantly like a paste/snap -->
+  <rect x="272" y="180" width="100" height="8" class="mid">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.1;0.15;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Cursor blinks at end of command then disappears on enter -->
+  <rect x="380" y="176" width="8" height="16" class="hi">
+    <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;0;0" keyTimes="0;0.1;0.2;0.25;0.3;0.35;0.38;0.42;0.45;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Output line 1 — snaps in -->
+  <rect x="244" y="204" width="240" height="8" class="shadow">
+    <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.42;0.48;0.5;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Output line 2 — snaps in -->
+  <rect x="244" y="220" width="180" height="8" class="shadow">
+    <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.42;0.54;0.56;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Output line 3 — snaps in -->
+  <rect x="244" y="236" width="220" height="8" class="shadow">
+    <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.42;0.6;0.62;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Second prompt -->
+  <rect x="244" y="260" width="20" height="8" class="hi">
+    <animate attributeName="opacity" values="0;0;0;1;1" keyTimes="0;0.42;0.65;0.68;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Blinking cursor at second prompt -->
+  <rect x="272" y="256" width="8" height="16" class="hi">
+    <animate attributeName="opacity" values="0;0;0;1;0;1;0;1;0;1;0" keyTimes="0;0.42;0.67;0.7;0.74;0.78;0.82;0.86;0.9;0.94;1" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+</svg>
