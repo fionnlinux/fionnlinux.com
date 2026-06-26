@@ -45,7 +45,7 @@ Networking fundamentals — TCP/IP, subnetting, routing, switching, and network 
 Security concepts, threat analysis, incident response, and cryptography.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="cloud" header="AZ-900" badge="Planned" subheader="Azure Fundamentals" >}}
+{{< timelineItem icon="cloud" header="AZ-900" badge="Planned" subheader="Introduction to Cloud Infrastructure" >}}
 Microsoft Azure fundamentals — cloud concepts, core services, and the foundation for the Azure administrator path.
 {{< /timelineItem >}}
 
@@ -62,8 +62,9 @@ Azure Administrator Associate — managing and governing Azure infrastructure, a
 ## What I Run
 
 - **Daily driver:** Fedora KDE
-- **Servers:** Rocky Linux
-- **Homelab goals:** Terraform, Ansible, OPNsense, K3s, WireGuard, Podman
+- **Servers:** AlmaLinux
+- **Containers:** Podman (rootless)
+- **Homelab goals:** OPNsense, WireGuard, Terraform, Ansible, K3s
 - **Learning:** Infrastructure as Code, cloud networking, Python, Bash
 - **Philosophy:** Self-hosted, open source, privacy first
 - **This site:** Hugo + Blowfish theme, source on [GitHub](https://github.com/fionnlinux/fionnlinux.com) and [Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com), deployed via GitHub Actions to GitHub Pages
