@@ -1,7 +1,6 @@
 /* ================================
    FONTS
    ================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500&display=swap');
 
 /* Headings — Fira Mono */
@@ -65,9 +64,13 @@ h1.mb-3 {
   line-height: 1.8;
 }
 
+/* ================================
+   BORDERS & ACCENTS
+   ================================ */
+
 /* Blog index page featured image thumbnail — pixel border, square corners */
 .thumbnail {
-  border: 2px solid #50FC00;
+  border: 2px solid rgb(var(--color-primary-500));
   border-radius: 0 !important;
 }
 
@@ -78,65 +81,20 @@ h1.mb-3 {
 
 /* Homepage card featured image — pixel border, square corners */
 .article-link--card {
-  border: 2px solid #50FC00;
+  border: 2px solid rgb(var(--color-primary-500));
   border-radius: 0 !important;
 }
 
 /* Show more button — square corners and border */
 .mt-10 > a {
-  border: 2px solid #50FC00;
+  border: 2px solid rgb(var(--color-primary-500));
   border-radius: 0 !important;
 }
 
-/* GitHub card — green border, square corners */
+/* GitHub card — border, square corners */
 .github-card-wrapper {
-  border: 4px solid #50FC00 !important;
+  border: 4px solid rgb(var(--color-primary-500)) !important;
   border-radius: 0 !important;
-}
-
-/* Mobile menu links — Press Start 2P */
-nav.mx-auto span {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 1.5rem;
-  line-height: 2.5;
-}
-
-/* Mobile menu background — dark green instead of black */
-.dark\:bg-neutral-900\/99 {
-  background-color: #00180B !important;
-}
-
-/* Mobile menu close button — square, green border */
-label.fixed.end-8 {
-  border-radius: 0 !important;
-  border: 2px solid #50FC00 !important;
-  background-color: #00180B !important;
-}
-
-label.fixed.end-8 svg {
-  color: #50FC00;
-}
-
-/* Search modal — terminal green border, square corners */
-#search-modal {
-  border-color: #50FC00 !important;
-  border-radius: 0 !important;
-}
-
-/* Search input — terminal green focus */
-#search-query,
-#search-query:focus,
-#search-query:focus-visible {
-  border-color: #50FC00 !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Author name — Press Start 2P */
-.flex.author .font-semibold {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 0.7rem;
-  line-height: 2;
 }
 
 /* Tags — square corners */
@@ -145,10 +103,10 @@ span.rounded-md.border {
   border-radius: 0 !important;
 }
 
-/* Alert boxes — square corners, green border */
+/* Alert boxes — square corners, primary border */
 div.flex.px-4.py-3.rounded-md.shadow {
   border-radius: 0 !important;
-  border: 2px solid #50FC00 !important;
+  border: 2px solid rgb(var(--color-primary-500)) !important;
 }
 
 /* Alert box heading — Press Start 2P */
@@ -159,15 +117,73 @@ div.flex.px-4.py-3.rounded-md.shadow strong {
   line-height: 2;
 }
 
+/* ================================
+   MOBILE MENU
+   ================================ */
+
+/* Mobile menu links — Press Start 2P */
+nav.mx-auto span {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 1.5rem;
+  line-height: 2.5;
+}
+
+/* Mobile menu background */
+.dark\:bg-neutral-900\/99 {
+  background-color: rgb(var(--color-neutral-900)) !important;
+}
+
+/* Mobile menu close button — square, primary border */
+label.fixed.end-8 {
+  border-radius: 0 !important;
+  border: 2px solid rgb(var(--color-primary-500)) !important;
+  background-color: rgb(var(--color-neutral-900)) !important;
+}
+
+label.fixed.end-8 svg {
+  color: rgb(var(--color-primary-500));
+}
+
+/* ================================
+   SEARCH
+   ================================ */
+
+/* Search modal — primary border, square corners */
+#search-modal {
+  border-color: rgb(var(--color-primary-500)) !important;
+  border-radius: 0 !important;
+}
+
+/* Search input — primary focus */
+#search-query,
+#search-query:focus,
+#search-query:focus-visible {
+  border-color: rgb(var(--color-primary-500)) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ================================
+   AUTHOR & SCROLL
+   ================================ */
+
+/* Author name — Press Start 2P */
+.flex.author .font-semibold {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+
+/* Scroll to top button */
 #scroll-to-top a {
   border-radius: 0 !important;
-  border: 2px solid #50FC00 !important;
-  background-color: #00180B !important;
-  color: #50FC00 !important;
+  border: 2px solid rgb(var(--color-primary-500)) !important;
+  background-color: rgb(var(--color-neutral-900)) !important;
+  color: rgb(var(--color-primary-500)) !important;
 }
 
 #scroll-to-top a svg {
-  color: #50FC00 !important;
+  color: rgb(var(--color-primary-500)) !important;
 }
 
 #scroll-to-top a svg path {
@@ -177,7 +193,7 @@ div.flex.px-4.py-3.rounded-md.shadow strong {
 
 #scroll-to-top a:hover {
   color: white !important;
-  border-color: #50FC00 !important;
+  border-color: rgb(var(--color-primary-500)) !important;
 }
 
 #scroll-to-top a:hover svg {

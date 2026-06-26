@@ -1,125 +1,141 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" shape-rendering="crispEdges">
+  <defs>
+    <style>
+      .bg      { fill: #0d1117; }
+      .hi      { fill: #5bb3ff; }
+      .mid     { fill: #1f71eb; }
+      .shadow  { fill: #2363d1; }
+      .drop-a  { fill: #5bb3ff; }
+      .drop-b  { fill: #1f71eb; }
+      @media (prefers-color-scheme: light) {
+        .bg      { fill: #e2f2ff; }
+        .hi      { fill: #1f71eb; }
+        .mid     { fill: #0092ff; }
+        .shadow  { fill: #1f71eb; }
+        .drop-a  { fill: #1f71eb; }
+        .drop-b  { fill: #0092ff; }
+      }
+    </style>
+  </defs>
+
   <!-- Background -->
-  <rect x="0" y="0" width="800" height="450" fill="#00180B"/>
+  <rect x="0" y="0" width="800" height="450" class="bg"/>
 
-  <!-- Rain drops — angled, falling, varied sizes and opacity -->
-
-  <!-- Long drops -->
-  <rect x="180" y="75" width="6" height="28" fill="#84FF4A" opacity="0.9" transform="rotate(-15 180 75)">
+  <!-- Rain drops — long -->
+  <rect x="180" y="75" width="6" height="28" class="drop-a" opacity="0.9" transform="rotate(-15 180 75)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.0s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.9;0.9;0" dur="1.0s" repeatCount="indefinite"/>
   </rect>
-  <rect x="260" y="60" width="6" height="28" fill="#50FC00" opacity="0.7" transform="rotate(-15 260 60)">
+  <rect x="260" y="60" width="6" height="28" class="drop-b" opacity="0.7" transform="rotate(-15 260 60)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.3s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.7;0.7;0" dur="1.3s" repeatCount="indefinite"/>
   </rect>
-  <rect x="340" y="70" width="6" height="28" fill="#84FF4A" opacity="0.9" transform="rotate(-15 340 70)">
+  <rect x="340" y="70" width="6" height="28" class="drop-a" opacity="0.9" transform="rotate(-15 340 70)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.1s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.9;0.9;0" dur="1.1s" repeatCount="indefinite"/>
   </rect>
-  <rect x="420" y="65" width="6" height="28" fill="#50FC00" opacity="0.8" transform="rotate(-15 420 65)">
+  <rect x="420" y="65" width="6" height="28" class="drop-b" opacity="0.8" transform="rotate(-15 420 65)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.4s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.8;0.8;0" dur="1.4s" repeatCount="indefinite"/>
   </rect>
-  <rect x="500" y="80" width="6" height="28" fill="#84FF4A" opacity="0.9" transform="rotate(-15 500 80)">
+  <rect x="500" y="80" width="6" height="28" class="drop-a" opacity="0.9" transform="rotate(-15 500 80)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.2s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.9;0.9;0" dur="1.2s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Medium drops -->
-  <rect x="210" y="90" width="6" height="20" fill="#50FC00" opacity="0.6" transform="rotate(-15 210 90)">
+  <!-- Rain drops — medium -->
+  <rect x="210" y="90" width="6" height="20" class="drop-b" opacity="0.6" transform="rotate(-15 210 90)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.5s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.6;0.6;0" dur="1.5s" repeatCount="indefinite"/>
   </rect>
-  <rect x="290" y="80" width="6" height="20" fill="#84FF4A" opacity="0.8" transform="rotate(-15 290 80)">
+  <rect x="290" y="80" width="6" height="20" class="drop-a" opacity="0.8" transform="rotate(-15 290 80)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.1s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.8;0.8;0" dur="1.1s" repeatCount="indefinite"/>
   </rect>
-  <rect x="370" y="95" width="6" height="20" fill="#50FC00" opacity="0.5" transform="rotate(-15 370 95)">
+  <rect x="370" y="95" width="6" height="20" class="drop-b" opacity="0.5" transform="rotate(-15 370 95)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.6s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.5;0.5;0" dur="1.6s" repeatCount="indefinite"/>
   </rect>
-  <rect x="450" y="75" width="6" height="20" fill="#84FF4A" opacity="0.7" transform="rotate(-15 450 75)">
+  <rect x="450" y="75" width="6" height="20" class="drop-a" opacity="0.7" transform="rotate(-15 450 75)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.3s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.7;0.7;0" dur="1.3s" repeatCount="indefinite"/>
   </rect>
-  <rect x="530" y="85" width="6" height="20" fill="#50FC00" opacity="0.8" transform="rotate(-15 530 85)">
+  <rect x="530" y="85" width="6" height="20" class="drop-b" opacity="0.8" transform="rotate(-15 530 85)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.0s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.8;0.8;0" dur="1.0s" repeatCount="indefinite"/>
   </rect>
-  <rect x="230" y="110" width="6" height="20" fill="#84FF4A" opacity="0.6" transform="rotate(-15 230 110)">
+  <rect x="230" y="110" width="6" height="20" class="drop-a" opacity="0.6" transform="rotate(-15 230 110)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.7s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.6;0.6;0" dur="1.7s" repeatCount="indefinite"/>
   </rect>
-  <rect x="480" y="108" width="6" height="20" fill="#50FC00" opacity="0.9" transform="rotate(-15 480 108)">
+  <rect x="480" y="108" width="6" height="20" class="drop-b" opacity="0.9" transform="rotate(-15 480 108)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.2s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.9;0.9;0" dur="1.2s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Short drops -->
-  <rect x="195" y="120" width="6" height="12" fill="#84FF4A" opacity="0.4" transform="rotate(-15 195 120)">
+  <!-- Rain drops — short -->
+  <rect x="195" y="120" width="6" height="12" class="drop-a" opacity="0.4" transform="rotate(-15 195 120)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.4s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.4;0.4;0" dur="1.4s" repeatCount="indefinite"/>
   </rect>
-  <rect x="275" y="115" width="6" height="12" fill="#50FC00" opacity="0.5" transform="rotate(-15 275 115)">
+  <rect x="275" y="115" width="6" height="12" class="drop-b" opacity="0.5" transform="rotate(-15 275 115)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.6s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.5;0.5;0" dur="1.6s" repeatCount="indefinite"/>
   </rect>
-  <rect x="355" y="105" width="6" height="12" fill="#84FF4A" opacity="0.4" transform="rotate(-15 355 105)">
+  <rect x="355" y="105" width="6" height="12" class="drop-a" opacity="0.4" transform="rotate(-15 355 105)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.1s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.4;0.4;0" dur="1.1s" repeatCount="indefinite"/>
   </rect>
-  <rect x="435" y="118" width="6" height="12" fill="#50FC00" opacity="0.5" transform="rotate(-15 435 118)">
+  <rect x="435" y="118" width="6" height="12" class="drop-b" opacity="0.5" transform="rotate(-15 435 118)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.5s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.5;0.5;0" dur="1.5s" repeatCount="indefinite"/>
   </rect>
-  <rect x="515" y="125" width="6" height="12" fill="#84FF4A" opacity="0.4" transform="rotate(-15 515 125)">
+  <rect x="515" y="125" width="6" height="12" class="drop-a" opacity="0.4" transform="rotate(-15 515 125)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.3s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.4;0.4;0" dur="1.3s" repeatCount="indefinite"/>
   </rect>
-  <rect x="245" y="130" width="6" height="12" fill="#50FC00" opacity="0.5" transform="rotate(-15 245 130)">
+  <rect x="245" y="130" width="6" height="12" class="drop-b" opacity="0.5" transform="rotate(-15 245 130)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.8s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.5;0.5;0" dur="1.8s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- Extra right-side drops for balance -->
-  <rect x="560" y="75" width="6" height="28" fill="#84FF4A" opacity="0.8" transform="rotate(-15 560 75)">
+  <!-- Extra right-side drops -->
+  <rect x="560" y="75" width="6" height="28" class="drop-a" opacity="0.8" transform="rotate(-15 560 75)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.2s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.8;0.8;0" dur="1.2s" repeatCount="indefinite"/>
   </rect>
-  <rect x="590" y="100" width="6" height="20" fill="#50FC00" opacity="0.5" transform="rotate(-15 590 100)">
+  <rect x="590" y="100" width="6" height="20" class="drop-b" opacity="0.5" transform="rotate(-15 590 100)">
     <animateTransform attributeName="transform" type="translate" values="0 0; 6 40" dur="1.4s" repeatCount="indefinite" additive="sum"/>
     <animate attributeName="opacity" values="0.5;0.5;0" dur="1.4s" repeatCount="indefinite"/>
   </rect>
-  <!-- Top highlight — primary-300 -->
-  <rect x="392" y="175" width="16" height="8"  fill="#84FF4A"/>
-  <rect x="376" y="183" width="48" height="8"  fill="#84FF4A"/>
-  <!-- Upper mid — primary-400 -->
-  <rect x="352" y="191" width="96"  height="8" fill="#50FC00"/>
-  <rect x="328" y="199" width="144" height="8" fill="#50FC00"/>
-  <rect x="296" y="207" width="208" height="8" fill="#50FC00"/>
-  <!-- Lower rows — primary-500 -->
-  <rect x="264" y="215" width="272" height="8" fill="#38B000"/>
-  <rect x="224" y="223" width="352" height="8" fill="#38B000"/>
-  <rect x="208" y="231" width="384" height="8" fill="#38B000"/>
+
+  <!-- Umbrella canopy -->
+  <rect x="392" y="175" width="16" height="8"  class="hi"/>
+  <rect x="376" y="183" width="48" height="8"  class="hi"/>
+  <rect x="352" y="191" width="96"  height="8" class="mid"/>
+  <rect x="328" y="199" width="144" height="8" class="mid"/>
+  <rect x="296" y="207" width="208" height="8" class="mid"/>
+  <rect x="264" y="215" width="272" height="8" class="shadow"/>
+  <rect x="224" y="223" width="352" height="8" class="shadow"/>
+  <rect x="208" y="231" width="384" height="8" class="shadow"/>
   <!-- Scalloped bottom edge -->
-  <rect x="208" y="239" width="16" height="8"  fill="#38B000"/>
-  <rect x="208" y="247" width="8"  height="8"  fill="#38B000"/>
-  <rect x="288" y="239" width="16" height="8"  fill="#38B000"/>
-  <rect x="288" y="247" width="8"  height="8"  fill="#38B000"/>
-  <rect x="368" y="239" width="16" height="8"  fill="#38B000"/>
-  <rect x="368" y="247" width="8"  height="8"  fill="#38B000"/>
-  <rect x="448" y="239" width="16" height="8"  fill="#38B000"/>
-  <rect x="448" y="247" width="8"  height="8"  fill="#38B000"/>
-  <rect x="528" y="239" width="16" height="8"  fill="#38B000"/>
-  <rect x="528" y="247" width="8"  height="8"  fill="#38B000"/>
+  <rect x="208" y="239" width="16" height="8"  class="shadow"/>
+  <rect x="208" y="247" width="8"  height="8"  class="shadow"/>
+  <rect x="288" y="239" width="16" height="8"  class="shadow"/>
+  <rect x="288" y="247" width="8"  height="8"  class="shadow"/>
+  <rect x="368" y="239" width="16" height="8"  class="shadow"/>
+  <rect x="368" y="247" width="8"  height="8"  class="shadow"/>
+  <rect x="448" y="239" width="16" height="8"  class="shadow"/>
+  <rect x="448" y="247" width="8"  height="8"  class="shadow"/>
+  <rect x="528" y="239" width="16" height="8"  class="shadow"/>
+  <rect x="528" y="247" width="8"  height="8"  class="shadow"/>
   <!-- Centre spoke tip -->
-  <rect x="392" y="167" width="16" height="8"  fill="#84FF4A"/>
-  <rect x="396" y="159" width="8"  height="8"  fill="#84FF4A"/>
+  <rect x="392" y="167" width="16" height="8"  class="hi"/>
+  <rect x="396" y="159" width="8"  height="8"  class="hi"/>
   <!-- Handle stem -->
-  <rect x="392" y="255" width="16" height="96" fill="#50FC00"/>
+  <rect x="392" y="255" width="16" height="96" class="mid"/>
   <!-- Handle J curve -->
-  <rect x="360" y="343" width="32" height="8"  fill="#50FC00"/>
-  <rect x="352" y="327" width="8"  height="16" fill="#50FC00"/>
-  <rect x="360" y="319" width="16" height="8"  fill="#50FC00"/>
+  <rect x="360" y="343" width="32" height="8"  class="mid"/>
+  <rect x="352" y="327" width="8"  height="16" class="mid"/>
+  <rect x="360" y="319" width="16" height="8"  class="mid"/>
 </svg>

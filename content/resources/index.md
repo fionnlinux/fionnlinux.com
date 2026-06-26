@@ -178,7 +178,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-{{< alert icon="envelope" cardColor="#173d24" iconColor="#4ade80" textColor="#e5e7eb" >}}
+{{< alert icon="envelope" cardColor="#0d1117" iconColor="#1f71eb" textColor="#e2f2ff" >}}
 **Got a suggestion?**
 
 This page reflects what I actually use today. If a resource has genuinely helped you on a similar path, get in touch at [contact@mail.fionnlinux.com](mailto:contact@mail.fionnlinux.com).
