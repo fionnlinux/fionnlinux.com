@@ -56,3 +56,7 @@ nav.mx-auto span {
   font-size: 1.1rem;
   line-height: 2.5;
 }
+
+.thumbnail img {
+  object-fit: contain !important;
+}
