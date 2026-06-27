@@ -50,3 +50,9 @@ h1.mt-5.text-4xl.font-extrabold {
 a:hover {
   text-decoration: underline;
 }
+
+nav.mx-auto span {
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.9rem;
+  line-height: 2.5;
+}
