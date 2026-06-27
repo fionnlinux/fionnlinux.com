@@ -94,8 +94,10 @@ main {
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
 }
 
-.gsc-comments-count {
-  color: #1F2328 !important;
+@media (prefers-color-scheme: light) {
+  .gsc-comments-count {
+    color: #1F2328 !important;
+  }
 }
 
 main .pagination-loader-container {
