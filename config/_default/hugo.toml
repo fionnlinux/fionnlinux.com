@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
  theme = "blowfish" # UNCOMMENT THIS LINE
- title = "~/fionnlinux"
+ title = "fionnlinux"
  baseURL = "https://fionnlinux.com/"
 defaultContentLanguage = "en"
 
