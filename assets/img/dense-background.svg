@@ -36,8 +36,6 @@
       <rect x="36" y="18" width="6" height="3" opacity="0.5"/>
     </g>
 
-    <!-- One pattern, three layers, each cloud tiled 3x3 like Blowfish's rain.
-         Translate exactly one tile (-520 520) => seamless, no seam, even density. -->
     <pattern id="clouds" x="0" y="0" width="520" height="520" patternUnits="userSpaceOnUse">
       <g class="cloud-far" opacity="0.5">
         <use href="#mini-cloud" transform="translate(-440 -430) scale(0.6)"/>
@@ -85,6 +83,33 @@
         <use href="#mini-cloud" transform="translate(780 -270) scale(0.6)"/>
         <use href="#mini-cloud" transform="translate(780 250) scale(0.6)"/>
         <use href="#mini-cloud" transform="translate(780 770) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(-460 -50) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(-460 470) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(-460 990) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(60 -50) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(60 470) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(60 990) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(580 -50) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(580 470) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(580 990) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(-50 -440) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(-50 80) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(-50 600) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(470 -440) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(470 80) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(470 600) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(990 -440) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(990 80) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(990 600) scale(0.6)"/>
+        <use href="#mini-cloud" transform="translate(-160 -190) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(-160 330) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(-160 850) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(360 -190) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(360 330) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(360 850) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(880 -190) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(880 330) scale(0.55)"/>
+        <use href="#mini-cloud" transform="translate(880 850) scale(0.55)"/>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; -520 520" keyTimes="0;1" dur="30s"
           repeatCount="indefinite" calcMode="linear"/>
@@ -126,6 +151,33 @@
         <use href="#mini-cloud" transform="translate(830 -70) scale(0.7)"/>
         <use href="#mini-cloud" transform="translate(830 450) scale(0.7)"/>
         <use href="#mini-cloud" transform="translate(830 970) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(-380 -310) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(-380 210) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(-380 730) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(140 -310) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(140 210) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(140 730) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(660 -310) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(660 210) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(660 730) scale(0.72)"/>
+        <use href="#mini-cloud" transform="translate(-50 -120) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(-50 400) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(-50 920) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(470 -120) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(470 400) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(470 920) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(990 -120) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(990 400) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(990 920) scale(0.7)"/>
+        <use href="#mini-cloud" transform="translate(-270 -370) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(-270 150) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(-270 670) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(250 -370) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(250 150) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(250 670) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(770 -370) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(770 150) scale(0.74)"/>
+        <use href="#mini-cloud" transform="translate(770 670) scale(0.74)"/>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; -520 520" keyTimes="0;1" dur="20s"
           repeatCount="indefinite" calcMode="linear"/>
@@ -158,6 +210,24 @@
         <use href="#mini-cloud" transform="translate(770 -130) scale(0.95)"/>
         <use href="#mini-cloud" transform="translate(770 390) scale(0.95)"/>
         <use href="#mini-cloud" transform="translate(770 910) scale(0.95)"/>
+        <use href="#mini-cloud" transform="translate(-450 -100) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(-450 420) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(-450 940) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(70 -100) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(70 420) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(70 940) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(590 -100) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(590 420) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(590 940) scale(0.9)"/>
+        <use href="#mini-cloud" transform="translate(-80 -50) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(-80 470) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(-80 990) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(440 -50) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(440 470) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(440 990) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(960 -50) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(960 470) scale(0.92)"/>
+        <use href="#mini-cloud" transform="translate(960 990) scale(0.92)"/>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; -520 520" keyTimes="0;1" dur="13s"
           repeatCount="indefinite" calcMode="linear"/>
