@@ -5,11 +5,15 @@ description: "Linux systems, cloud infrastructure, and open source"
 
 {{< typeit
   tag="h2"
-  speed=80
-  deleteSpeed=25
+  speed=100
   lifeLike=true
+  loop=false
+  breakLines=true
+  startDelay=2000
 >}}
-A+ | N+ | Security+ | AZ-900 | RHCSA Building it properly.
+Cloud Engineering
+Linux Foundations
+Open Source
 {{< /typeit >}}
 
 {{< lead >}}
