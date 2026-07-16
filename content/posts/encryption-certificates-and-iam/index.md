@@ -2,7 +2,7 @@
 title: "Proving Who You Are — Encryption, Certificates, and the Many Ways to Log In"
 date: 2026-07-13T00:00:00+01:00
 draft: false
-description: "Encryption at rest and in transit, PKI and self-signed certificates, and the authentication and authorization protocols behind SSO and MFA — grounded in logging into work systems every day without ever thinking about what's actually happening underneath."
+description: "Encryption at rest and in transit, PKI and self-signed certificates, the authentication and authorization protocols behind SSO and MFA, and geofencing — grounded in logging into work systems every day without ever thinking about what's actually happening underneath."
 tags: ["networking", "security", "comptia"]
 series: []
 showTableOfContents: true
@@ -52,6 +52,10 @@ Behind both of those sit protocols that actually carry the authentication inform
 Authorization only matters once authentication has already succeeded, and it answers a completely different question: now that the system knows who you are, what should you actually be allowed to touch.
 
 **Least privilege** is the underlying principle — give an account only the access it genuinely needs to do its job, nothing broader. Without the formal name, this is already how the machines in my house are set up: my kids' accounts are standard users, and administrative rights through sudo stay with me. Their accounts can do everything they actually need and nothing more, which is the principle exactly, just applied at home rather than in an organisation. **Role-based access control** is the common way the same principle gets implemented at scale, assigning permissions to defined roles rather than to individual people one at a time, so access follows the job someone does rather than being configured from scratch for every new user.
+
+## Geofencing
+
+One more piece of logical security sits alongside IAM rather than inside it. **Geofencing** restricts access based on where a device physically is, using its location to decide whether a login should even be allowed to proceed — blocking a login attempt from a country an account has never operated in, for example, regardless of whether the password and MFA code entered were actually correct. It is a different kind of check entirely from anything above: not who you are or what you know, but where you are when you are asking.
 
 ## Why Separating These Actually Helps
 
