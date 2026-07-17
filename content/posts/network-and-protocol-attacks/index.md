@@ -11,7 +11,7 @@ showDate: true
 showAuthor: true
 ---
 
-Part of the long-term homelab plan is running OPNsense on a Protectli box, properly segmenting my own network into separate VLANs rather than everything sitting on one flat network. Before building anything, I wanted to actually understand what VLAN hopping was and how it worked — because building segmentation without understanding the attack it is meant to defend against felt like the wrong order to learn things in. That question ended up pulling in the rest of this list too, since VLAN hopping is only one of several attacks aimed at the network itself rather than at a person, and they turned out to be worth understanding together rather than one at a time.
+Part of the long-term homelab plan is running OPNsense on a Protectli box, properly segmenting my own network into separate VLANs rather than everything sitting on one flat network. Working through this section of Network+, VLAN hopping was the one that actually caught my attention, because building segmentation without understanding the attack it is meant to defend against felt like the wrong order to learn things in. It sits alongside a handful of other attacks aimed at the network itself rather than at a person, all covered here together rather than one at a time.
 
 ## VLAN Hopping
 
