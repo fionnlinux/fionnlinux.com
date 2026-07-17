@@ -11,13 +11,7 @@ showDate: true
 showAuthor: true
 ---
 
-Part of the long-term homelab plan is running OPNsense on a Protectli box, properly segmenting my own network into separate VLANs rather than everything sitting on one flat network. Before building anything, I wanted to actually understand what VLAN hopping was and how it worked — because building segmentation without understanding the attack it is meant to defend against felt like the wrong order to learn things in.
-
-## Denial-of-Service
-
-**DoS** (Denial-of-Service) is an attack aimed at making a system or service unavailable, rather than trying to steal or alter anything. It works by overwhelming a target with more requests or traffic than it can actually handle, until legitimate users simply cannot get through. **DDoS** (Distributed Denial-of-Service) is the same goal achieved from many sources at once, usually a large number of compromised devices all directed at the same target simultaneously, which makes it both far more powerful and far harder to block, since there is no single source to simply cut off.
-
-The impact is specifically to availability, one third of the CIA triad covered in an earlier post — nothing is stolen or changed, but the service stops being reachable for exactly as long as the attack continues.
+Part of the long-term homelab plan is running OPNsense on a Protectli box, properly segmenting my own network into separate VLANs rather than everything sitting on one flat network. Before building anything, I wanted to actually understand what VLAN hopping was and how it worked — because building segmentation without understanding the attack it is meant to defend against felt like the wrong order to learn things in. That question ended up pulling in the rest of this list too, since VLAN hopping is only one of several attacks aimed at the network itself rather than at a person, and they turned out to be worth understanding together rather than one at a time.
 
 ## VLAN Hopping
 
@@ -28,6 +22,12 @@ VLANs exist to logically separate traffic that shares the same physical switches
 **Double tagging** is a genuinely different technique. The attacker sits on what is called the native VLAN — the one a trunk port treats as untagged by default — and sends a frame carrying two VLAN tags stacked on top of each other. The first switch in the path strips off the outer tag, since it matches the native VLAN it already expects, and forwards the frame onward still carrying the second, inner tag. That inner tag is the actual target VLAN, and the frame ends up delivered somewhere it should never have been allowed to reach. It only works one direction — the attacker can send a frame in, but nothing can be sent back the same way — but that is still enough to inject traffic into a VLAN that was supposed to be isolated.
 
 The impact in both cases is the same: segmentation that was assumed to be a hard boundary turns out not to be one, and traffic crosses between VLANs that should never have been able to communicate at all. Knowing this exists is exactly why disabling automatic trunk negotiation on ports that do not need it is a real, practical step, not just theory — something to actually configure properly when the OPNsense segmentation project happens, rather than assume VLANs alone are enough.
+
+## Denial-of-Service
+
+**DoS** (Denial-of-Service) is an attack aimed at making a system or service unavailable, rather than trying to steal or alter anything. It works by overwhelming a target with more requests or traffic than it can actually handle, until legitimate users simply cannot get through. **DDoS** (Distributed Denial-of-Service) is the same goal achieved from many sources at once, usually a large number of compromised devices all directed at the same target simultaneously, which makes it both far more powerful and far harder to block, since there is no single source to simply cut off.
+
+The impact is specifically to availability, one third of the CIA triad covered in an earlier post — nothing is stolen or changed, but the service stops being reachable for exactly as long as the attack continues.
 
 ## MAC Flooding
 
