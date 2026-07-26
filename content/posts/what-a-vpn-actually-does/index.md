@@ -3,7 +3,7 @@ title: "What a VPN Actually Does — and the Three Jobs I Use One For"
 date: 2026-05-31T00:00:00+01:00
 draft: false
 description: "VPNs are sold as magic privacy boxes. The reality is more specific, more useful, and worth understanding properly."
-tags: ["security", "networking", "vpn", "privacy", "comptia", "open-source", "homelab"]
+tags: ["security", "networking", "comptia", "open-source"]
 series: []
 showTableOfContents: true
 showReadingTime: true
@@ -11,7 +11,9 @@ showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 My first encounter with VPNs had nothing to do with security. Like a lot of people, I came across them as a way to watch content from another country — making it look as though I was somewhere I was not. That was the whole of my understanding for a long time. A VPN was a thing that changed where the internet thought you were.
+{{< /lead >}}
 
 It was only when I started my CompTIA studies that I realised I did not actually understand what was happening underneath. I could describe what a VPN did from the outside, but not how, or why it mattered for security. And when I started trying to take charge of my privacy online and moved my email over to Proton, a VPN came bundled into the subscription I was already paying for. That gave me every reason to learn it properly — not just for the exam, but to get real use out of a tool I already had.
 
@@ -49,7 +51,7 @@ The protocol is the technical method used to build the encrypted tunnel — the 
 
 The service is the company providing the VPN servers you connect to. Proton VPN is a service. So are the many others advertised everywhere.
 
-The reason the distinction matters is that they are independent. Proton VPN uses WireGuard as one of its protocols, but WireGuard is not Proton — it is an open protocol that anyone can use, including in a setup you build entirely yourself with no company involved at all. I will come back to that, because it is exactly how my future home network plan works and is a long-term goal for both learning and self-hosting.
+The reason the distinction matters is that they are independent. Proton VPN uses WireGuard as one of its protocols, but WireGuard is not Proton — it is an open protocol that anyone can use, including in a setup you build entirely yourself with no company involved at all. I will come back to that, because it is exactly how my future home network plan works and is a long-term goal for both learning and self-hosting — the different VPN types this becomes in practice are covered in [a later post]({{< ref "posts/network-access-and-management" >}}). 
 
 When people say "I use a VPN," they almost always mean they subscribe to a service provided by a company. But the protocol is the actual technology underneath. Knowing they are separate things is what made the different roles a VPN can play click into place for me.
 
