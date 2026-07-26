@@ -46,11 +46,13 @@ These are the ones that stuck first, because I had hands-on reasons to remember 
 
 Once the protocols felt real, a pattern jumped out that stuck with me afterwards. Many protocols come in pairs — an older insecure version and a newer encrypted one. This is where ports stop being just exam facts and start being a security signal.
 
-- **Telnet (23) vs SSH (22)** — Telnet sends everything, including passwords, in plaintext. SSH does the same job encrypted. There is almost no reason to use Telnet today.
-- **HTTP (80) vs HTTPS (443)** — plaintext web versus encrypted web.
-- **FTP (20/21) vs SFTP (22)** — plaintext file transfer versus secure file transfer over SSH.
-- **SMTP (25) vs SMTPS (587)** — plaintext email submission versus encrypted.
-- **LDAP (389) vs LDAPS (636)** — plaintext directory queries versus encrypted.
+| Insecure | Port | Secure | Port |
+|---|---|---|---|
+| Telnet | 23 | SSH | 22 |
+| HTTP | 80 | HTTPS | 443 |
+| FTP | 20/21 | SFTP | 22 |
+| SMTP | 25 | SMTPS | 587 |
+| LDAP | 389 | LDAPS | 636 |
 
 The thing that genuinely shifted for me is that I now look at the insecure versions with suspicion. Why would you send credentials over Telnet in plaintext when SSH exists and does the same thing safely? These are not just exam topics — they show up in real logs, real alerts, real decisions. Plaintext protocols on a network are a red flag. Telnet traffic where you would expect SSH, or plain HTTP where sensitive data is involved, is exactly the kind of thing worth investigating. The port number tells you not just what the traffic is, but whether it should be there at all.
 
@@ -60,45 +62,75 @@ Two ports are worth knowing as common security concerns. **RDP (3389)**, the Rem
 
 Here is the complete set from the Network+ objectives, grouped by what they do so they are easier to hold in your head than a flat list. Each one is a service, doing a job, on a number.
 
-**File transfer**
-- FTP — 20/21 — the File Transfer Protocol, used to move files between machines. It sends everything, including login credentials, in plaintext, which is why it has largely been replaced by secure alternatives. Uses two ports: 21 for control commands and 20 for the actual data.
-- SFTP — 22 — Secure File Transfer Protocol, which does the same job as FTP but runs over SSH, so the transfer is encrypted. It uses port 22 because it is effectively file transfer carried inside an SSH connection.
-- TFTP — 69 — Trivial File Transfer Protocol, a stripped-down, lightweight version with no authentication. Commonly used on local networks for simple jobs like pushing configuration files to routers and switches or booting devices over the network.
+### File transfer
 
-**Remote access**
-- SSH — 22 — Secure Shell, an encrypted connection to a remote machine's command line. The standard way to administer a Linux server you are not sitting in front of.
-- Telnet — 23 — the older, unencrypted way of doing what SSH does. It sends everything in plaintext, including passwords, so it is considered obsolete and unsafe for real use.
-- RDP — 3389 — Remote Desktop Protocol, which gives you the full graphical desktop of a remote Windows machine, as though you were sitting at it.
+| Protocol | Port | Description |
+|---|---|---|
+| FTP | 20/21 | Moves files between machines. Sends everything, including login credentials, in plaintext, which is why it has largely been replaced by secure alternatives. Two ports: 21 for control commands, 20 for the actual data. |
+| SFTP | 22 | Same job as FTP but over SSH, so the transfer is encrypted. Uses port 22 because it is effectively file transfer carried inside an SSH connection. |
+| TFTP | 69 | A stripped-down, lightweight version with no authentication. Commonly used on local networks for simple jobs like pushing configuration files to routers and switches or booting devices over the network. |
 
-**Web**
-- HTTP — 80 — Hypertext Transfer Protocol, the protocol for serving web pages. Unencrypted, so anything sent over it can be read in transit.
-- HTTPS — 443 — the encrypted version of HTTP, secured with TLS. This is what the padlock in your browser represents, and what nearly all of the modern web uses.
+### Remote access
 
-**Email**
-- SMTP — 25 — Simple Mail Transfer Protocol, used by mail servers to send and relay email. Port 25 is the traditional, unencrypted port.
-- SMTPS — 587 — the modern port for submitting outgoing mail securely, with encryption applied so credentials and message contents are protected in transit.
+| Protocol | Port | Description |
+|---|---|---|
+| SSH | 22 | An encrypted connection to a remote machine's command line. The standard way to administer a Linux server you are not sitting in front of. |
+| Telnet | 23 | The older, unencrypted way of doing what SSH does. Sends everything in plaintext, including passwords, so it is considered obsolete and unsafe for real use. |
+| RDP | 3389 | Gives you the full graphical desktop of a remote Windows machine, as though you were sitting at it. |
 
-**Name and address services**
-- DNS — 53 — the Domain Name System, which translates human-readable names like example.com into the IP addresses machines actually use to find each other. Without it you would have to remember an IP address for every site you visit.
-- DHCP — 67/68 — Dynamic Host Configuration Protocol, which automatically hands out IP addresses to devices when they join a network, so you do not have to configure each one by hand. The server listens on port 67 and the client on port 68.
+### Web
 
-**Directory services**
-- LDAP — 389 — Lightweight Directory Access Protocol. A directory is a central database of an organisation's users, computers, and groups — most commonly Microsoft's Active Directory. LDAP is the protocol used to query and authenticate against that directory, for example when you log into a work computer and it checks your username and password against the central system. Unencrypted on port 389.
-- LDAPS — 636 — the same directory queries as LDAP, but encrypted, so usernames and passwords are not sent in plaintext across the network.
+| Protocol | Port | Description |
+|---|---|---|
+| HTTP | 80 | Serves web pages. Unencrypted, so anything sent over it can be read in transit. |
+| HTTPS | 443 | The encrypted version of HTTP, secured with TLS. This is what the padlock in your browser represents, and what nearly all of the modern web uses. |
 
-**Management, time, and logging**
-- NTP — 123 — Network Time Protocol, which keeps the clocks on all the devices in a network synchronised. This matters more than it sounds — accurate timestamps are essential for security logs to line up across systems during an investigation.
-- SNMP — 161/162 — Simple Network Management Protocol, used to monitor and manage network devices like routers and switches, gathering information such as whether a device is up and how it is performing.
-- Syslog — 514 — a standard for sending log messages from many devices to one central logging server. Central to security monitoring, because it puts all the logs in one place where they can be searched and correlated.
+### Email
 
-**File sharing**
-- SMB — 445 — Server Message Block, the protocol behind Windows file and printer sharing. It is how you access shared folders and network drives in a Windows environment.
+| Protocol | Port | Description |
+|---|---|---|
+| SMTP | 25 | Used by mail servers to send and relay email. Port 25 is the traditional, unencrypted port. |
+| SMTPS | 587 | The modern port for submitting outgoing mail securely, with encryption applied so credentials and message contents are protected in transit. |
 
-**Database**
-- SQL Server — 1433 — the port used by Microsoft SQL Server for database traffic. If an application needs to talk to a Microsoft database, this is usually the port it uses.
+### Name and address services
 
-**Voice**
-- SIP — 5060/5061 — Session Initiation Protocol, which sets up and tears down voice and video calls in internet telephony (VoIP). Port 5060 is unencrypted, 5061 is the encrypted version.
+| Protocol | Port | Description |
+|---|---|---|
+| DNS | 53 | Translates human-readable names like example.com into the IP addresses machines actually use to find each other. Without it you would have to remember an IP address for every site you visit. |
+| DHCP | 67/68 | Automatically hands out IP addresses to devices when they join a network, so you do not have to configure each one by hand. The server listens on port 67, the client on port 68. |
+
+### Directory services
+
+| Protocol | Port | Description |
+|---|---|---|
+| LDAP | 389 | Queries and authenticates against a directory — a central database of an organisation's users, computers, and groups, most commonly Microsoft's Active Directory — for example when logging into a work computer checks your username and password against the central system. Unencrypted. |
+| LDAPS | 636 | The same directory queries as LDAP, but encrypted, so usernames and passwords are not sent in plaintext across the network. |
+
+### Management, time, and logging
+
+| Protocol | Port | Description |
+|---|---|---|
+| NTP | 123 | Keeps the clocks on all the devices in a network synchronised. Matters more than it sounds — accurate timestamps are essential for security logs to line up across systems during an investigation. |
+| SNMP | 161/162 | Monitors and manages network devices like routers and switches, gathering information such as whether a device is up and how it is performing. |
+| Syslog | 514 | Sends log messages from many devices to one central logging server. Central to security monitoring, because it puts all the logs in one place where they can be searched and correlated. |
+
+### File sharing
+
+| Protocol | Port | Description |
+|---|---|---|
+| SMB | 445 | The protocol behind Windows file and printer sharing. It is how you access shared folders and network drives in a Windows environment. |
+
+### Database
+
+| Protocol | Port | Description |
+|---|---|---|
+| SQL Server | 1433 | Used by Microsoft SQL Server for database traffic. If an application needs to talk to a Microsoft database, this is usually the port it uses. |
+
+### Voice
+
+| Protocol | Port | Description |
+|---|---|---|
+| SIP | 5060/5061 | Sets up and tears down voice and video calls in internet telephony (VoIP). Port 5060 is unencrypted, 5061 is the encrypted version. |
 
 ## Why This Matters Beyond the Exam
 
