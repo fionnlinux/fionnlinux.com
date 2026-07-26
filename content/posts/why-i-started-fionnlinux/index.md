@@ -3,7 +3,7 @@ title: "Why I Started fionnlinux.com"
 date: 2026-05-19T18:04:57-04:00
 draft: false
 description: "The reasoning behind starting this site and what I hope to achieve with it."
-tags: ["linux", "comptia", "hugo", "blowfish", "open-source", "career", "homelab"]
+tags: ["linux", "comptia", "open-source", "career"]
 series: []
 showTableOfContents: true
 showReadingTime: true
@@ -11,9 +11,11 @@ showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Welcome to fionnlinux.com — glad you found your way here.
 Whether you stumbled across this by accident or you're on a
 similar journey yourself, I hope you find something useful here.
+{{< /lead >}}
 
 I've been planning this site for a few months now and have
 finally been able to make it happen. I'm aiming for one to
