@@ -3,7 +3,7 @@ title: "Security Isn't a Job Title — It's a Way of Thinking"
 date: 2026-05-26T00:00:00+01:00
 draft: false
 description: "Why security drew me in, and how I've already built it into how I live online — before I'm working in the field."
-tags: ["security", "open-source", "privacy", "career", "personal"]
+tags: ["security", "open-source", "career"]
 series: []
 showTableOfContents: true
 showReadingTime: true
@@ -11,9 +11,11 @@ showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 My interest in security did not start with a certification or a course. It started with two things happening at the same time — realising that companies were profiting from my data whether I liked it or not, and becoming a parent who needed to keep three kids safe online.
+{{< /lead >}}
 
-Those two things pushed me in the same direction. Understanding how technology actually works rather than just using it and hoping for the best.
+*Those two things pushed me in the same direction. Understanding how technology actually works rather than just using it and hoping for the best.*
 
 ## The Kids Problem
 
@@ -21,7 +23,7 @@ When you home educate your children the internet is part of the learning environ
 
 My first instinct was the obvious one. uBlock Origin on the browser, firewall rules on their laptops. Both helped. Neither was sufficient on its own. A determined child or a misdirected search can still end up somewhere you do not want, and browser level blocking does nothing if they are using a different browser or a different device entirely.
 
-So I started learning about DNS properly. I had already seen it in my CompTIA studies — a name, a port number, a definition to memorise. On paper it was just another term. It did not click as something real until I was setting up a WordPress site for a family member's business and had to configure DNS records for their domain. Suddenly it was not abstract anymore. I could see what it was actually doing — translating names into addresses, routing traffic, sitting quietly underneath every request made on the internet. And once I understood it as a real thing rather than an exam topic I started thinking about how I could use it at home.
+So I started learning about [DNS]({{< ref "posts/the-beauty-of-dns" >}}) properly. I had already seen it in my CompTIA studies — a name, a port number, a definition to memorise. On paper it was just another term. It did not click as something real until I was setting up a WordPress site for a family member's business and had to configure DNS records for their domain. Suddenly it was not abstract anymore. I could see what it was actually doing — translating names into addresses, routing traffic, sitting quietly underneath every request made on the internet. And once I understood it as a real thing rather than an exam topic I started thinking about how I could use it at home.
 
 Self hosting a DNS resolver on the router was the proper solution but I did not have the setup or the time to do it properly at that point, and I did not want my attempts at tinkering to affect my wife's devices or my own.
 
