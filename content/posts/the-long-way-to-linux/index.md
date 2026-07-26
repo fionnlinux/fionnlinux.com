@@ -3,7 +3,7 @@ title: "The Long Way to Linux"
 date: 2026-05-24T16:44:20-04:00
 draft: false
 description: "From a thousand hours of online gaming to a dead laptop from 2010 — how I found Linux the long way round."
-tags: ["linux", "comptia", "open-source", "career", "personal"]
+tags: ["linux", "comptia", "open-source", "career"]
 series: []
 showTableOfContents: true
 showReadingTime: true
@@ -11,7 +11,9 @@ showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Some people find Linux through university computer science courses, or through a job that demands it. I found it the long way round — through a thousand hours of an online game, a global pandemic, two kids, and a dead laptop from 2010.
+{{< /lead >}}
 
 ## A Tool I Never Understood
 
