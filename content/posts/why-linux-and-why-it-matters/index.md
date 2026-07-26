@@ -3,7 +3,7 @@ title: "Why Linux — and Why It Matters More Than You Think"
 date: 2026-05-25T00:00:00-04:00
 draft: false
 description: "Linux has a reputation for being complicated. The reality is more interesting than that."
-tags: ["linux", "security", "open-source", "redhat", "career", "personal"]
+tags: ["linux", "security", "open-source", "career"]
 series: []
 showTableOfContents: true
 showReadingTime: true
@@ -11,9 +11,11 @@ showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Linux has a reputation for being complicated. Something for developers and server administrators, not for ordinary people with ordinary computers. That reputation is not entirely undeserved — but it tells maybe ten percent of the story.
+{{< /lead >}}
 
-The other ninety percent is more interesting.
+*The other ninety percent is more interesting.*
 
 ## Small Tools, Done Right
 
