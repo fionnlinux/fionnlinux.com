@@ -2,16 +2,19 @@
 title: "Seven Layers, One Web Page, and a Movie Night That Would Not Start"
 date: 2026-06-03T00:00:00+01:00
 draft: false
-description: "The OSI model is a wall of abstract layers until you anchor each one to something real. Here is how it clicked for me, explained through loading a web page and a movie night that would not start."
-tags: ["networking", "security", "osi-model", "comptia", "soc", "troubleshooting"]
-series: []
+description: "The OSI model is just a list of names until you anchor each one to something real. Here is how it came together for me, explained through loading a web page and a movie night that would not start."
+tags: ["networking", "security", "comptia", "troubleshooting"]
+series: ["CompTIA Network+"]
+series_order: 1
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 When I first met the OSI model in my CompTIA studies, it was overwhelming. Seven layers, each with a name, stacked on top of each other like Lego blocks — except nobody had told me what each block did or why it sat where it did. I could see the structure but not the point. It felt like memorising the floors of a building without knowing what happened on any of them.
+{{< /lead >}}
 
 What every tutorial offered was a mnemonic. "Please Do Not Throw Sausage Pizza Away" and a dozen variations, each one a trick for remembering the order of the layers. None of them helped me, because they gave me the names without the meaning. I could recite the layers and still have no idea what any of them actually did. That is the gap this post is about. Not how to list the seven layers, but how to understand them — which, for me, only happened when I stopped memorising and started attaching each layer to something real.
 
@@ -19,7 +22,7 @@ What every tutorial offered was a mnemonic. "Please Do Not Throw Sausage Pizza A
 
 The Open Systems Interconnection model is a conceptual framework that breaks network communication into seven layers, each responsible for one part of the job of getting data from one device to another. It is not a piece of software or a physical thing. It is a way of thinking about networks — a shared map that lets people reason about where something happens, and where it might be going wrong.
 
-It is worth saying early, because it confused me at first: the OSI model is not literally how every network is built. The internet actually runs on the TCP/IP model, which I covered in an earlier post, and that has four layers rather than seven. The OSI model is the more detailed teaching and troubleshooting framework. The two map onto each other, and CompTIA expects you to know both. Think of OSI as the diagram you reason with, and TCP/IP as the thing that is actually running.
+It is worth saying early, because it confused me at first: the OSI model is not literally how every network is built. The internet actually runs on [the TCP/IP model]({{< ref "posts/tcp-ip-the-acronym-i-ignored" >}}), which I covered in an earlier post, and that has four layers rather than seven. The OSI model is the more detailed teaching and troubleshooting framework. The two map onto each other, and CompTIA expects you to know both. Think of OSI as the diagram you reason with, and TCP/IP as the thing that is actually running.
 
 The seven layers, from the bottom up:
 
@@ -37,9 +40,33 @@ That description still would not have helped me much when I started. What helped
 
 ## How Data Actually Travels Through the Layers
 
-Before walking through the layers one by one, there is a point that confused me at first and is worth getting straight, because once it clicks the whole model makes sense.
+Before walking through the layers one by one, there is a point that confused me at first and is worth getting straight, because once it lands the whole model makes sense.
 
 The seven layers are not places out in the network. They exist inside each device. Your computer has all seven layers. The server you are talking to has all seven layers. The request does not travel through one single stack — it travels *down* the stack on your device and *up* the stack on the server.
+
+{{< mermaid >}}
+graph LR
+    subgraph Client Device
+        direction TB
+        C7[7. Application] --> C6[6. Presentation]
+        C6 --> C5[5. Session]
+        C5 --> C4[4. Transport]
+        C4 --> C3[3. Network]
+        C3 --> C2[2. Data Link]
+        C2 --> C1[1. Physical]
+    end
+    C1 --> NET[Physical Network]
+    NET --> S1
+    subgraph Server Device
+        direction TB
+        S1[1. Physical] --> S2[2. Data Link]
+        S2 --> S3[3. Network]
+        S3 --> S4[4. Transport]
+        S4 --> S5[5. Session]
+        S5 --> S6[6. Presentation]
+        S6 --> S7[7. Application]
+    end
+{{< /mermaid >}}
 
 When you request a web page, the request starts at Layer 7 on your machine and moves down to Layer 1. At each layer on the way down, that layer wraps the data with its own information — the transport layer adds port details, the network layer adds IP addresses, the data link layer adds MAC addresses, and so on. This wrapping is called encapsulation. By the time it reaches Layer 1, it is a stream of bits ready to leave your device, pushed onto the cable or through the air by your network card.
 
@@ -53,19 +80,33 @@ The way I hold it in my head is packing a parcel. Going down your stack, the dat
 
 Here is the model the way I now picture it — by following that web request layer by layer, from the top of my stack down to the physical medium.
 
-**Layer 7 — Application.** This is the layer closest to you, the one you actually interact with. When your browser makes an HTTP or HTTPS request for a web page, that happens here. It is not the application itself, but the protocols the application uses to communicate — HTTP, HTTPS, DNS, and the others from the ports I wrote about previously. This is where the request begins.
+### Layer 7 — Application
 
-**Layer 6 — Presentation.** This layer deals with how data is formatted, encrypted, and presented so both ends understand it. When your HTTPS connection encrypts the traffic, that translation between readable data and encrypted data sits here. It is the layer that makes sure data is in a form the application layer can use.
+This is the layer closest to you, the one you actually interact with. When your browser makes an HTTP or HTTPS request for a web page, that happens here. It is not the application itself, but the protocols the application uses to communicate — HTTP, HTTPS, DNS, and the others from [the ports I wrote about previously]({{< ref "posts/network-ports-worth-memorising" >}}). This is where the request begins.
 
-**Layer 5 — Session.** This layer manages the conversation between the two devices — opening it, keeping it going, and closing it cleanly. It is the one I found vaguest at first, and honestly it is the one most people struggle to point at. The simplest way to hold it is that it is responsible for establishing and maintaining the session that the higher layers talk over.
+### Layer 6 — Presentation
 
-**Layer 4 — Transport.** This is where TCP and UDP live, the subject of an earlier post. TCP establishes a reliable, ordered connection with its three-way handshake. UDP fires data off without guarantees. The transport layer decides how the data gets carried — reliably or quickly — and breaks it into manageable segments.
+This layer deals with how data is formatted, encrypted, and presented so both ends understand it. When your HTTPS connection encrypts the traffic, that translation between readable data and encrypted data sits here. It is the layer that makes sure data is in a form the application layer can use.
 
-**Layer 3 — Network.** This is the layer of IP addresses and routing. It is responsible for getting data across different networks, choosing a path from your device to the destination, however many networks sit in between. The device that works at this layer is the router. If Layer 2 moves data within a local network, Layer 3 moves it between networks.
+### Layer 5 — Session
 
-**Layer 2 — Data link.** This layer handles communication between devices on the same local network, using MAC addresses rather than IP addresses. The device that works here is the switch, directing traffic between machines on the local network. It takes the data from the network layer and frames it for the physical hop to the next device.
+This layer manages the conversation between the two devices — opening it, keeping it going, and closing it cleanly. It is the one I found vaguest at first, and honestly it is the one most people struggle to point at. The simplest way to hold it is that it is responsible for establishing and maintaining the session that the higher layers talk over.
 
-**Layer 1 — Physical.** The bottom layer. The actual cables, the electrical or optical signals, the WiFi radio waves — the raw transmission of bits across a physical medium. This is your network card pushing the data out as signals: a wired card sending electrical signals down an Ethernet cable, or a wireless card sending radio waves to the access point. Nothing clever, just the physical movement of ones and zeros.
+### Layer 4 — Transport
+
+This is where TCP and UDP live, the subject of an earlier post. TCP establishes a reliable, ordered connection with its three-way handshake. UDP fires data off without guarantees. The transport layer decides how the data gets carried — reliably or quickly — and breaks it into manageable segments.
+
+### Layer 3 — Network
+
+This is the layer of IP addresses and routing. It is responsible for getting data across different networks, choosing a path from your device to the destination, however many networks sit in between. The device that works at this layer is the router. If Layer 2 moves data within a local network, Layer 3 moves it between networks.
+
+### Layer 2 — Data Link
+
+This layer handles communication between devices on the same local network, using MAC addresses rather than IP addresses. The device that works here is the switch, directing traffic between machines on the local network. It takes the data from the network layer and frames it for the physical hop to the next device.
+
+### Layer 1 — Physical
+
+The bottom layer. The actual cables, the electrical or optical signals, the WiFi radio waves — the raw transmission of bits across a physical medium. This is your network card pushing the data out as signals: a wired card sending electrical signals down an Ethernet cable, or a wireless card sending radio waves to the access point. Nothing clever, just the physical movement of ones and zeros.
 
 ## Where It Stopped Being Theory — A Movie Night That Would Not Start
 
@@ -75,7 +116,7 @@ It was our weekly movie night. For a change, the kids wanted to watch in their r
 
 But I knew it was not, and here is where the layered thinking kicked in without me forcing it. My phone was working fine on the same network, so the connection to the internet was up. That ruled out the bottom of the stack straight away — the physical connection, the local network, the routing out to the internet were all fine, because another device was happily online. Then I tried loading the same Amazon Prime page on my phone, and it worked. So it was not Amazon being down, and it was not a general connectivity problem. The fault was specific to the kids' device.
 
-That is when it clicked. The kids' devices all use a NextDNS profile I set up, with content filtering that includes a block list — and Amazon Prime was on it. Their machine was asking for the address of the Amazon Prime domain, and NextDNS was refusing to resolve it, so the page could not load. Every lower layer was working perfectly. The problem was right at the top of the stack, at the application layer, where DNS does its name resolution — and it was not even a fault, it was a filter I had configured myself and forgotten about.
+That is when the cause became obvious. The kids' devices all use a NextDNS profile I set up, with content filtering that includes a block list — and Amazon Prime was on it. Their machine was asking for the address of the Amazon Prime domain, and NextDNS was refusing to resolve it, so the page could not load. Every lower layer was working perfectly. The problem was right at the top of the stack, at the application layer, where DNS does its name resolution — and it was not even a fault, it was a filter I had configured myself and forgotten about.
 
 What I had done, without naming it, was divide and conquer. Instead of guessing randomly, I worked through the layers by elimination. Is the physical connection up? Yes, my phone is online. Is it the network or the service? No, the page loads on my phone. Is it specific to this device? Yes. What is different about this device? Its DNS. Each test ruled out a layer until only one explanation was left.
 
@@ -83,7 +124,7 @@ That is the real value of the OSI model. It is not just something to memorise fo
 
 ## Using the Model to Troubleshoot
 
-The technique I stumbled into has a name in networking — and CompTIA expects you to know it. Divide and conquer means starting in the middle of the stack and working up or down based on what you find, rather than testing every layer in order. Other approaches work from the bottom up (start at the physical layer and climb) or the top down (start at the application and descend).
+The technique I stumbled into has a name in networking — and CompTIA expects you to know it. Divide and conquer means starting in the middle of the stack and working up or down based on what you find, rather than testing every layer in order. Other approaches work from the bottom up (start at the physical layer and climb) or the top down (start at the application and descend). The full seven-step methodology this fits into is covered properly in [a later post]({{< ref "posts/troubleshooting-methodology" >}}).
 
 The power of it is that each layer suggests its own checks. In practice the top three layers are often dealt with together, since session and presentation problems usually surface as application-layer symptoms — so the checks below focus on the layers you can most cleanly isolate:
 
@@ -108,4 +149,4 @@ Understanding where a given control operates, and where a given attack is aimed,
 
 ## Where It Landed
 
-The OSI model went from the most abstract, frustrating thing in my early studies to something I actually reach for when something breaks. That shift came entirely from anchoring each layer to something real — a router, a switch, a cable, a web request, a movie night that would not start. The model is only useful if you understand it, and you only understand it once you have seen it do something.
+The OSI model went from the most confusing, frustrating thing in my early studies to something I actually reach for when something breaks. That shift came entirely from anchoring each layer to something real — a router, a switch, a cable, a web request, a movie night that would not start. The model is only useful if you understand it, and you only understand it once you have seen it do something.
