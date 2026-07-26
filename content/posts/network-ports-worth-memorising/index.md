@@ -3,17 +3,20 @@ title: "The Network Ports Worth Memorising — and Why I Could Never Remember Th
 date: 2026-06-02T00:00:00+01:00
 draft: false
 description: "Ports and protocols are exam staples and a memorisation nightmare. Here is how each one finally stuck for me — by knowing the job it does — and why a security mindset cares which is which."
-tags: ["networking", "security", "ports", "protocols", "comptia", "soc", "homelab"]
-series: []
+tags: ["networking", "security", "comptia"]
+series: ["CompTIA Network+"]
+series_order: 5
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 The list of ports and protocols you have to know for Network+ is one of the most memorisation-heavy parts of the exam. Dozens of protocols, each with a number, and you are expected to recall them on demand. When I first tried to learn them as a flat list — FTP 21, SSH 22, DNS 53, on and on — none of it stuck. They were just numbers next to acronyms, and within a day they were gone.
+{{< /lead >}}
 
-What changed it was the same thing that changed TCP/IP for me. I stopped trying to memorise the numbers and started learning what each protocol actually does. Once a port was attached to a real job — something I had used, configured, or broken — it stopped being a number and became a thing with a purpose. This post is how I made them stick, grouped the way that worked for me, with the security angle that turned out to matter just as much as the numbers.
+What changed it was the same thing that changed [TCP/IP]({{< ref "posts/tcp-ip-the-acronym-i-ignored" >}}) for me. I stopped trying to memorise the numbers and started learning what each protocol actually does. Once a port was attached to a real job — something I had used, configured, or broken — it stopped being a number and became a thing with a purpose. This post is how I made them stick, grouped the way that worked for me, with the security angle that turned out to matter just as much as the numbers.
 
 ## Why Ports Exist at All
 
@@ -21,7 +24,7 @@ Before the list, the concept. In my last post I described IP as a road network g
 
 A single server can run many services at once — a website, an email service, a database. They all share one IP address. The port number is how the machine knows which service an incoming request is for. Port 80 means "the web server." Port 22 means "the SSH service." The IP gets you to the machine; the port gets you to the specific service running on it.
 
-That was the first thing that made ports feel real rather than arbitrary. They are not random numbers. They are addresses for services.
+That was the first thing that made ports feel real rather than random. They are not arbitrary numbers. They are addresses for services.
 
 ## The Ports I Learned by Using Them
 
@@ -29,7 +32,7 @@ These are the ones that stuck first, because I had hands-on reasons to remember 
 
 **HTTP (80) and HTTPS (443)** became real when I started building websites. HTTP on port 80 is unencrypted web traffic. HTTPS on port 443 is the encrypted version. Building my own site and configuring a relative's meant these stopped being exam entries and became the difference between a site browsers trust and one they flag as "Not Secure." I now find it hard to forget 80 and 443 because I have watched what each one does in practice.
 
-**DNS (53)** clicked through configuring domains. As I wrote about in an earlier post, DNS only became real to me when I had to set up records for a website and saw it translating names into addresses. Port 53 is where that happens. Once you have waited for a DNS change to propagate, the number sticks.
+**DNS (53)** became real through configuring domains. As I wrote about in [an earlier post]({{< ref "posts/security-isnt-a-job-title" >}}), DNS only became real to me when I had to set up records for a website and saw it translating names into addresses. Port 53 is where that happens. Once you have waited for a DNS change to propagate, the number sticks.
 
 **SSH (22)** became concrete through Linux administration. Every time I watched or followed a tutorial on managing a Linux machine remotely, SSH on port 22 was the way in — an encrypted connection to a remote shell. It is the backbone of remote Linux work, and you remember it once you have actually used it to reach a machine.
 
@@ -41,7 +44,7 @@ These are the ones that stuck first, because I had hands-on reasons to remember 
 
 ## The Security Story — Secure vs Insecure Pairs
 
-Once the protocols felt real, a pattern jumped out that I now cannot unsee. Many protocols come in pairs — an older insecure version and a newer encrypted one. This is where ports stop being trivia and start being a security signal.
+Once the protocols felt real, a pattern jumped out that stuck with me afterwards. Many protocols come in pairs — an older insecure version and a newer encrypted one. This is where ports stop being just exam facts and start being a security signal.
 
 - **Telnet (23) vs SSH (22)** — Telnet sends everything, including passwords, in plaintext. SSH does the same job encrypted. There is almost no reason to use Telnet today.
 - **HTTP (80) vs HTTPS (443)** — plaintext web versus encrypted web.
