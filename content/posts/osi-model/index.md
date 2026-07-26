@@ -45,9 +45,8 @@ Before walking through the layers one by one, there is a point that confused me 
 The seven layers are not places out in the network. They exist inside each device. Your computer has all seven layers. The server you are talking to has all seven layers. The request does not travel through one single stack — it travels *down* the stack on your device and *up* the stack on the server.
 
 {{< mermaid >}}
-graph LR
+graph TB
     subgraph Client Device
-        direction TB
         C7[7. Application] --> C6[6. Presentation]
         C6 --> C5[5. Session]
         C5 --> C4[4. Transport]
@@ -58,7 +57,6 @@ graph LR
     C1 --> NET[Physical Network]
     NET --> S1
     subgraph Server Device
-        direction TB
         S1[1. Physical] --> S2[2. Data Link]
         S2 --> S3[3. Network]
         S3 --> S4[4. Transport]
