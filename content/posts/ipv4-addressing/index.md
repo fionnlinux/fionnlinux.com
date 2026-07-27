@@ -2,16 +2,19 @@
 title: "IPv4 Addressing — Making the Numbers Make Sense"
 date: 2026-06-08T00:00:00+01:00
 draft: false
-description: "Private addresses, loopback, address classes, and subnetting — explained through my home network, a Podman container, and the mental-maths method that finally made subnetting click."
-tags: ["networking", "comptia", "security", "ipv4", "subnetting", "homelab"]
-series: []
+description: "Private addresses, loopback, address classes, and subnetting — explained through my home network, a Podman container, and the mental-maths method that finally made subnetting make sense."
+tags: ["networking", "security", "comptia"]
+series: ["CompTIA Network+"]
+series_order: 9
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 My understanding of IP addresses used to begin and end with a "what is my IP" website, or the occasional ping when something would not connect. They were just numbers that appeared when I needed them. I never thought about where they came from or what they actually meant.
+{{< /lead >}}
 
 That changed a few months ago, and oddly it started with my kids. I was studying for Network+ at the same time as setting up Mineclonia — an open-source, Minecraft-style game — for them to play and host at home. To get them connecting to the server, I had to start actually looking at the addresses on our home network, and I noticed something. Every device in the house had an address that looked almost identical: the same first three numbers, with only the last number different. To reach a particular machine — the game server, another computer, a device sharing files — I kept the first three numbers the same and changed the last one.
 
@@ -23,7 +26,7 @@ This post is my attempt to explain IPv4 addressing in a way that would have help
 
 An IPv4 address is four numbers separated by dots, like this:
 
-```
+```text
 192.168.1.10
 ```
 
@@ -39,7 +42,7 @@ Computers do not see `255`. They see eight switches, each either **on** or **off
 
 Here is the part that makes it usable. Each switch has a value, and the values double as you move from right to left:
 
-```
+```text
 128   64   32   16   8   4   2   1
 ```
 
@@ -51,7 +54,7 @@ When a switch is **on**, you count its value. When it is **off**, you ignore it.
 
 That doubling sequence — 1, 2, 4, 8, 16, 32, 64, 128 — is worth burning into memory, because it is the backbone of everything that follows. Notice what happens when you switch the values on one at a time, starting from the left and keeping a running total:
 
-```
+```text
 128                       = 128
 128 + 64                  = 192
 128 + 64 + 32             = 224
@@ -72,7 +75,7 @@ The subnet mask is a second set of four numbers that sits alongside the IP addre
 
 The most common subnet mask, and the one on my home network, is:
 
-```
+```text
 255.255.255.0
 ```
 
@@ -86,7 +89,7 @@ With the last octet free for devices, that octet can be anything from 0 to 255 �
 
 Writing out `255.255.255.0` every time is tedious, so there is a shorthand called **CIDR notation** (Classless Inter-Domain Routing). You will see it everywhere, and it looks like this:
 
-```
+```text
 192.168.1.0/24
 ```
 
@@ -100,13 +103,13 @@ Here is something you can check right now. The address of your device on your ho
 
 The answer is that some address ranges are deliberately set aside as **private**. They are reserved for use inside local networks and are never used directly on the public internet. Because they never appear on the public internet, the same private range can be reused in every home, office, and network in the world without conflict. These ranges are defined in a standard called **RFC1918**, and there are three of them:
 
-```
-10.0.0.0    to 10.255.255.255    (a huge range, used by large organisations)
-172.16.0.0  to 172.31.255.255    (a mid-sized range)
-192.168.0.0 to 192.168.255.255   (the small range home routers use)
-```
+| Range | Description |
+|---|---|
+| 10.0.0.0 to 10.255.255.255 | A huge range, used by large organisations |
+| 172.16.0.0 to 172.31.255.255 | A mid-sized range |
+| 192.168.0.0 to 192.168.255.255 | The small range home routers use |
 
-Your home router hands out addresses from that last range to everything in the house. When your traffic needs to reach the actual internet, the router translates your private address into the single **public** address your internet provider gave you — a process called NAT (Network Address Translation), which is a topic of its own. The short version: private addresses work inside your network, public addresses work on the open internet, and your router sits on the boundary translating between the two.
+Your home router hands out addresses from that last range to everything in the house. When your traffic needs to reach the actual internet, the router translates your private address into the single **public** address your internet provider gave you — a process called [NAT (Network Address Translation)]({{< ref "posts/routing-how-networks-decide" >}}), which is a topic of its own. The short version: private addresses work inside your network, public addresses work on the open internet, and your router sits on the boundary translating between the two.
 
 This is also why the private-versus-public distinction matters for security. A private address cannot be reached directly from the internet — it sits behind the router, out of view, and on its own it is meaningless to anyone outside your network. That protection comes for free, simply from how private addressing works.
 
@@ -116,9 +119,13 @@ It is worth being clear about what that protection does and does not cover, thou
 
 A couple of specific addresses come up constantly, both in the exam and in real work.
 
-**Loopback — 127.0.0.1.** This address always means "this very device, talking to itself." It never leaves the machine. I ran into this properly while learning containers with Podman. When I looked up the secure way to run a service, the advice was repeatedly to **bind it to 127.0.0.1** — also called **localhost**. Doing that means the service can only be reached from the machine it is running on. Nothing else on the network, and nobody on any other machine, can touch it. That was my way into understanding loopback: not as something to memorise for an exam, but as a deliberate security choice. Binding to loopback is one of the simplest ways to keep something private to a single host.
+### Loopback — 127.0.0.1
 
-**APIPA — 169.254.x.x.** Normally a device gets its address automatically from the router (via DHCP, another topic of its own). But if a device asks for an address and gets no answer — the router is down, the DHCP service has failed, a cable is unplugged — the device gives up waiting and assigns itself an address in the `169.254` range. This is **APIPA** (Automatic Private IP Addressing). The practical thing to remember is what it signals: if you ever see a device sitting on a `169.254` address, it almost always means it failed to reach the DHCP server. It is less a useful address and more a symptom — a flashing warning light that automatic addressing has broken somewhere.
+This address always means "this very device, talking to itself." It never leaves the machine. I ran into this properly while learning containers with Podman. When I looked up the secure way to run a service, the advice was repeatedly to **bind it to 127.0.0.1** — also called **localhost**. Doing that means the service can only be reached from the machine it is running on. Nothing else on the network, and nobody on any other machine, can touch it. That was my way into understanding loopback: not as something to memorise for an exam, but as a deliberate security choice. Binding to loopback is one of the simplest ways to keep something private to a single host.
+
+### APIPA — 169.254.x.x
+
+Normally a device gets its address automatically from the router (via [DHCP]({{< ref "posts/dhcp-and-time" >}}), another topic of its own). But if a device asks for an address and gets no answer — the router is down, the DHCP service has failed, a cable is unplugged — the device gives up waiting and assigns itself an address in the `169.254` range. This is **APIPA** (Automatic Private IP Addressing). The practical thing to remember is what it signals: if you ever see a device sitting on a `169.254` address, it almost always means it failed to reach the DHCP server. It is less a useful address and more a symptom — a flashing warning light that automatic addressing has broken somewhere.
 
 ## IPv4 Address Classes
 
@@ -126,13 +133,13 @@ Before CIDR existed, addresses were divided into fixed **classes**, decided by t
 
 There are five classes, A through E, and you can identify them purely by the first number of the address:
 
-```
-Class A   1   – 126     Default mask 255.0.0.0   (/8)    Very large networks
-Class B   128 – 191     Default mask 255.255.0.0 (/16)   Medium networks
-Class C   192 – 223     Default mask 255.255.255.0 (/24) Small networks
-Class D   224 – 239     No mask — used for multicast
-Class E   240 – 255     No mask — reserved/experimental
-```
+| Class | Range | Default Mask | Use |
+|---|---|---|---|
+| A | 1 – 126 | 255.0.0.0 (/8) | Very large networks |
+| B | 128 – 191 | 255.255.0.0 (/16) | Medium networks |
+| C | 192 – 223 | 255.255.255.0 (/24) | Small networks |
+| D | 224 – 239 | No mask | Used for multicast |
+| E | 240 – 255 | No mask | Reserved/experimental |
 
 A few things to take from that table. Class A networks are enormous, which is why only the largest organisations ever held one. Class C is the small-network size — and notice that its default mask is `255.255.255.0`, the same `/24` my home network uses, and the `192.168` private range falls inside Class C territory. **Class D** is set aside for **multicast**, which is one-to-many traffic (a single stream sent to many devices at once). **Class E** is **reserved and experimental** — you will not use it, but you may be asked to recognise it.
 
@@ -144,30 +151,36 @@ You might also notice `127` is missing from the list. That whole range is reserv
 
 This is the part most people find hardest, and it is the part I have found hardest too — it is still the section I slow down and think through rather than answer on instinct. But the method I use is mental maths, not long-winded binary on paper, and I think it is the most approachable way in.
 
-**Why subnet at all?** A single network with 254 addresses might be far more than one part of an organisation needs, and putting everything on one flat network is both wasteful and, as I wrote about in my post on network topology, a security problem — a flat network lets a threat move freely. Subnetting is how you carve one network into smaller, separate pieces, by **borrowing switches** from the device part of the address and giving them to the network part — turning the slash number up from `/24` to `/25`, `/26`, and so on.
+### Why Subnet at All?
+
+A single network with 254 addresses might be far more than one part of an organisation needs, and putting everything on one flat network is both wasteful and, as I wrote about in [my post on network topology]({{< ref "posts/the-shape-of-a-network" >}}), a security problem — a flat network lets a threat move freely. Subnetting is how you carve one network into smaller, separate pieces, by **borrowing switches** from the device part of the address and giving them to the network part — turning the slash number up from `/24` to `/25`, `/26`, and so on.
 
 One honest clarification, though, because it caught me out: subnetting on its own only *draws* the boundaries. It does not enforce them. What actually stops traffic crossing from one piece to another is the rules you place between them — firewall policies, access control lists, or VLANs. Subnetting is the structure that real segmentation is built on; those controls are what make the separation stick. Drawing different subnets on a flat home network, with nothing enforcing the split, is lines on a map rather than walls — which is exactly the distinction I will be getting hands-on with when I build the OPNsense setup.
 
-**The method.** When a subnet mask has an octet that is not a clean 0 or 255 — say `255.255.255.192` — that octet is the one doing the work. The trick is one subtraction:
+### The Method
 
-```
+When a subnet mask has an octet that is not a clean 0 or 255 — say `255.255.255.192` — that octet is the one doing the work. The trick is one subtraction:
+
+```text
 256 − 192 = 64
 ```
 
 That **64** is your **block size** — the number of addresses in each subnet, and the gap between where one subnet starts and the next begins. With a block size of 64, the subnets fall at:
 
-```
-192.168.1.0     (covers .0   to .63)
-192.168.1.64    (covers .64  to .127)
-192.168.1.128   (covers .128 to .191)
-192.168.1.192   (covers .192 to .255)
-```
+| Subnet | Covers |
+|---|---|
+| 192.168.1.0 | .0 to .63 |
+| 192.168.1.64 | .64 to .127 |
+| 192.168.1.128 | .128 to .191 |
+| 192.168.1.192 | .192 to .255 |
 
 Four subnets, each holding 64 addresses. And just like before, each subnet loses two addresses to its own network and broadcast address, so each one has **62 usable** addresses (64 − 2).
 
 That is the whole method in one line: **256 minus the interesting octet gives you the block size, and you count up in blocks of that size.** Remember the doubling sequence from the binary section — `128, 192, 224, 240, 248, 252, 254` — those are the only values that interesting octet can be, and each one gives a different block size when you subtract it from 256. A larger mask value means a smaller block, which means more subnets with fewer hosts in each. It is all the same trade-off, dialled up or down.
 
-**VLSM.** One last concept in the objective: **Variable Length Subnet Masking**. In the old classful world, every subnet had to be the same size. That wasted enormous numbers of addresses — a link between two routers needs only two addresses, but you would have been forced to give it the same large block as a department of fifty people. VLSM means using **different mask sizes for different subnets**, sizing each one to what it actually needs. Big subnet for the big department, a tiny `/30` (just two usable addresses) for the router link. It is simply the sensible idea that not every piece of a network is the same size, so the masks should not be either.
+### VLSM
+
+One last concept in the objective: **Variable Length Subnet Masking**. In the old classful world, every subnet had to be the same size. That wasted enormous numbers of addresses — a link between two routers needs only two addresses, but you would have been forced to give it the same large block as a department of fifty people. VLSM means using **different mask sizes for different subnets**, sizing each one to what it actually needs. Big subnet for the big department, a tiny `/30` (just two usable addresses) for the router link. It is simply the sensible idea that not every piece of a network is the same size, so the masks should not be either.
 
 ## How I Am Actually Learning This
 
