@@ -118,6 +118,9 @@ This is the part of the objective that lands closest to my trade background. **P
 
 Cable run through those spaces has to be **plenum-rated**, meaning it has a special fire-resistant jacket that does not give off thick toxic smoke if it burns. The reason makes sense once you think about it: if a fire starts, those air spaces would otherwise pump poisonous fumes straight through the whole building's ventilation. **Non-plenum** cable (cheaper, standard jacket) is fine for ordinary walls and open runs but is not permitted in plenum spaces by fire code.
 
+> [!WARNING]
+> Running non-plenum cable through an air-handling space is a genuine fire code violation, not just a technicality. The wrong jacket burning in a ceiling void can pump toxic smoke through a building's entire ventilation system. Always check plenum rating before running cable above a drop ceiling or under a raised floor.
+
 I worked with rules like this as an electrician, even if I did not know the networking term for it at the time. So this is one of the few parts of the objective I did not have to memorise from scratch — I already understood why the rule exists.
 
 ## Transceivers — The Swappable Port Modules
