@@ -125,7 +125,12 @@ This address always means "this very device, talking to itself." It never leaves
 
 ### APIPA — 169.254.x.x
 
-Normally a device gets its address automatically from the router (via [DHCP]({{< ref "posts/dhcp-and-time" >}}), another topic of its own). But if a device asks for an address and gets no answer — the router is down, the DHCP service has failed, a cable is unplugged — the device gives up waiting and assigns itself an address in the `169.254` range. This is **APIPA** (Automatic Private IP Addressing). The practical thing to remember is what it signals: if you ever see a device sitting on a `169.254` address, it almost always means it failed to reach the DHCP server. It is less a useful address and more a symptom — a flashing warning light that automatic addressing has broken somewhere.
+Normally a device gets its address automatically from the router (via [DHCP]({{< ref "posts/dhcp-and-time" >}}), another topic of its own). But if a device asks for an address and gets no answer — the router is down, the DHCP service has failed, a cable is unplugged — the device gives up waiting and assigns itself an address in the `169.254` range. This is **APIPA** (Automatic Private IP Addressing).
+
+> [!TIP]
+> If you ever see a device sitting on a `169.254` address, it almost always means it failed to reach the DHCP server. Treat it as a flashing warning light, not a normal address — go check DHCP first.
+
+The practical thing to remember is what it signals: it is less a useful address and more a symptom that automatic addressing has broken somewhere.
 
 ## IPv4 Address Classes
 
@@ -155,7 +160,12 @@ This is the part most people find hardest, and it is the part I have found harde
 
 A single network with 254 addresses might be far more than one part of an organisation needs, and putting everything on one flat network is both wasteful and, as I wrote about in [my post on network topology]({{< ref "posts/the-shape-of-a-network" >}}), a security problem — a flat network lets a threat move freely. Subnetting is how you carve one network into smaller, separate pieces, by **borrowing switches** from the device part of the address and giving them to the network part — turning the slash number up from `/24` to `/25`, `/26`, and so on.
 
-One honest clarification, though, because it caught me out: subnetting on its own only *draws* the boundaries. It does not enforce them. What actually stops traffic crossing from one piece to another is the rules you place between them — firewall policies, access control lists, or VLANs. Subnetting is the structure that real segmentation is built on; those controls are what make the separation stick. Drawing different subnets on a flat home network, with nothing enforcing the split, is lines on a map rather than walls — which is exactly the distinction I will be getting hands-on with when I build the OPNsense setup.
+One honest clarification, though, because it caught me out: subnetting on its own only *draws* the boundaries. It does not enforce them. What actually stops traffic crossing from one piece to another is the rules you place between them — firewall policies, access control lists, or VLANs.
+
+> [!IMPORTANT]
+> Subnetting only draws lines on a map. It does not build walls. A subnet with nothing enforcing it — no firewall rule, no ACL, no VLAN separation — is just an organisational label. Real segmentation needs subnetting plus something actively controlling what is allowed to cross between the pieces.
+
+Subnetting is the structure that real segmentation is built on; those controls are what make the separation stick. Drawing different subnets on a flat home network, with nothing enforcing the split, is lines on a map rather than walls — which is exactly the distinction I will be getting hands-on with when I build the OPNsense setup.
 
 ### The Method
 
@@ -186,7 +196,11 @@ One last concept in the objective: **Variable Length Subnet Masking**. In the ol
 
 Honestly, this has been the hardest part of the exam objectives for me so far. It has taken more time than I would like, and I am not going to pretend the maths falls out of my head instantly yet — it does not.
 
-What helps is practice, plain and simple. Working through questions and drilling on a subnetting practice site — the kind that throws an address and a mask at you and asks for the network, the broadcast, the usable range, and the host count — is slowly turning it into muscle memory. I have linked the one I use on my [resources page](/resources/). There is no clever shortcut: you understand the method once, then repeat it until your brain stops having to work for the answer.
+What helps is practice, plain and simple. Working through questions and drilling on a subnetting practice site — the kind that throws an address and a mask at you and asks for the network, the broadcast, the usable range, and the host count — is slowly turning it into muscle memory. There is no clever shortcut: you understand the method once, then repeat it until your brain stops having to work for the answer.
+
+{{< button pageRef="resources" >}}
+Find a subnetting practice tool on my resources page
+{{< /button >}}
 
 So if you are studying the same thing and finding this objective a slog, you are in good company. Read this once to understand *why* the maths works, then go and drill it until the why fades into the background and the answers simply come.
 
