@@ -3,17 +3,20 @@ title: "IP Types and Traffic Types — Filling In the Gaps"
 date: 2026-06-11T00:00:00+01:00
 draft: false
 description: "ICMP, GRE, IPSec and the four traffic types — the smaller networking topics I had skipped over, learned well enough to recognise and explain."
-tags: ["networking", "comptia", "protocols"]
-series: []
+tags: ["networking", "security", "comptia"]
+series: ["CompTIA Network+"]
+series_order: 6
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Not every networking topic gets its own headline. Some sit quietly in the objectives, easy to skim past when TCP/IP and subnetting are taking up most of the room. The IP protocol types and traffic types are exactly that — not complicated, but worth actually understanding rather than half-recognising.
+{{< /lead >}}
 
-TCP and UDP are covered in my [TCP/IP post](https://fionnlinux.com/posts/tcp-ip-the-acronym-i-ignored/), so I am not repeating them here.
+TCP and UDP are covered in my [TCP/IP post]({{< ref "posts/tcp-ip-the-acronym-i-ignored" >}}), so I am not repeating them here.
 
 ## IP Protocol Types
 
@@ -23,7 +26,7 @@ TCP and UDP carry most everyday traffic, but they are not the only protocols tha
 
 ICMP is the protocol the network uses to send status and error messages about itself. It does not carry your actual data — it reports on the network's condition.
 
-The everyday example is **ping**. When you ping a device, your machine sends an ICMP request and waits for a reply. If it comes back, the device is reachable, and you can see how long the round trip took. **Traceroute** uses ICMP too, to show each hop between you and a destination. Those "request timed out" messages are ICMP.
+The everyday example is **ping**. When you ping a device, your machine sends an ICMP request and waits for a reply. If it comes back, the device is reachable, and you can see how long the round trip took. **Traceroute** uses ICMP too, to show each hop between you and a destination — both [covered in more depth later]({{< ref "posts/tools-and-protocols" >}}) as troubleshooting tools in their own right. Those "request timed out" messages are ICMP.
 
 Worth knowing on the security side: because ping uses ICMP, it can be weaponised — flooding a target with ICMP traffic to overwhelm it. You will see this come up when studying network attacks, and it is one of the reasons you will sometimes encounter networks that limit or block ICMP entirely.
 
@@ -37,7 +40,7 @@ One important point: GRE does not encrypt anything. It only wraps. That is why i
 
 ### IPSec — Internet Protocol Security
 
-IPSec is a set of protocols that secures IP traffic by encrypting and authenticating it. It is commonly used for VPNs that connect two sites securely across the internet.
+IPSec is a set of protocols that secures IP traffic by encrypting and authenticating it. It is commonly used for [VPNs that connect two sites securely]({{< ref "posts/network-access-and-management" >}}) across the internet.
 
 IPSec has three components, and what matters is knowing what each one does:
 
