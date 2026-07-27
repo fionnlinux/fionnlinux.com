@@ -3,15 +3,18 @@ title: "Where Networking Is Heading — SDN, Zero Trust, SASE, IPv6 and IaC"
 date: 2026-06-13
 draft: false
 description: "The last objective in Section 1 of Network+ — a tour of the modern concepts shaping how networks are built and managed: SDN, VXLAN, Zero Trust, SASE, IaC and IPv6."
-tags: ["networking", "comptia", "cloud", "infrastructure-as-code"]
-series: []
+tags: ["networking", "security", "comptia", "cloud"]
+series: ["CompTIA Network+"]
+series_order: 10
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 This is the last objective in Section 1 of the Network+, and it is a different kind of topic from the rest. Where earlier objectives covered the fixed pieces — cables, addresses, the OSI model — this one is about direction. It asks you to summarise the concepts shaping how modern networks are built and run, most of which lean heavily toward cloud and automation.
+{{< /lead >}}
 
 That makes it the right note to end the section on, because it is where networking meets the cloud direction I am heading in. Right now I know a bit more about the Infrastructure as Code side than the rest, because that is the part that has caught my interest while learning Linux and automation — so I have gone deeper on it here. The others are concepts I am still building a proper picture of.
 
@@ -20,6 +23,14 @@ That makes it the right note to end the section on, because it is where networki
 Traditionally, every switch and router makes its own decisions about where traffic goes. The logic that decides (the control plane) and the part that actually moves the packets (the data plane) both live inside each box. To change how the network behaves, you configure devices one at a time.
 
 SDN separates those two jobs. The decision-making is pulled out into a central controller — software — while the physical devices are left to do nothing but forward traffic according to what the controller tells them. One place to set policy, and the whole network follows. That central control is the core idea worth holding on to.
+
+{{< mermaid >}}
+graph TD
+    Controller["Central Controller (Control Plane)"]
+    Controller --> SW1[Switch — forwards only]
+    Controller --> SW2[Switch — forwards only]
+    Controller --> SW3[Switch — forwards only]
+{{< /mermaid >}}
 
 For the exam, the related terms to recognise:
 
@@ -34,7 +45,7 @@ SD-WAN is SDN applied to the wide area network — the long-distance connections
 
 ## VXLAN — Virtual Extensible LAN
 
-VXLAN solves a problem rooted in the limits of traditional VLANs, so it is worth understanding the limit first.
+VXLAN solves a problem rooted in the limits of traditional [VLANs]({{< ref "posts/switching-and-vlans" >}}), so it is worth understanding the limit first.
 
 A VLAN is identified by a number called a VLAN ID. That ID is stored in a 12-bit field. Twelve bits gives you 2 to the power of 12 — which is 4,096 possible values. In practice that caps a network at around 4,094 usable VLANs. For a home or a single office that is far more than enough. For a cloud provider running thousands of separate customers on shared hardware, 4,094 segments is nowhere near enough.
 
@@ -42,7 +53,7 @@ VXLAN raises that ceiling dramatically. It uses a 24-bit identifier instead of 1
 
 The two exam terms:
 
-- **Layer 2 encapsulation** — VXLAN takes a Layer 2 Ethernet frame and wraps it inside a regular Layer 4 UDP packet. Wrapping it this way lets Layer 2 traffic travel across Layer 3 networks it could not normally cross. (If the wrapping idea sounds familiar, it is the same principle as the [tunnelling I covered in my IP types post](https://fionnlinux.com/posts/ip-types-traffic-types/) — put one packet inside another so it can travel where it otherwise could not.)
+- **Layer 2 encapsulation** — VXLAN takes a Layer 2 Ethernet frame and wraps it inside a regular Layer 4 UDP packet. Wrapping it this way lets Layer 2 traffic travel across Layer 3 networks it could not normally cross. (If the wrapping idea sounds familiar, it is the same principle as [the tunnelling I covered in my IP types post]({{< ref "posts/ip-types-traffic-types" >}}) — put one packet inside another so it can travel where it otherwise could not.)
 - **Data center interconnect (DCI)** — the main use case. VXLAN lets physically separate data centres behave as one logical Layer 2 network, which is what makes large cloud environments possible.
 
 ## Zero Trust Architecture (ZTA)
@@ -52,16 +63,26 @@ The old security model trusted anything already inside the network perimeter. Ge
 The exam breaks it into three parts:
 
 - **Policy-based authentication** — access decisions are driven by defined policies, not by location on the network. Who you are and what the policy allows, checked every time.
-- **Authorization** — there are two separate checks. Authentication proves who you are. Authorization decides what you are allowed to do once you are in. Zero Trust treats them as distinct steps and checks both — proving your identity does not automatically grant you access to everything.
+- **Authorisation** — access decisions about what you are allowed to do once you are in.
 - **Least privilege access** — each user or system is given the minimum access needed to do its job, and nothing more. Less standing access means less damage if something is compromised.
+
+> [!IMPORTANT]
+> Authentication and authorisation are not the same check. Authentication proves who you are. Authorisation decides what you are allowed to do once you are in. Zero Trust treats them as two distinct steps and checks both — proving your identity does not automatically grant you access to everything.
 
 In practice, Zero Trust thinking is the default-deny mindset: nothing is open unless it has been explicitly allowed, and access is granted narrowly rather than broadly. It describes how you build and configure a network, rather than a single product you can buy off the shelf.
 
 ## SASE and SSE
 
-**SASE — Secure Access Service Edge** delivers networking and security together as a single cloud service, instead of as separate physical boxes on site. Rather than running a firewall, a secure web gateway, Zero Trust access and wide-area networking as individual appliances, SASE rolls them into one service delivered from the cloud. It combines ideas already in this post — SD-WAN for the networking, Zero Trust for the access.
+### SASE — Secure Access Service Edge
 
-**SSE — Security Service Edge** is the security half of SASE on its own, without the SD-WAN networking part. The simple way to hold the two apart: SSE is the security services; SASE is those same security services plus the networking.
+Delivers networking and security together as a single cloud service, instead of as separate physical boxes on site. Rather than running a firewall, a secure web gateway, Zero Trust access and wide-area networking as individual appliances, SASE rolls them into one service delivered from the cloud. It combines ideas already in this post — SD-WAN for the networking, Zero Trust for the access.
+
+### SSE — Security Service Edge
+
+The security half of SASE on its own, without the SD-WAN networking part.
+
+> [!TIP]
+> The simple way to hold the two apart: SSE is the security services; SASE is those same security services plus the networking on top.
 
 ## Infrastructure as Code (IaC)
 
@@ -74,9 +95,17 @@ Two tools made this concrete for me, and the distinction between them is worth g
 - **Terraform provisions.** It creates and sets up the infrastructure itself — the servers, the networks, the cloud resources. If you need ten virtual machines on Azure with the right networking around them, Terraform builds them from a definition file.
 - **Ansible configures.** Once those machines exist, Ansible sets them up — installs packages, creates users, applies firewall rules, starts services. It configures what is already there.
 
+{{< mermaid >}}
+graph TD
+    Code[Infrastructure Code] --> TF[Terraform: provisions]
+    TF --> VMs[Virtual Machines Created]
+    VMs --> Ans[Ansible: configures]
+    Ans --> Ready[Configured, Ready Servers]
+{{< /mermaid >}}
+
 The short version: Terraform builds the boxes, Ansible furnishes them. They are complementary, not competing.
 
-### The automation side
+### The Automation Side
 
 The objective lists several automation concepts, and they are all reasons IaC is worth the effort:
 
@@ -85,7 +114,7 @@ The objective lists several automation concepts, and they are all reasons IaC is
 - **Upgrades** — applying updates across many machines from one definition rather than touching each one.
 - **Dynamic inventories** — the inventory is the list of machines your automation manages. A fixed list is written by hand, which works when your machines are stable. But in the cloud, servers are created and destroyed constantly, and a hand-written list would be out of date immediately. A dynamic inventory builds itself automatically by asking the cloud platform what machines currently exist, so the list is always accurate without you maintaining it.
 
-### The source control side
+### The Source Control Side
 
 This is the part that connects to how I already work day to day. Every change to this site goes through Git with structured commit messages, pushed to two separate hosts for redundancy. IaC depends on exactly this discipline, and the objective lists the pieces:
 
