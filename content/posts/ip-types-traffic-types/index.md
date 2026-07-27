@@ -36,7 +36,10 @@ GRE is a tunnelling protocol. Its job is to wrap one packet inside another so it
 
 The way I think of it: you put your packet inside an outer "envelope" that the network does accept, send it across, and the other end opens the envelope to get the original back. A common use is linking two private networks over the internet — the private traffic is wrapped up, sent across, and unwrapped at the far end.
 
-One important point: GRE does not encrypt anything. It only wraps. That is why it is often paired with IPSec, which adds the encryption GRE lacks.
+One important point: GRE does not encrypt anything. It only wraps.
+
+> [!IMPORTANT]
+> Tunnelling is not the same as encryption. GRE wraps a packet so it can travel where it otherwise could not — it does nothing to hide the contents. That is why it is often paired with IPSec, which adds the encryption GRE lacks.
 
 ### IPSec — Internet Protocol Security
 
