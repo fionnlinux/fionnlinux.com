@@ -59,6 +59,16 @@ That guarantee starts with the three-way handshake — the single most important
 
 It goes like this:
 
+{{< mermaid >}}
+sequenceDiagram
+    participant Client
+    participant Server
+    Client->>Server: SYN
+    Server->>Client: SYN-ACK
+    Client->>Server: ACK
+    Note over Client,Server: Connection established
+{{< /mermaid >}}
+
 - **SYN** — the client sends a synchronise packet. "I want to connect."
 - **SYN-ACK** — the server replies with synchronise-acknowledge. "I heard you, I am ready, are you?"
 - **ACK** — the client sends acknowledge. "Confirmed. Let's go."
