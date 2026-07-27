@@ -51,9 +51,9 @@ The protocol is the technical method used to build the encrypted tunnel — the 
 
 The service is the company providing the VPN servers you connect to. Proton VPN is a service. So are the many others advertised everywhere.
 
-The reason the distinction matters is that they are independent. Proton VPN uses WireGuard as one of its protocols, but WireGuard is not Proton — it is an open protocol that anyone can use, including in a setup you build entirely yourself with no company involved at all. I will come back to that, because it is exactly how my future home network plan works and is a long-term goal for both learning and self-hosting — the different VPN types this becomes in practice are covered in [a later post]({{< ref "posts/network-access-and-management" >}}). 
+The reason the distinction matters is that they are independent. Proton VPN uses WireGuard as one of its protocols, but WireGuard is not Proton — it is an open protocol that anyone can use, including in a setup you build entirely yourself with no company involved at all. I will come back to that, because it is exactly how my future home network plan works and is a long-term goal for both learning and self-hosting — the different VPN types this becomes in practice are covered in [a later post]({{< ref "posts/network-access-and-management" >}}).
 
-When people say "I use a VPN," they almost always mean they subscribe to a service provided by a company. But the protocol is the actual technology underneath. Knowing they are separate things is what made the different roles a VPN can play click into place for me.
+When people say "I use a VPN," they almost always mean they subscribe to a service provided by a company. But the protocol is the actual technology underneath. Knowing they are separate things is what made the different roles a VPN can play fall into place for me.
 
 ## Job One — A Commercial Privacy VPN (Proton VPN)
 
@@ -111,13 +111,17 @@ This is still the use case I would recommend to anyone, regardless of how techni
 
 This is the section the marketing skips, and it is the most important one. A VPN is a specific tool that does specific things. It is not a force field.
 
-**A VPN does not make you anonymous.** This is the biggest myth. A commercial VPN hides your traffic from your ISP and your local network, and hides your IP from the sites you visit. It does not make you anonymous. The VPN provider can see your traffic. The sites you log into still know who you are the moment you sign in. Browser fingerprinting, cookies, and accounts identify you regardless of your IP. If you genuinely need anonymity rather than privacy, that is what Tor is built for, and it works very differently. A VPN is privacy from specific observers, not anonymity from everyone.
+> [!WARNING]
+> A VPN does not make you anonymous. This is the biggest myth. A commercial VPN hides your traffic from your ISP and your local network, and hides your IP from the sites you visit. It does not make you anonymous. The VPN provider can see your traffic. The sites you log into still know who you are the moment you sign in. Browser fingerprinting, cookies, and accounts identify you regardless of your IP. If you genuinely need anonymity rather than privacy, that is what Tor is built for, and it works very differently. A VPN is privacy from specific observers, not anonymity from everyone.
 
-**A VPN does not remove the need for trust — it moves it.** As I said earlier, the moment you route your traffic through a provider, you are trusting that provider with what your ISP used to see. A VPN does not remove the need to trust someone. It lets you choose who. With a reputable, audited, no-logs provider that is a good trade. With a free VPN of unknown origin, you may be handing your data to something far worse than your ISP. The trust does not disappear. It relocates.
+> [!WARNING]
+> A VPN does not remove the need for trust — it moves it. The moment you route your traffic through a provider, you are trusting that provider with what your ISP used to see. A VPN does not remove the need to trust someone. It lets you choose who. With a reputable, audited, no-logs provider that is a good trade. With a free VPN of unknown origin, you may be handing your data to something far worse than your ISP. The trust does not disappear. It relocates.
 
-**A VPN does not replace HTTPS — and HTTPS does not replace a VPN.** This one matters for anyone studying networking. Most websites now use HTTPS, which already encrypts the contents of your connection between your device and the website. So does a VPN make that redundant? No — they protect different things. HTTPS encrypts the content of your traffic to a specific site, but anyone watching your connection can still see which sites you are connecting to. A VPN hides those destinations from your local network and ISP. HTTPS protects the conversation; a VPN hides who you are talking to from local observers. They layer together rather than replace each other.
+> [!WARNING]
+> A VPN does not replace HTTPS — and HTTPS does not replace a VPN. This one matters for anyone studying networking. Most websites now use HTTPS, which already encrypts the contents of your connection between your device and the website. So does a VPN make that redundant? No — they protect different things. HTTPS encrypts the content of your traffic to a specific site, but anyone watching your connection can still see which sites you are connecting to. A VPN hides those destinations from your local network and ISP. HTTPS protects the conversation; a VPN hides who you are talking to from local observers. They layer together rather than replace each other.
 
-**A VPN does not make you unhackable.** It does not stop malware, it does not block phishing, and it does not protect you if you hand your password to a fake login page. It secures one specific thing — the network path between your device and the VPN endpoint. Everything else about staying safe still applies.
+> [!WARNING]
+> A VPN does not make you unhackable. It does not stop malware, it does not block phishing, and it does not protect you if you hand your password to a fake login page. It secures one specific thing — the network path between your device and the VPN endpoint. Everything else about staying safe still applies.
 
 None of this makes a VPN less useful. It makes it useful in a defined way. Understanding the boundaries is what lets you use it well, instead of relying on it for things it was never going to do.
 
