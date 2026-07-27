@@ -56,7 +56,12 @@ Once the protocols felt real, a pattern jumped out that stuck with me afterwards
 
 The thing that genuinely shifted for me is that I now look at the insecure versions with suspicion. Why would you send credentials over Telnet in plaintext when SSH exists and does the same thing safely? These are not just exam topics — they show up in real logs, real alerts, real decisions. Plaintext protocols on a network are a red flag. Telnet traffic where you would expect SSH, or plain HTTP where sensitive data is involved, is exactly the kind of thing worth investigating. The port number tells you not just what the traffic is, but whether it should be there at all.
 
-Two ports are worth knowing as common security concerns. **RDP (3389)**, the Remote Desktop Protocol, gives graphical remote access to a Windows machine. That makes it genuinely useful for remote work and administration, but it also means that if it is exposed to the internet with weak or default credentials, an attacker can attempt to brute-force their way in and gain full control of the machine. It is a port that should only ever be reachable from trusted sources. **SMB (445)**, used for Windows file and printer sharing, has appeared at the centre of some significant malware outbreaks — most notably WannaCry in 2017, which exploited an SMB vulnerability to spread rapidly from machine to machine across networks. Both ports have legitimate uses, but seeing either exposed where it should not be is worth investigating.
+Two ports are worth knowing as common security concerns. **RDP (3389)**, the Remote Desktop Protocol, gives graphical remote access to a Windows machine. That makes it genuinely useful for remote work and administration, but it also means that if it is exposed to the internet with weak or default credentials, an attacker can attempt to brute-force their way in and gain full control of the machine. It is a port that should only ever be reachable from trusted sources.
+
+> [!WARNING]
+> RDP should never be exposed directly to the open internet. Port 3389 is one of the most commonly scanned and attacked ports out there — if remote access is genuinely needed, put it behind a VPN rather than opening it to the world.
+
+**SMB (445)**, used for Windows file and printer sharing, has appeared at the centre of some significant malware outbreaks — most notably WannaCry in 2017, which exploited an SMB vulnerability to spread rapidly from machine to machine across networks. Both ports have legitimate uses, but seeing either exposed where it should not be is worth investigating.
 
 ## The Full List for the Exam
 
