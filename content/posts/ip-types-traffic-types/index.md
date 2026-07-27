@@ -54,6 +54,25 @@ The short version of how they fit together: IKE sets up the secure connection, a
 
 The other gap was traffic types — a way of describing how many destinations a packet is meant for. There are four.
 
+{{< mermaid >}}
+graph LR
+    subgraph Unicast
+        U1[Sender] --> U2[Receiver]
+    end
+    subgraph Broadcast
+        B1[Sender] --> B2[Device]
+        B1 --> B3[Device]
+        B1 --> B4[Device]
+    end
+    subgraph Multicast
+        M1[Sender] --> M2[Subscriber]
+        M1 --> M3[Subscriber]
+    end
+    subgraph Anycast
+        A1[Sender] --> A2[Nearest Server]
+    end
+{{< /mermaid >}}
+
 ### Unicast
 
 One to one. A single sender, a single recipient. Most traffic is unicast — loading a web page, sending a file. Your device talks directly to one other device.
