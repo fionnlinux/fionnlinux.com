@@ -4,36 +4,56 @@ date: 2026-07-16T00:00:00+01:00
 draft: false
 description: "DoS/DDoS, VLAN hopping, MAC flooding, ARP and DNS poisoning/spoofing, rogue devices, evil twin, and on-path attacks — what each one actually does to a network, grounded in a long-term plan to segment my own network with OPNsense."
 tags: ["networking", "security", "comptia"]
-series: []
+series: ["CompTIA Network+"]
+series_order: 24
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Part of the long-term homelab plan is running OPNsense on a Protectli box, properly segmenting my own network into separate VLANs rather than everything sitting on one flat network. Working through this section of Network+, VLAN hopping was the one that actually caught my attention, because building segmentation without understanding the attack it is meant to defend against felt like the wrong order to learn things in. It sits alongside a handful of other attacks aimed at the network itself rather than at a person, all covered here together rather than one at a time.
+{{< /lead >}}
 
 ## VLAN Hopping
 
 VLANs exist to logically separate traffic that shares the same physical switches, so that devices on one VLAN cannot normally see or reach devices on another. VLAN hopping is specifically about defeating that separation, and it works through two distinct methods.
 
-**Switch spoofing** takes advantage of a protocol called DTP (Dynamic Trunking Protocol), which some switches use to automatically negotiate whether a port should become a trunk port — the kind of port that carries traffic for multiple VLANs at once. An attacker's device pretends to be a switch itself, negotiates a trunk connection with a legitimate switch that has auto-negotiation switched on, and once that trunk exists, gains access to every VLAN carried across it.
+### Switch Spoofing
 
-**Double tagging** is a genuinely different technique. The attacker sits on what is called the native VLAN — the one a trunk port treats as untagged by default — and sends a frame carrying two VLAN tags stacked on top of each other. The first switch in the path strips off the outer tag, since it matches the native VLAN it already expects, and forwards the frame onward still carrying the second, inner tag. That inner tag is the actual target VLAN, and the frame ends up delivered somewhere it should never have been allowed to reach. It only works one direction — the attacker can send a frame in, but nothing can be sent back the same way — but that is still enough to inject traffic into a VLAN that was supposed to be isolated.
+Takes advantage of a protocol called DTP (Dynamic Trunking Protocol), which some switches use to automatically negotiate whether a port should become a trunk port — the kind of port that carries traffic for multiple VLANs at once. An attacker's device pretends to be a switch itself, negotiates a trunk connection with a legitimate switch that has auto-negotiation switched on, and once that trunk exists, gains access to every VLAN carried across it.
 
-The impact in both cases is the same: segmentation that was assumed to be a hard boundary turns out not to be one, and traffic crosses between VLANs that should never have been able to communicate at all. Knowing this exists is exactly why disabling automatic trunk negotiation on ports that do not need it is a real, practical step, not just theory — something to actually configure properly when the OPNsense segmentation project happens, rather than assume VLANs alone are enough.
+### Double Tagging
+
+A genuinely different technique. The attacker sits on what is called the native VLAN — the one a trunk port treats as untagged by default — and sends a frame carrying two VLAN tags stacked on top of each other.
+
+{{< mermaid >}}
+graph TD
+    A[Attacker on Native VLAN] -->|Sends frame with two stacked tags| S1[First Switch]
+    S1 -->|Strips outer tag, matches native VLAN| S2[Forwards with inner tag remaining]
+    S2 -->|Delivered to| T[Target VLAN — never should have been reachable]
+{{< /mermaid >}}
+
+The first switch in the path strips off the outer tag, since it matches the native VLAN it already expects, and forwards the frame onward still carrying the second, inner tag. That inner tag is the actual target VLAN, and the frame ends up delivered somewhere it should never have been allowed to reach. It only works one direction — the attacker can send a frame in, but nothing can be sent back the same way — but that is still enough to inject traffic into a VLAN that was supposed to be isolated.
+
+The impact in both cases is the same: segmentation that was assumed to be a hard boundary turns out not to be one, and traffic crosses between VLANs that should never have been able to communicate at all.
+
+> [!TIP]
+> Disabling automatic trunk negotiation on ports that do not need it is a real, practical step against switch spoofing, not just theory — something to actually configure properly when the OPNsense segmentation project happens, rather than assume VLANs alone are enough.
 
 ## Denial-of-Service
 
 **DoS** (Denial-of-Service) is an attack aimed at making a system or service unavailable, rather than trying to steal or alter anything. It works by overwhelming a target with more requests or traffic than it can actually handle, until legitimate users simply cannot get through. **DDoS** (Distributed Denial-of-Service) is the same goal achieved from many sources at once, usually a large number of compromised devices all directed at the same target simultaneously, which makes it both far more powerful and far harder to block, since there is no single source to simply cut off.
 
-The impact is specifically to availability, one third of the CIA triad covered in an earlier post — nothing is stolen or changed, but the service stops being reachable for exactly as long as the attack continues.
+The impact is specifically to availability, one third of [the CIA triad covered in an earlier post]({{< ref "posts/locks-decoys-and-security-vocabulary" >}}) — nothing is stolen or changed, but the service stops being reachable for exactly as long as the attack continues.
 
 ## MAC Flooding
 
 Switches keep a table mapping MAC addresses to the physical ports they are connected through, which is how a switch knows to send traffic only out the correct port rather than everywhere at once. **MAC flooding** deliberately overwhelms that table with an enormous number of fake MAC addresses, until it has no room left to track legitimate ones.
 
-The impact is that many switches, once their table is full, fail open rather than closed — they start behaving like a hub, broadcasting traffic out every port rather than just the correct one. That turns a network that was supposed to keep traffic contained to specific ports into one where an attacker can suddenly see traffic meant for other devices entirely.
+> [!NOTE]
+> Many switches, once their table is full, fail open rather than closed — they start behaving like a hub, broadcasting traffic out every port rather than just the correct one. That turns a network that was supposed to keep traffic contained to specific ports into one where an attacker can suddenly see traffic meant for other devices entirely.
 
 ## ARP Poisoning and ARP Spoofing
 
@@ -43,7 +63,7 @@ The impact is that traffic meant for the real device gets sent to the attacker i
 
 ## DNS Poisoning and DNS Spoofing
 
-This pairs with ARP in the same way — **DNS spoofing** is sending a forged DNS response, and **DNS poisoning** is the resulting corrupted entry sitting in a resolver's cache, now confidently handing out the wrong address to anyone who asks. Covered properly in an earlier post on how DNS actually works, this is exactly the kind of forged response DNSSEC exists to catch, by verifying a response genuinely came from the authoritative server rather than an attacker sitting somewhere in between.
+This pairs with ARP in the same way — **DNS spoofing** is sending a forged DNS response, and **DNS poisoning** is the resulting corrupted entry sitting in a resolver's cache, now confidently handing out the wrong address to anyone who asks. Covered properly in [an earlier post on how DNS actually works]({{< ref "posts/the-beauty-of-dns" >}}), this is exactly the kind of forged response DNSSEC exists to catch, by verifying a response genuinely came from the authoritative server rather than an attacker sitting somewhere in between.
 
 The impact is a device being sent somewhere it never intended to go — potentially a convincing fake version of a real site — while believing the whole time that DNS resolved the name correctly.
 
@@ -62,6 +82,11 @@ The impact is a direct loss of confidentiality, since the attacker is now positi
 ## On-Path Attack
 
 An **on-path attack** (formerly commonly called man-in-the-middle) is the broader category several of the attacks above actually belong to — ARP spoofing, DNS spoofing, and an evil twin are all specific ways of achieving the same underlying position: getting in between two parties who believe they are communicating directly with each other, when in fact everything is passing through the attacker first.
+
+{{< mermaid >}}
+graph LR
+    A[Party A] --- Attacker --- B[Party B]
+{{< /mermaid >}}
 
 The impact depends entirely on what the attacker chooses to do once in that position — simply observe traffic passing through, or actively alter it before passing it on — but the defining feature of an on-path attack is the position itself, not any one specific technique used to get there.
 
