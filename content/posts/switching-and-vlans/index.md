@@ -54,7 +54,7 @@ graph LR
 802.1Q trunks tag all traffic to identify which VLAN it belongs to, with one exception: the native VLAN travels untagged. The reason it exists is backward compatibility — older devices that don't understand 802.1Q tagging can still function on an 802.1Q trunk as long as they're on the native VLAN, because their untagged traffic just passes through. By default that's VLAN 1.
 
 > [!WARNING]
-> An attacker can craft frames that appear to belong to a different VLAN — a technique called VLAN hopping — by exploiting the native VLAN's untagged traffic. Standard practice is to change the native VLAN away from VLAN 1 and keep real traffic off it entirely.
+> An attacker can craft frames that appear to belong to a different VLAN — a technique called [VLAN hopping]({{< ref "posts/network-and-protocol-attacks" >}}), covered in full in a later post — by exploiting the native VLAN's untagged traffic. Standard practice is to change the native VLAN away from VLAN 1 and keep real traffic off it entirely.
 
 ### Voice VLAN
 
