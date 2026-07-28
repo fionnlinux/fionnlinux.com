@@ -4,30 +4,54 @@ date: 2026-07-13T00:00:00+01:00
 draft: false
 description: "Encryption at rest and in transit, PKI and self-signed certificates, the authentication and authorization protocols behind SSO and MFA, and geofencing — grounded in logging into work systems every day without ever thinking about what's actually happening underneath."
 tags: ["networking", "security", "comptia"]
-series: []
+series: ["CompTIA Network+"]
+series_order: 21
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 I use single sign-on for work every day — one login gets me into several different systems without typing a password into each one separately. I also use multi-factor authentication on anything that actually matters, a password plus a code from my phone, and that one I did think about deliberately — sensitive accounts got it on purpose. The work login I gave far less thought to. It just worked, and I never stopped to ask what was actually carrying my identity between all those separate systems, or that the two things had their own distinct names and mechanisms underneath.
+{{< /lead >}}
 
 ## Encryption — Protecting Data in Two Different States
 
 Encryption gets talked about as one idea, but it actually has to solve two separate problems depending on where the data physically is.
 
-**Data in transit** is data moving across a network right now — between your device and a server, for example. If it is not encrypted at this point, anyone in a position to observe that traffic can simply read it as it passes. This is exactly the problem HTTPS solves for web traffic — the connection between browser and website is encrypted while it travels, so anything sitting in between sees scrambled data rather than the actual content.
+### Data in Transit
 
-**Data at rest** is data sitting still — stored on a disk, a database, a backup. Encrypting data at rest means that even if someone gets physical access to the storage itself, or steals a backup, what they actually get is unreadable without the key. This one I already had covered without realising it fitted here: every Linux device in my house uses LUKS full-disk encryption, which is exactly this — if one of the laptops was stolen, the drive contents are unreadable without the passphrase. These are genuinely separate problems with separate solutions: data can be fully encrypted at rest and still be sent across the network in the clear, or the other way round, unless both are deliberately handled.
+Data moving across a network right now — between your device and a server, for example. If it is not encrypted at this point, anyone in a position to observe that traffic can simply read it as it passes. This is exactly the problem HTTPS solves for web traffic — the connection between browser and website is encrypted while it travels, so anything sitting in between sees scrambled data rather than the actual content.
+
+### Data at Rest
+
+Data sitting still — stored on a disk, a database, a backup. Encrypting data at rest means that even if someone gets physical access to the storage itself, or steals a backup, what they actually get is unreadable without the key. This one I already had covered without realising it fitted here: every Linux device in my house uses LUKS full-disk encryption, which is exactly this — if one of the laptops was stolen, the drive contents are unreadable without the passphrase. These are genuinely separate problems with separate solutions: data can be fully encrypted at rest and still be sent across the network in the clear, or the other way round, unless both are deliberately handled.
 
 ## Certificates — Proving a Server Is Who It Claims to Be
 
 Encryption on its own answers "can anyone read this." Certificates answer a different question: "am I actually talking to who I think I am." A connection can be perfectly encrypted and still be with an impostor, if nothing verifies identity first.
 
-**Public key infrastructure (PKI)** is the system that makes this verification work at scale. A trusted third party — a certificate authority — vouches for a certificate by signing it, and because your device already trusts that authority, it extends that trust to anything the authority has signed. This is why a certificate from a recognised authority causes no warning in a browser, while an unrecognised one does. It is also, I checked while writing this, exactly what is behind the padlock on fionnlinux.com — the certificate is issued by Let's Encrypt, a certificate authority browsers already trust, and I had never actually looked at who was vouching for my own site until now.
+### Public Key Infrastructure (PKI)
 
-**Self-signed certificates** skip that trusted third party entirely — the certificate is signed by whoever created it, rather than by an authority anything else already trusts. That still gives you encryption, but not the same independent verification of identity, which is exactly why browsers warn about them. They are genuinely useful in a homelab or for internal testing, where you already know and trust the source yourself, but the wrong choice for anything public-facing where a stranger has no reason to trust your own signature.
+The system that makes this verification work at scale. A trusted third party — a certificate authority — vouches for a certificate by signing it, and because your device already trusts that authority, it extends that trust to anything the authority has signed.
+
+{{< mermaid >}}
+graph TD
+    Browser[Your Browser] -->|Already trusts| CA[Certificate Authority]
+    CA -->|Signs and vouches for| Cert[Website's Certificate]
+    Cert -->|Presented by| Server[The Website]
+    Browser -.->|Trust extends to| Server
+{{< /mermaid >}}
+
+This is why a certificate from a recognised authority causes no warning in a browser, while an unrecognised one does. It is also, I checked while writing this, exactly what is behind the padlock on fionnlinux.com — the certificate is issued by Let's Encrypt, a certificate authority browsers already trust, and I had never actually looked at who was vouching for my own site until now.
+
+### Self-Signed Certificates
+
+Skip that trusted third party entirely — the certificate is signed by whoever created it, rather than by an authority anything else already trusts. That still gives you encryption, but not the same independent verification of identity, which is exactly why browsers warn about them.
+
+> [!TIP]
+> Self-signed certificates are genuinely useful in a homelab or for internal testing, where you already know and trust the source yourself, but the wrong choice for anything public-facing where a stranger has no reason to trust your own signature.
 
 ## Identity and Access Management
 
@@ -41,11 +65,13 @@ Encryption on its own answers "can anyone read this." Certificates answer a diff
 
 Behind both of those sit protocols that actually carry the authentication information between systems:
 
-- **RADIUS** — commonly used to centralise authentication for network access itself, such as logging onto Wi-Fi or a VPN.
-- **LDAP** — a directory protocol, used to look up and verify user identities stored in a central directory.
-- **SAML** — an XML-based standard specifically built to pass authentication between systems, which is what actually makes SSO work between separate applications.
-- **TACACS+** — similar in purpose to RADIUS, more commonly associated with authenticating access to network devices themselves, like switches and routers.
-- **Time-based authentication** — proving identity partly using a code that is only valid for a short rotating window, the mechanism behind the six-digit codes an authenticator app generates.
+| Protocol | What It's For |
+|---|---|
+| RADIUS | Commonly used to centralise authentication for network access itself, such as logging onto Wi-Fi or a VPN. |
+| LDAP | A directory protocol, used to look up and verify user identities stored in a central directory. |
+| SAML | An XML-based standard specifically built to pass authentication between systems, which is what actually makes SSO work between separate applications. |
+| TACACS+ | Similar in purpose to RADIUS, more commonly associated with authenticating access to network devices themselves, like switches and routers. |
+| Time-based authentication | Proving identity partly using a code that is only valid for a short rotating window, the mechanism behind the six-digit codes an authenticator app generates. |
 
 ### Authorization — Deciding What You're Allowed to Do
 
