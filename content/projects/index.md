@@ -2,6 +2,7 @@
 title: "Projects"
 date: 2026-05-19
 draft: false
+description: "Real repos built alongside my studies — this site, dotfiles, Python and Bash scripting, and the homelab projects still to come."
 showDate: false
 showReadingTime: false
 showTableOfContents: true
@@ -12,7 +13,9 @@ showHero: true
 heroStyle: "background"
 ---
 
+{{< lead >}}
 This page documents the projects I am actively building and learning from. Each one is a practical extension of my studies — real tools, real workflows, and real problems to solve. As my skills grow so will this page.
+{{< /lead >}}
 
 ## fionnlinux.com
 
@@ -52,10 +55,7 @@ A collection of Python projects written while learning to programme. Started sma
 
 ## bash-toolkit
 
-A collection of bash scripts for Linux administration and automation,
-built on Fedora Linux. Scripts are written to be readable,
-well-commented, and RHCSA-aligned. Actively growing alongside
-my Linux studies.
+A collection of bash scripts for Linux administration and automation, built on Fedora Linux. Scripts are written to be readable, well-commented, and RHCSA-aligned. Actively growing alongside my Linux studies.
 
 **Stack:** Bash, Linux, GNU coreutils
 
@@ -67,12 +67,10 @@ my Linux studies.
 
 ## Coming Soon
 
-- **ansible-homelab** — configuration management for a mixed RHEL/Ubuntu
-homelab fleet, launching alongside the blog walkthrough series
-- **terraform-lab** — infrastructure as code for provisioning and managing
-cloud resources on Azure
+### ansible-homelab
 
+Configuration management for a mixed RHEL/Ubuntu homelab fleet, launching alongside the blog walkthrough series.
 
+### terraform-lab
 
-
-
+Infrastructure as code for provisioning and managing cloud resources on Azure.
