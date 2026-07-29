@@ -93,7 +93,10 @@ Content filtering goes further still, inspecting the actual nature of the traffi
 
 ## Protecting the Keys — Key Management
 
-The web server almost certainly uses [encryption and a certificate]({{< ref "posts/encryption-certificates-and-iam" >}}) so that customer connections to it are secure. But that protection is only ever as strong as the handling of the keys behind it. **Key management** covers how those keys are generated, stored, rotated, and eventually retired. A strong encryption setup guarding the connection means nothing if the private key is stored carelessly or never changed, because whoever obtains that key can undo all of it. This runs quietly underneath the visible controls, but it holds them up.
+The web server almost certainly uses [encryption and a certificate]({{< ref "posts/encryption-certificates-and-iam" >}}) so that customer connections to it are secure. But that protection is only ever as strong as the handling of the keys behind it. **Key management** covers how those keys are generated, stored, rotated, and eventually retired. This runs quietly underneath the visible controls, but it holds them up.
+
+> [!IMPORTANT]
+> A strong encryption setup means nothing if the private key behind it is stored carelessly or never changed — whoever obtains that key can undo all of it.
 
 ## Why They Only Work Together
 

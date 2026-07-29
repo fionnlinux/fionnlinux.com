@@ -4,14 +4,17 @@ date: 2026-07-23T00:00:00+01:00
 draft: false
 description: "STP, VLAN misassignment, ACLs, routing, and IP addressing faults, worked through with two related incidents on the same small office network."
 tags: ["networking", "comptia", "troubleshooting"]
-series: []
+series: ["CompTIA Network+"]
+series_order: 29
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 Picture the same small office network again — a couple of switches connecting everything together, a router handling traffic out to the internet, and several VLANs separating staff, guests, and a handful of servers. Two separate incidents on that network, a few weeks apart, are enough to walk through everything this objective actually covers.
+{{< /lead >}}
 
 ## Incident One — The Network That Suddenly Slowed Down
 
@@ -21,7 +24,15 @@ One afternoon, the whole office network becomes sluggish at once, not just one d
 
 With two switches in the building, someone has recently added a second cable between them for redundancy, without realising both switches were already connected once already. That creates a loop — a path where traffic can circulate endlessly between the two switches rather than reaching its actual destination, and a loop like this is exactly what floods a network and slows everything down at once.
 
-**Spanning Tree Protocol (STP)** exists specifically to prevent this. It works by having switches elect a **root bridge** — a single reference point the whole topology is built around — and then deciding the **port roles** and **port states** of every other link based on that election. A redundant link like the one just added gets placed into a blocking state rather than being allowed to actively forward traffic, so the physical loop exists but no traffic loop actually happens.
+[**Spanning Tree Protocol (STP)**]({{< ref "posts/switching-and-vlans" >}}) exists specifically to prevent this. It works by having switches elect a **root bridge** — a single reference point the whole topology is built around — and then deciding the **port roles** and **port states** of every other link based on that election. A redundant link like the one just added gets placed into a blocking state rather than being allowed to actively forward traffic, so the physical loop exists but no traffic loop actually happens.
+
+{{< mermaid >}}
+graph TD
+    SW1[Switch 1 — Root Bridge]
+    SW2[Switch 2]
+    SW1 -->|Original link — forwarding| SW2
+    SW1 -.->|Redundant link — blocking once STP is enabled| SW2
+{{< /mermaid >}}
 
 The fault here turns out to be that STP was never properly enabled on one of the switches, so it had no mechanism in place to block the redundant link. Once STP is correctly running on both switches, the root bridge gets elected, the redundant link is placed into its correct blocking role, and the network settles back down immediately.
 
@@ -29,7 +40,10 @@ The fault here turns out to be that STP was never properly enabled on one of the
 
 While investigating the slowdown, a second, smaller issue turns up: a handful of guest devices have full access to the staff VLAN, which should never be possible. A **VLAN** — virtual local area network — is a way of splitting one physical network into separate logical networks, so that devices on different VLANs cannot normally reach each other even though they share the same switches and cabling. Tracing this fault back, a switch port was assigned to the wrong VLAN during a recent change, putting a guest device on the staff network instead of the isolated guest one — an **incorrect VLAN assignment**, plain and simple.
 
-Even once the port is corrected, it is worth checking the **ACLs** meant to enforce that separation in the first place. An **ACL** — access control list — is a set of rules that explicitly allow or block traffic based on things like address or port, and one is typically used to make sure a guest VLAN cannot reach anything on the staff VLAN even if something does slip through. In this case, the ACL controlling what the guest VLAN can reach was written correctly, but the port assignment mistake bypassed it entirely, since the device was never actually being treated as part of the guest VLAN the rule applied to. It is a reminder that a correctly written rule does nothing if the traffic it is meant to control never actually passes through it.
+Even once the port is corrected, it is worth checking the [**ACLs**]({{< ref "posts/network-security-features" >}}) meant to enforce that separation in the first place. An **ACL** — access control list — is a set of rules that explicitly allow or block traffic based on things like address or port, and one is typically used to make sure a guest VLAN cannot reach anything on the staff VLAN even if something does slip through. In this case, the ACL controlling what the guest VLAN can reach was written correctly, but the port assignment mistake bypassed it entirely, since the device was never actually being treated as part of the guest VLAN the rule applied to.
+
+> [!TIP]
+> A correctly written rule does nothing if the traffic it is meant to control never actually passes through it.
 
 ## Incident Two — The New Starters Who Can't Get Online
 
@@ -41,7 +55,7 @@ The first thing worth checking is whether DHCP even has anything left to hand ou
 
 ### Incorrect Default Gateway
 
-One of the new starters does get an address, through a manual override rather than DHCP, but still cannot reach anything outside the local network. Checking the configuration shows the **default gateway** was entered incorrectly — pointing at an address that does not correspond to the actual router. Local traffic on the same subnet works fine, since that never needs the gateway at all, but anything destined elsewhere has nowhere to actually go.
+One of the new starters does get an address, through a manual override rather than DHCP, but still cannot reach anything outside the local network. Checking the configuration shows the [**default gateway**]({{< ref "posts/routing-how-networks-decide" >}}) was entered incorrectly — pointing at an address that does not correspond to the actual router. Local traffic on the same subnet works fine, since that never needs the gateway at all, but anything destined elsewhere has nowhere to actually go.
 
 ### Incorrect IP Address and Duplicate IP Address
 
