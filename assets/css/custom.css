@@ -60,3 +60,7 @@ nav.mx-auto span {
 .thumbnail img {
   object-fit: contain !important;
 }
+
+.nested-menu span.text-sm.font-sm {
+  font-family: inherit !important;
+}
