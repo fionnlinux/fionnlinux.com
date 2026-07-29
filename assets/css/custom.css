@@ -62,5 +62,7 @@ nav.mx-auto span {
 }
 
 .nested-menu span.text-sm.font-sm {
-  font-family: inherit !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
 }
