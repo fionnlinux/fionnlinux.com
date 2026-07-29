@@ -2,6 +2,7 @@
 title: "About"
 date: 2026-05-19
 draft: false
+description: "Linux practitioner building toward a cloud engineering role with a security-first mindset — the certifications, homelab, and background behind this site."
 showDate: false
 showReadingTime: false
 showTableOfContents: true
@@ -13,7 +14,9 @@ heroStyle: "background"
 
 ## Who I Am
 
+{{< lead >}}
 Linux practitioner building toward a cloud engineering role, with a security-first mindset. The goal is clear: Network+, Security+, AZ-900, RHCSA, and AZ-104 in sequence — Linux depth underpinning cloud infrastructure, with security running through everything.
+{{< /lead >}}
 
 The site documents all of it — certs studied, labs built, infrastructure provisioned and torn down. Security thinking runs through everything here — not as a separate concern but as part of how I approach every system and decision.
 
@@ -23,7 +26,7 @@ British-American dual citizen, eligible to work in the UK and US without sponsor
 
 ## What This Site Is
 
-A working journal. Every certificate studied, homelab built, and command line tool configured gets documented here. Written for anyone following a similar path — and for future me when I forget how I did something. If something I document saves someone else an hour of troubleshooting, that's reason enough to write it up.
+A working journal. Every certificate studied, homelab built, and command line tool configured gets documented here — the full [Network+ series]({{< ref "series/comptia-network+" >}}) is the first complete example, with more series added as I move through the rest of the list below. Written for anyone following a similar path — and for future me when I forget how I did something. If something I document saves someone else an hour of troubleshooting, that's reason enough to write it up.
 
 ## The Journey
 
