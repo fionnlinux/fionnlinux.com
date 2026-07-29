@@ -3,19 +3,37 @@ title: "The Method Behind Fixing Anything — Walking Through the Troubleshootin
 date: 2026-07-21T00:00:00+01:00
 draft: false
 description: "The seven-step troubleshooting methodology, walked through end to end using the same NextDNS block that showed up in an earlier post on the OSI model."
-tags: ["networking", "comptia"]
-series: []
+tags: ["networking", "comptia", "troubleshooting"]
+series: ["CompTIA Network+"]
+series_order: 27
 showTableOfContents: true
 showReadingTime: true
 showDate: true
 showAuthor: true
 ---
 
+{{< lead >}}
 An earlier post described a moment where a family member's device could not load Amazon Prime, while every other device on the network worked fine. [That post]({{< ref "posts/osi-model" >}}) walked through the layer-by-layer elimination that found the cause — DNS filtering, not a fault. This one uses the same story for something different: the formal seven-step methodology sitting around that whole process, most of which happened silently and never made it into the original post at all.
+{{< /lead >}}
+
+{{< mermaid >}}
+graph TD
+    A[1. Identify the Problem] --> B[2. Establish a Theory of Probable Cause]
+    B --> C[3. Test the Theory]
+    C --> D{Confirmed?}
+    D -->|No| B
+    D -->|Yes| E[4. Establish a Plan of Action]
+    E --> F[5. Implement the Solution]
+    F --> G[6. Verify Full System Functionality]
+    G --> H[7. Document Findings, Actions, Outcomes, and Lessons Learned]
+{{< /mermaid >}}
 
 ## Identify the Problem
 
-This step is less about guessing and more about actually gathering the full picture first. What is the symptom? A specific site would not load. Who noticed it, and on which device? Question users, in this case simply asking what was happening and when. Has anything changed recently? Nothing had — no new settings, no new app installed. Could the problem be duplicated? Yes, reliably, every time that device tried to load that one site. And if there had been multiple issues reported at once, the methodology says to approach each one individually rather than assuming they share a single cause.
+This step is less about guessing and more about actually gathering the full picture first. What is the symptom? A specific site would not load. Who noticed it, and on which device? Question users, in this case simply asking what was happening and when. Has anything changed recently? Nothing had — no new settings, no new app installed. Could the problem be duplicated? Yes, reliably, every time that device tried to load that one site.
+
+> [!NOTE]
+> If multiple issues are reported at once, the methodology calls for approaching each one individually rather than assuming they share a single cause.
 
 None of that requires technical skill yet. It is just refusing to guess at a cause before actually establishing what is happening.
 
@@ -37,7 +55,7 @@ Confirming the cause is not the same as fixing it. The plan here was small and l
 
 ## Implement the Solution
 
-Straightforward here — the domain was removed from the block list directly in the NextDNS dashboard. No escalation needed, since this was well within what I could resolve myself.
+Nothing complicated about this step — the domain was removed from the block list directly in the NextDNS dashboard. No escalation needed, since this was well within what I could resolve myself.
 
 ## Verify Full System Functionality
 
