@@ -12,13 +12,15 @@ showHero: true
 background: "img/background.svg"
 ---
 
+{{< lead >}}
 A curated list of highly regarded tools, documentation, and learning resources for Linux, cloud, networking, and security. Some I use daily, some are reference material, and some are on the horizon — all are worth knowing about.
+{{< /lead >}}
 
 ---
 
 ## Linux
 
-**Documentation**
+### Documentation
 
 - [Fedora Documentation](https://docs.fedoraproject.org) — official Fedora docs, well maintained and thorough. My first stop for anything Fedora specific.
 - [AlmaLinux Wiki](https://wiki.almalinux.org) — the go-to reference for the RHEL-compatible ecosystem. Covers everything from installation to administration.
@@ -26,7 +28,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 - [Red Hat Developer Subscription](https://developers.redhat.com/products/rhel/download) — free RHEL subscription for individuals. The hands-on environment for RHCSA study.
 - [Arch Wiki](https://wiki.archlinux.org) — the best Linux reference on the internet regardless of which distribution you use. If it is not here, it is probably not documented anywhere.
 
-**YouTube**
+### YouTube
 
 - [Learn Linux TV](https://www.youtube.com/@LearnLinuxTV) — practical Linux tutorials with a consistent focus on real administration skills. Good for RHCSA relevant content.
 - [Into the Terminal — Red Hat](https://www.youtube.com/@IntotheTerminal) — Red Hat administration, RHEL content, and enterprise Linux from the people who build it.
@@ -34,7 +36,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 - [Red Hat](https://www.youtube.com/@redhat) — enterprise Linux, RHEL releases, and community content straight from Red Hat.
 - [Fedora Project](https://www.youtube.com/@FedoraProject) — Fedora releases, features, and community updates.
 
-**Podcasts**
+### Podcasts
 
 - [Linux Matters](https://linuxmatters.sh) — Linux news and discussion. Genuinely good conversation rather than just headlines.
 - [Late Night Linux](https://latenightlinux.com) — Linux and open source discussion worth your time. More opinionated than most.
@@ -46,20 +48,20 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Cloud
 
-**Documentation**
+### Documentation
 
 - [Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/) — the official Azure docs. Well structured and the authoritative reference for everything Azure.
 - [Microsoft Learn](https://learn.microsoft.com) — free structured learning paths for AZ-900 and AZ-104. The best free resource for Azure certification preparation.
 - [Terraform Documentation](https://developer.hashicorp.com/terraform/docs) — the official Terraform docs. Start with the getting started guide for Azure, then work through modules and state management.
 - [Terraform Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs) — the reference for every Azure resource you can provision with Terraform. Open constantly when writing IaC.
 
-**YouTube**
+### YouTube
 
 - [Adam Marczak — Azure for Everyone](https://www.youtube.com/@AdamMarczakYT) — Azure fundamentals and certification content, well regarded for AZ-900 and AZ-104 preparation.
 - [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana) — Kubernetes, Docker, Terraform, and DevOps fundamentals. Widely recommended for infrastructure tooling.
 - [NetworkChuck](https://www.youtube.com/@NetworkChuck) — cloud, networking, and Linux content. Energetic but genuinely useful for getting concepts to land.
 
-**Practice**
+### Practice
 
 - [Azure Free Tier](https://azure.microsoft.com/en-gb/free/) — 12 months of free services plus a credit on sign-up. The starting point for Azure homelab work.
 - [KillerCoda](https://killercoda.com) — browser-based Linux and Kubernetes labs. No local setup needed, useful for practising in environments you haven't built yet.
@@ -68,13 +70,13 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Infrastructure as Code and Automation
 
-**Documentation**
+### Documentation
 
 - [Ansible Documentation](https://docs.ansible.com) — the official docs are excellent. Start with the getting started guide and work through the playbook documentation systematically.
 - [Kubernetes Documentation](https://kubernetes.io/docs/) — the official reference for Kubernetes concepts, kubectl, and cluster administration.
 - [K3s Documentation](https://docs.k3s.io) — lightweight Kubernetes for homelab use. The practical starting point before moving to managed Kubernetes on Azure.
 
-**YouTube**
+### YouTube
 
 - [The Ansible Playbook](https://www.youtube.com/@TheAnsiblePlaybook) — practical Ansible tutorials focused on real administration use cases.
 
@@ -82,12 +84,12 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Networking
 
-**Documentation**
+### Documentation
 
 - [OPNsense Documentation](https://docs.opnsense.org) — open source firewall and routing platform. Clear and well organised for both beginners and experienced administrators.
 - [Wireshark Documentation](https://www.wireshark.org/docs/) — essential reference for network traffic analysis. Pairs well with any networking certification study.
 
-**Practice Tools**
+### Practice Tools
 
 - [SubnettingPractice.com](https://subnettingpractice.com) — the most thorough free subnetting practice tool I have found. Used heavily during Network+ preparation.
 
@@ -95,7 +97,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Security
 
-**Documentation and Reference**
+### Documentation and Reference
 
 - [MITRE ATT&CK](https://attack.mitre.org) — the definitive framework for understanding adversary tactics and techniques. Relevant to cloud security and infrastructure hardening.
 - [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks) — hardening guides for Linux, cloud platforms, and infrastructure. The practical reference for secure-by-default configuration.
@@ -104,7 +106,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Certifications and Study
 
-**YouTube**
+### YouTube
 
 - [Professor Messer](https://www.youtube.com/@professormesser) — the standard for CompTIA exam preparation. Free video courses for A+, Network+, and Security+. Use alongside the study guides.
 - [BurningIceTech](https://www.youtube.com/@burningicetech) — CompTIA PBQ preparation. Pairs well with Professor Messer for the performance based questions that trip people up.
@@ -113,13 +115,13 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Scripting and Automation
 
-**Python**
+### Python
 
 - [futurecoder](https://futurecoder.io) — open source, interactive Python learning that starts from genuine zero. The best free resource for getting the fundamentals solid.
 - [Python Documentation](https://docs.python.org/3/) — the authoritative reference. Once the basics are in place this becomes the first place to check.
 - [W3Schools Python Reference](https://www.w3schools.com/python/) — quick reference when you need a syntax reminder without reading the full docs.
 
-**Bash**
+### Bash
 
 - [LearnShell.org](https://www.learnshell.org) — interactive browser based shell scripting tutorial. Good for getting started without setting up a local environment.
 - [The Bash Guide (Wooledge)](https://mywiki.wooledge.org/BashGuide) — the most thorough free Bash reference available. Go here once the basics make sense.
@@ -129,7 +131,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Containers
 
-**Documentation**
+### Documentation
 
 - [Podman Documentation](https://docs.podman.io) — rootless containers, daemonless architecture, and the right tool for Red Hat environments. Well documented and actively maintained.
 - [Docker Documentation](https://docs.docker.com) — container fundamentals and the wider ecosystem. Useful reference alongside Podman.
@@ -138,12 +140,12 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Development Tools
 
-**Version Control**
+### Version Control
 
 - [GitHub Documentation](https://docs.github.com) — covers Git workflows, Actions, Pages, and everything else in the GitHub ecosystem. Clear and well maintained.
 - [Pro Git Book](https://git-scm.com/book/en/v2) — free, comprehensive, and the standard Git reference. Worth reading properly rather than piecing it together from scattered tutorials.
 
-**Editors**
+### Editors
 
 - [Vim Documentation](https://www.vim.org/docs.php) — official Vim docs. Start with vimtutor before coming here.
 - [Vim Cheat Sheet](https://vim.rtorr.com) — the most useful quick reference for Vim keybindings. Worth bookmarking early on.
@@ -152,12 +154,12 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ## Site Building
 
-**Documentation**
+### Documentation
 
 - [Hugo Documentation](https://gohugo.io/documentation/) — the official Hugo docs, well structured and thorough. The functions and templates reference is particularly useful.
 - [Blowfish Theme Documentation](https://blowfish.page/docs/) — thorough documentation covering every configuration option. This site is built with Blowfish.
 
-**YouTube**
+### YouTube
 
 - [CloudCannon — Hugo](https://www.youtube.com/@cloudcannon) — Hugo tutorials and static site content from people who work with it professionally.
 - [Mike Dane](https://www.youtube.com/@GiraffeAcademy) — Hugo tutorials covering the fundamentals. One of the few good video resources for getting started with Hugo.
