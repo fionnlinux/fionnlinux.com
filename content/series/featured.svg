@@ -1,0 +1,160 @@
+<svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .spotlight {
+    animation: sweep 9s ease-in-out infinite;
+  }
+  @keyframes sweep {
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(80px, 0px); }
+    50%  { transform: translate(80px, 95px); }
+    75%  { transform: translate(0px, 95px); }
+    100% { transform: translate(0px, 0px); }
+  }
+
+  .node-dot {
+    animation: nodeGlow 2.8s ease-in-out infinite;
+  }
+  .node-dot.d1 { animation-delay: 0.35s; }
+  .node-dot.d2 { animation-delay: 0.7s; }
+  @keyframes nodeGlow {
+    0%, 100% { opacity: 0.55; }
+    50%      { opacity: 1; }
+  }
+
+  .cursor-blink {
+    animation: blink 1.4s steps(1) infinite;
+  }
+  @keyframes blink {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0.15; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+  }
+</style>
+
+<defs>
+  <radialGradient id="spotGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#79c0ff" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#79c0ff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#1f6feb" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#79c0ff"/>
+    <stop offset="100%" stop-color="#388bfd"/>
+  </linearGradient>
+  <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#79c0ff"/>
+    <stop offset="100%" stop-color="#2861c9"/>
+  </linearGradient>
+  <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1c222b"/>
+    <stop offset="100%" stop-color="#12171e"/>
+  </linearGradient>
+  <filter id="shadowBlur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6"/>
+  </filter>
+</defs>
+
+<circle cx="230" cy="230" r="200" fill="url(#ambientGlow)"/>
+
+<g transform="matrix(0.866,0.5,0,-1,152,285)">
+
+  <rect x="0" y="0" width="180" height="200" fill="url(#wallGrad)" stroke="#30363d"/>
+
+  <ellipse class="spotlight" cx="47.5" cy="55" rx="58" ry="58" fill="url(#spotGlow)"/>
+
+  <!-- ===== Poster 1: Network+ — clean node topology ===== -->
+  <g transform="translate(15,95) scale(1,-1)">
+    <rect x="0" y="0" width="65" height="80" rx="2.5" fill="#0d1117" stroke="#79c0ff" stroke-width="1.6"/>
+    <rect x="4" y="4" width="57" height="72" rx="1.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+    <line x1="32.5" y1="22" x2="18" y2="45" stroke="#388bfd" stroke-width="1.6" opacity="0.8"/>
+    <line x1="32.5" y1="22" x2="47" y2="45" stroke="#388bfd" stroke-width="1.6" opacity="0.8"/>
+    <line x1="18" y1="45" x2="47" y2="45" stroke="#388bfd" stroke-width="1.6" opacity="0.8"/>
+
+    <circle class="node-dot" cx="32.5" cy="22" r="5.5" fill="#0d1117" stroke="#79c0ff" stroke-width="2"/>
+    <circle class="node-dot d1" cx="18" cy="45" r="5.5" fill="#0d1117" stroke="#79c0ff" stroke-width="2"/>
+    <circle class="node-dot d2" cx="47" cy="45" r="5.5" fill="#0d1117" stroke="#79c0ff" stroke-width="2"/>
+    <circle cx="32.5" cy="22" r="1.8" fill="#3fb950"/>
+
+    <rect x="16" y="62" width="33" height="3" rx="1.5" fill="#30363d"/>
+    <rect x="22" y="68" width="21" height="2.5" rx="1.25" fill="#21262d"/>
+  </g>
+
+  <!-- ===== Poster 2: Security+ — shield with keyhole ===== -->
+  <g transform="translate(15,190) scale(1,-1)">
+    <rect x="0" y="0" width="65" height="80" rx="2.5" fill="#0d1117" stroke="#79c0ff" stroke-width="1.6"/>
+    <rect x="4" y="4" width="57" height="72" rx="1.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+    <path d="M32.5 17
+             L48 24
+             L48 43
+             Q48 55 32.5 61
+             Q17 55 17 43
+             L17 24
+             Z"
+          fill="url(#shieldGrad)"/>
+    <path d="M32.5 22
+             L44 27
+             L44 42
+             Q44 51 32.5 56
+             Q21 51 21 42
+             L21 27
+             Z"
+          fill="none" stroke="#0d1117" stroke-width="1" opacity="0.5"/>
+    <circle cx="32.5" cy="37" r="3.5" fill="#0d1117"/>
+    <rect x="31.2" y="37" width="2.6" height="7" rx="1.3" fill="#0d1117"/>
+
+    <rect x="16" y="66" width="33" height="3" rx="1.5" fill="#30363d"/>
+    <rect x="22" y="71" width="21" height="2.5" rx="1.25" fill="#21262d"/>
+  </g>
+
+  <!-- ===== Poster 3: Cloud / AZ-900 — refined cloud with upload arrow ===== -->
+  <g transform="translate(95,95) scale(1,-1)">
+    <rect x="0" y="0" width="65" height="80" rx="2.5" fill="#0d1117" stroke="#79c0ff" stroke-width="1.6"/>
+    <rect x="4" y="4" width="57" height="72" rx="1.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+    <path d="M20.5 50
+             A9 9 0 0 1 22.5 32.5
+             A13 13 0 0 1 46 30
+             A10 10 0 0 1 47 50
+             Z"
+          fill="url(#cloudGrad)"/>
+
+
+    <rect x="16" y="62" width="33" height="3" rx="1.5" fill="#30363d"/>
+    <rect x="22" y="68" width="21" height="2.5" rx="1.25" fill="#21262d"/>
+  </g>
+
+  <!-- ===== Poster 4: Linux / RHCSA — terminal with blinking cursor ===== -->
+  <g transform="translate(95,190) scale(1,-1)">
+    <rect x="0" y="0" width="65" height="80" rx="2.5" fill="#0d1117" stroke="#79c0ff" stroke-width="1.6"/>
+    <rect x="4" y="4" width="57" height="72" rx="1.5" fill="none" stroke="#21262d" stroke-width="1"/>
+
+    <rect x="12" y="16" width="41" height="40" rx="2.5" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect x="12" y="16" width="41" height="8" rx="2.5" fill="#21262d"/>
+    <circle cx="17" cy="20" r="1.4" fill="#484f58"/>
+    <circle cx="22" cy="20" r="1.4" fill="#484f58"/>
+    <circle cx="27" cy="20" r="1.4" fill="#484f58"/>
+
+    <path d="M17 32 L22 36 L17 40" fill="none" stroke="#3fb950" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect class="cursor-blink" x="26" y="31" width="7" height="9" rx="0.5" fill="#3fb950"/>
+    <rect x="17" y="46" width="20" height="2.2" rx="1.1" fill="#30363d"/>
+    <rect x="40" y="46" width="8" height="2.2" rx="1.1" fill="#30363d"/>
+
+    <rect x="16" y="62" width="33" height="3" rx="1.5" fill="#30363d"/>
+    <rect x="22" y="68" width="21" height="2.5" rx="1.25" fill="#21262d"/>
+  </g>
+
+  <line x1="0" y1="0" x2="180" y2="0" stroke="#30363d" stroke-width="2"/>
+
+</g>
+
+<ellipse cx="230" cy="400" rx="130" ry="16" fill="#000000" opacity="0.3" filter="url(#shadowBlur)"/>
+
+</svg>

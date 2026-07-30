@@ -2,6 +2,8 @@
 title: "CompTIA Network+"
 description: "Every post in the CompTIA Network+ (N10-009) series, in exam objective order — networking fundamentals through to troubleshooting, written as I actually studied each one."
 showTableOfContents: false
+showHero: true
+heroStyle: "big"
 ---
 
 {{< lead >}}
