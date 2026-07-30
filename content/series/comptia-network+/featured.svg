@@ -1,0 +1,164 @@
+<svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+  .led { animation: blink 1.8s ease-in-out infinite; }
+  .led.u1 { animation-delay: 0.4s; }
+  .led.u2 { animation-delay: 0.8s; }
+  @keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50%      { opacity: 1; }
+  }
+
+  .node-wrap {
+    animation: nodeFloat 3.6s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  .node-wrap.n0 { animation-delay: 0s; }
+  .node-wrap.n1 { animation-delay: 0.7s; }
+  .node-wrap.n2 { animation-delay: 1.4s; }
+  .node-wrap.n3 { animation-delay: 2.1s; }
+  .node-wrap.n4 { animation-delay: 2.8s; }
+  @keyframes nodeFloat {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-6px); }
+  }
+
+  .link { stroke-dasharray: 3 4; animation: march 1.8s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -7; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+  }
+</style>
+
+<defs>
+  <linearGradient id="tileFace" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#4a94e0"/>
+    <stop offset="100%" stop-color="#388bfd"/>
+  </linearGradient>
+  <linearGradient id="rackFront" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#4a94e0"/>
+    <stop offset="100%" stop-color="#2f7fe0"/>
+  </linearGradient>
+  <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#1f6feb" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="shadowBlur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6"/>
+  </filter>
+  <filter id="dotGlow" x="-200%" y="-200%" width="500%" height="500%">
+    <feGaussianBlur stdDeviation="1.5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<circle cx="230" cy="200" r="180" fill="url(#ambientGlow)"/>
+
+<!-- ===== connections: rack top centre (230,262) -> centre of each device tile ===== -->
+<g>
+  <path id="l0" class="link" d="M230,262 Q150,250 68,198" stroke="#79c0ff" stroke-width="1.3" opacity="0.55" fill="none">
+    <animate attributeName="d" dur="3.6s" begin="0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      values="M230,262 Q150,250 68,198;M230,262 Q150,244 68,192;M230,262 Q150,250 68,198"/>
+  </path>
+  <circle r="2.4" fill="#3fb950" filter="url(#dotGlow)"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#l0" xlink:href="#l0"/></animateMotion></circle>
+
+  <path id="l1" class="link" d="M230,262 Q180,215 130,138" stroke="#79c0ff" stroke-width="1.3" opacity="0.55" fill="none">
+    <animate attributeName="d" dur="3.6s" begin="0.7s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      values="M230,262 Q180,215 130,138;M230,262 Q180,209 130,132;M230,262 Q180,215 130,138"/>
+  </path>
+  <circle r="2.4" fill="#3fb950" filter="url(#dotGlow)"><animateMotion dur="2.3s" repeatCount="indefinite"><mpath href="#l1" xlink:href="#l1"/></animateMotion></circle>
+
+  <path id="l2" class="link" d="M230,262 Q230,195 230,112" stroke="#79c0ff" stroke-width="1.3" opacity="0.55" fill="none">
+    <animate attributeName="d" dur="3.6s" begin="1.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      values="M230,262 Q230,195 230,112;M230,262 Q230,189 230,106;M230,262 Q230,195 230,112"/>
+  </path>
+  <circle r="2.4" fill="#3fb950" filter="url(#dotGlow)"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#l2" xlink:href="#l2"/></animateMotion></circle>
+
+  <path id="l3" class="link" d="M230,262 Q280,215 330,138" stroke="#79c0ff" stroke-width="1.3" opacity="0.55" fill="none">
+    <animate attributeName="d" dur="3.6s" begin="2.1s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      values="M230,262 Q280,215 330,138;M230,262 Q280,209 330,132;M230,262 Q280,215 330,138"/>
+  </path>
+  <circle r="2.4" fill="#3fb950" filter="url(#dotGlow)"><animateMotion dur="2.5s" repeatCount="indefinite"><mpath href="#l3" xlink:href="#l3"/></animateMotion></circle>
+
+  <path id="l4" class="link" d="M230,262 Q310,250 392,198" stroke="#79c0ff" stroke-width="1.3" opacity="0.55" fill="none">
+    <animate attributeName="d" dur="3.6s" begin="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.5;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+      values="M230,262 Q310,250 392,198;M230,262 Q310,244 392,192;M230,262 Q310,250 392,198"/>
+  </path>
+  <circle r="2.4" fill="#3fb950" filter="url(#dotGlow)"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#l4" xlink:href="#l4"/></animateMotion></circle>
+</g>
+
+<!-- ===== device tiles — all icons centred within their tiles ===== -->
+
+<!-- Router: tile 34,178 → 102,218, centre (68,198) -->
+<g class="node-wrap n0">
+  <rect x="34" y="178" width="68" height="40" rx="6" fill="url(#tileFace)" stroke="#79c0ff" stroke-width="1"/>
+  <line x1="68" y1="198" x2="68" y2="189" stroke="#0d1117" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="68" y1="198" x2="60" y2="206" stroke="#0d1117" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="68" y1="198" x2="76" y2="206" stroke="#0d1117" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="68" cy="189" r="2.8" fill="#0d1117"/>
+  <circle cx="60" cy="206" r="2.8" fill="#0d1117"/>
+  <circle cx="76" cy="206" r="2.8" fill="#0d1117"/>
+  <circle cx="68" cy="198" r="2.8" fill="#3fb950"/>
+</g>
+
+<!-- Firewall: tile 96,118 → 164,158, centre (130,138) -->
+<g class="node-wrap n1">
+  <rect x="96" y="118" width="68" height="40" rx="6" fill="url(#tileFace)" stroke="#79c0ff" stroke-width="1"/>
+  <path d="M130 124 L142 129.5 L142 141 Q142 149.5 130 153 Q118 149.5 118 141 L118 129.5 Z" fill="#0d1117"/>
+  <path d="M130 129 L138.5 132.8 L138.5 141 Q138.5 146.5 130 149 Q121.5 146.5 121.5 141 L121.5 132.8 Z" fill="none" stroke="#3fb950" stroke-width="1.2"/>
+</g>
+
+<!-- Workstation: tile 196,92 → 264,132, centre (230,112) -->
+<g class="node-wrap n2">
+  <rect x="196" y="92" width="68" height="40" rx="6" fill="url(#tileFace)" stroke="#79c0ff" stroke-width="1"/>
+  <rect x="212" y="100" width="36" height="24" rx="2" fill="#0d1117"/>
+  <rect x="212" y="100" width="36" height="6" rx="2" fill="#21262d"/>
+  <circle cx="217" cy="103" r="1.1" fill="#484f58"/>
+  <circle cx="221" cy="103" r="1.1" fill="#484f58"/>
+  <circle cx="225" cy="103" r="1.1" fill="#484f58"/>
+  <path d="M217 111 L221 114 L217 117" fill="none" stroke="#3fb950" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="224" y="110.5" width="7" height="6" rx="0.5" fill="#3fb950" opacity="0.9"/>
+</g>
+
+<!-- Wireless AP: tile 296,118 → 364,158, centre (330,138) -->
+<g class="node-wrap n3">
+  <rect x="296" y="118" width="68" height="40" rx="6" fill="url(#tileFace)" stroke="#79c0ff" stroke-width="1"/>
+  <circle cx="330" cy="147" r="2.6" fill="#3fb950"/>
+  <path d="M322.5 142 A9.5 9.5 0 0 1 337.5 142" fill="none" stroke="#0d1117" stroke-width="1.9" stroke-linecap="round"/>
+  <path d="M317 135.5 A16 16 0 0 1 343 135.5" fill="none" stroke="#0d1117" stroke-width="1.9" stroke-linecap="round" opacity="0.6"/>
+</g>
+
+<!-- Cloud: tile 358,178 → 426,218, centre (392,198) -->
+<g class="node-wrap n4">
+  <rect x="358" y="178" width="68" height="40" rx="6" fill="url(#tileFace)" stroke="#79c0ff" stroke-width="1"/>
+  <path d="M377 207 A7.5 7.5 0 0 1 379 192.5 A11 11 0 0 1 400 190.5 A8.5 8.5 0 0 1 402 207 Z" fill="#0d1117"/>
+</g>
+
+<!-- ===== front-facing rack, centred on x=230 ===== -->
+<ellipse cx="230" cy="360" rx="46" ry="9" fill="#000000" opacity="0.4" filter="url(#shadowBlur)"/>
+
+<!-- cabinet body -->
+<rect x="192" y="262" width="76" height="96" rx="5" fill="url(#rackFront)" stroke="#79c0ff" stroke-width="1.2"/>
+
+<!-- feet -->
+<rect x="198" y="358" width="12" height="5" rx="2" fill="#21262d"/>
+<rect x="250" y="358" width="12" height="5" rx="2" fill="#21262d"/>
+
+<!-- blades -->
+<rect x="200" y="272" width="60" height="22" rx="3" fill="#0d1117" stroke="#1f6feb" stroke-width="0.8"/>
+<rect x="206" y="280" width="26" height="2.4" rx="1.2" fill="#30363d"/>
+<circle class="led" cx="250" cy="279" r="2.2" fill="#3fb950"/>
+<circle class="led" cx="250" cy="287" r="2.2" fill="#79c0ff"/>
+
+<rect x="200" y="300" width="60" height="22" rx="3" fill="#0d1117" stroke="#1f6feb" stroke-width="0.8"/>
+<rect x="206" y="308" width="26" height="2.4" rx="1.2" fill="#30363d"/>
+<circle class="led u1" cx="250" cy="307" r="2.2" fill="#3fb950"/>
+<circle class="led u1" cx="250" cy="315" r="2.2" fill="#79c0ff"/>
+
+<rect x="200" y="328" width="60" height="22" rx="3" fill="#0d1117" stroke="#1f6feb" stroke-width="0.8"/>
+<rect x="206" y="336" width="26" height="2.4" rx="1.2" fill="#30363d"/>
+<circle class="led u2" cx="250" cy="335" r="2.2" fill="#3fb950"/>
+<circle class="led u2" cx="250" cy="343" r="2.2" fill="#79c0ff"/>
+
+</svg>
