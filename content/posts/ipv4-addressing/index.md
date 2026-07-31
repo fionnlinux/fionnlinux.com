@@ -199,7 +199,7 @@ Honestly, this has been the hardest part of the exam objectives for me so far. I
 What helps is practice, plain and simple. Working through questions and drilling on a subnetting practice site — the kind that throws an address and a mask at you and asks for the network, the broadcast, the usable range, and the host count — is slowly turning it into muscle memory. There is no clever shortcut: you understand the method once, then repeat it until your brain stops having to work for the answer.
 
 {{< button pageRef="resources" >}}
-Find a subnetting practice tool on my resources page
+Subnetting Practice Tools Here
 {{< /button >}}
 
 So if you are studying the same thing and finding this objective a slog, you are in good company. Read this once to understand *why* the maths works, then go and drill it until the why fades into the background and the answers simply come.
