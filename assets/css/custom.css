@@ -66,3 +66,11 @@ nav.mx-auto span {
   font-size: 0.65rem;
   letter-spacing: 0.03em;
 }
+
+@media (max-width: 768px) {
+  figure img.single_hero_round {
+    width: 100% !important;
+    min-height: 200px;
+    object-fit: contain !important;
+  }
+}
