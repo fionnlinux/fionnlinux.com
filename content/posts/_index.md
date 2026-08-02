@@ -3,9 +3,7 @@ title: "Latest Posts"
 description: "Every post on fionnlinux.com, newest first — certification notes, homelab projects, and everything else written along the way."
 showTableOfContents: false
 showHero: true
-heroStyle: "background"
-layoutBackgroundHeaderSpace: true
-
+heroStyle: "basic"
 ---
 
 {{< lead >}}

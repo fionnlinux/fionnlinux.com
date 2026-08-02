@@ -12,7 +12,6 @@ autoSwitchAppearance = true
 
 [author]
   name = "fionnlinux"
- # headline = "Linux & Security | CompTIA A+ | Network+ In Progress"
   bio = "Linux foundations, cloud infrastructure, and a security-first mindset. Documenting the journey in public."
   links = [
     {github = "https://github.com/fionnlinux"},
@@ -25,40 +24,27 @@ enableA11y = false
 enableSearch = true
 enableCodeCopy = false
 enableStructuredBreadcrumbs = false
-# enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
 
 replyByEmail = false
-
-# mainSections = ["section1", "section2"]
-# robots = ""
 
 disableImageOptimization = false
 disableImageOptimizationMD = false
 disableTextInHeader = false
-# backgroundImageWidth = 1200
 
-defaultBackgroundImage = "img/background.svg" # used as default for background images
-defaultFeaturedImage = "img/featured.svg" # used as default for featured images in all articles
-defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
+defaultBackgroundImage = "img/background.svg"
+# defaultFeaturedImage removed — per-post images now used throughout
+defaultSocialImage = "/android-chrome-512x512.png"
 hotlinkFeatureImage = false
-# Thumbnail aspect ratio as a number (e.g., "1.5", "1.0", "1.777")
-# thumbnailAspectRatio = "1.5"
-# imagePosition = "50% 50%"
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
-
-fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
+fingerprintAlgorithm = "sha512"
 
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [seo]
-# metaDescriptionOrder = ["summary", "description", "site"] # Controls the fallback order for the HTML meta description. Valid values are "summary", "description", and "site".
 
 [header]
-  layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "fixed-fill-blur"
   showTitle = false
 
 [footer]
@@ -69,16 +55,16 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/background.svg" # used in: hero, and card
+  layout = "background"
+  homepageImage = "img/background.svg"
   showRecent = true
   showRecentItems = 3
   showMoreLink = true
   showMoreLinkDest = "/posts/"
   cardView = false
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
-  disableHeroImageFilter = false # only used when layout equals hero
+  layoutBackgroundBlur = true
+  disableHeroImageFilter = false
 
 [article]
   showDate = true
@@ -88,15 +74,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = true
-  # showAuthorBottom = false
   showHero = false
-  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  heroStyle = "basic"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
   showDraftLabel = true
   showEdit = false
-  # editURL = "https://github.com/username/repo/"
   editAppendPath = true
   seriesOpened = false
   showHeadingAnchors = true
@@ -104,23 +88,19 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   invertPagination = false
   showReadingTime = true
   showTableOfContents = false
-  # showRelatedContent = false
-  # relatedContentLimit = 3
   showTaxonomies = true
   showCategories = true
   showTags = true
   showCategoriesInSecondaryColor = false
   showAuthorsBadges = false
   showWordCount = true
-  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
   showZenMode = false
-  # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
 
 [list]
-  showHero = "true"
-  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  showHero = true
+  heroStyle = "big"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
   showSummary = false
   showViews = false
@@ -140,9 +120,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [taxonomy]
   showTermCount = true
   showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
   showViews = false
   showLikes = false
@@ -151,9 +130,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [term]
   showHero = true
-  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  heroStyle = "basic"
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = false
   showBreadcrumbs = false
   showViews = false
   showLikes = false
@@ -163,44 +142,14 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
-
-[fathomAnalytics]
-  # site = "ABC12345"
-  # domain = "llama.yoursite.com"
 
 [umamiAnalytics]
   websiteid = "c1e89db4-63e8-4567-87e7-df40c698deec"
   enableTrackEvent = false
   doNotTrack = false
 
-[selineAnalytics]
-  # token = "XXXXXX"
-  # enableTrackEvent = true
-
-[buymeacoffee]
-  # identifier = ""
-  # globalWidget = true
-  # globalWidgetMessage = "Hello"
-  # globalWidgetColor = "#FFDD00"
-  # globalWidgetPosition = "right"
-
 [verification]
-  # google = ""
-  # bing = ""
-  # pinterest = ""
-  # yandex = ""
-  # fediverse = ""
 
 [rssnext]
-  # feedId = ""
-  # userId = ""
 
 [advertisement]
-  # adsense = ""
