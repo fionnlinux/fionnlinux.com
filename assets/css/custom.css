@@ -68,9 +68,16 @@ nav.mx-auto span {
 }
 
 @media (max-width: 768px) {
-  figure img.single_hero_round {
+  main#main-content figure {
     width: 100% !important;
-    min-height: 200px;
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  main#main-content figure img.single_hero_round {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
     object-fit: contain !important;
   }
 }
