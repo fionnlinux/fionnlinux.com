@@ -1,0 +1,139 @@
+<svg viewBox="-400 -300 1260 900" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style>
+  .scene {
+    animation: float 4s ease-in-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-10px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+  }
+</style>
+
+<defs>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1f6feb" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#1f6feb" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<circle cx="230" cy="200" r="250" fill="url(#glow)"/>
+
+<!-- everything floats together -->
+<g class="scene">
+
+  <!-- pixel size = 14px -->
+  <!-- main branch line: y=200, x=40 to x=420 -->
+  <!-- feature branch: splits at x=160, y=200, goes up to y=100, rejoins at x=320 -->
+
+  <!-- ===== MAIN BRANCH LINE (horizontal pixel blocks) ===== -->
+  <rect x="40"  y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="56"  y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="72"  y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="88"  y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="104" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="120" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="136" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="152" y="193" width="14" height="14" fill="#1f6feb"/>
+  <!-- gap for branch split at 166 -->
+  <rect x="180" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="196" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="212" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="228" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="244" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="260" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="276" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="292" y="193" width="14" height="14" fill="#1f6feb"/>
+  <!-- gap for branch merge at 306 -->
+  <rect x="320" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="336" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="352" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="368" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="384" y="193" width="14" height="14" fill="#1f6feb"/>
+  <rect x="400" y="193" width="14" height="14" fill="#1f6feb"/>
+
+  <!-- ===== FEATURE BRANCH — diagonal up-right then horizontal then diagonal back ===== -->
+  <!-- diagonal up from x=166,y=193 stepping: each step +14x -14y -->
+  <rect x="166" y="179" width="14" height="14" fill="#3fb950"/>
+  <rect x="180" y="165" width="14" height="14" fill="#3fb950"/>
+  <rect x="194" y="151" width="14" height="14" fill="#3fb950"/>
+  <rect x="208" y="137" width="14" height="14" fill="#3fb950"/>
+  <!-- horizontal segment of feature branch -->
+  <rect x="222" y="123" width="14" height="14" fill="#3fb950"/>
+  <rect x="236" y="123" width="14" height="14" fill="#3fb950"/>
+  <rect x="250" y="123" width="14" height="14" fill="#3fb950"/>
+  <rect x="264" y="123" width="14" height="14" fill="#3fb950"/>
+  <rect x="278" y="123" width="14" height="14" fill="#3fb950"/>
+  <!-- diagonal back down to main branch at x=306,y=193 -->
+  <rect x="292" y="137" width="14" height="14" fill="#3fb950"/>
+  <rect x="306" y="151" width="14" height="14" fill="#3fb950"/>
+  <rect x="306" y="165" width="14" height="14" fill="#3fb950"/>
+  <rect x="306" y="179" width="14" height="14" fill="#3fb950"/>
+
+  <!-- ===== COMMIT NODES on main branch (larger pixel squares) ===== -->
+  <!-- commit 1 at x=80 -->
+  <rect x="73"  y="186" width="28" height="28" fill="#0d1117"/>
+  <rect x="77"  y="190" width="20" height="20" fill="#1f6feb"/>
+  <rect x="81"  y="194" width="12" height="12" fill="#a5d6ff"/>
+
+  <!-- commit 2 at x=220 (merge point) -->
+  <rect x="213" y="186" width="28" height="28" fill="#0d1117"/>
+  <rect x="217" y="190" width="20" height="20" fill="#1f6feb"/>
+  <rect x="221" y="194" width="12" height="12" fill="#a5d6ff"/>
+
+  <!-- commit 3 at x=360 -->
+  <rect x="353" y="186" width="28" height="28" fill="#0d1117"/>
+  <rect x="357" y="190" width="20" height="20" fill="#1f6feb"/>
+  <rect x="361" y="194" width="12" height="12" fill="#a5d6ff"/>
+
+  <!-- ===== COMMIT NODE on feature branch ===== -->
+  <rect x="243" y="116" width="28" height="28" fill="#0d1117"/>
+  <rect x="247" y="120" width="20" height="20" fill="#3fb950"/>
+  <rect x="251" y="124" width="12" height="12" fill="#79c0ff"/>
+
+  <!-- ===== HEAD label blocks (pixel text style) ===== -->
+  <rect x="384" y="165" width="56" height="22" rx="4" fill="#161b22" stroke="#1f6feb" stroke-width="2"/>
+  <rect x="392" y="171" width="8"  height="3" fill="#79c0ff"/>
+  <rect x="402" y="171" width="8"  height="3" fill="#79c0ff"/>
+  <rect x="412" y="171" width="8"  height="3" fill="#79c0ff"/>
+  <rect x="392" y="177" width="30" height="3" fill="#484f58"/>
+
+  <!-- ===== feature branch label ===== -->
+  <rect x="222" y="96" width="70" height="22" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <rect x="230" y="102" width="8"  height="3" fill="#3fb950"/>
+  <rect x="240" y="102" width="8"  height="3" fill="#3fb950"/>
+  <rect x="250" y="102" width="8"  height="3" fill="#3fb950"/>
+  <rect x="230" y="108" width="46" height="3" fill="#484f58"/>
+
+  <!-- ===== travelling commit dots along main branch ===== -->
+  <circle r="5" fill="#a5d6ff" opacity="0.9">
+    <animateMotion dur="3s" repeatCount="indefinite"
+      path="M40,200 L420,200"/>
+  </circle>
+  <circle r="5" fill="#a5d6ff" opacity="0.9">
+    <animateMotion dur="3s" begin="1s" repeatCount="indefinite"
+      path="M40,200 L420,200"/>
+  </circle>
+  <circle r="5" fill="#a5d6ff" opacity="0.9">
+    <animateMotion dur="3s" begin="2s" repeatCount="indefinite"
+      path="M40,200 L420,200"/>
+  </circle>
+
+  <!-- ===== travelling commit dot along feature branch ===== -->
+  <circle r="5" fill="#3fb950" opacity="0.9">
+    <animateMotion dur="4s" begin="0.5s" repeatCount="indefinite"
+      path="M166,200 L208,130 L292,130 L320,200"/>
+  </circle>
+  <circle r="5" fill="#3fb950" opacity="0.9">
+    <animateMotion dur="4s" begin="2.5s" repeatCount="indefinite"
+      path="M166,200 L208,130 L292,130 L320,200"/>
+  </circle>
+
+</g>
+
+</svg>
