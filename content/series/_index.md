@@ -3,7 +3,8 @@ title: "Series"
 description: "Every ongoing collection of posts on this site, grouped by subject rather than publish date — certifications, homelab projects, and staged troubleshooting scenarios."
 showTableOfContents: false
 showHero: true
-heroStyle: "basic"
+heroStyle: "big"
+imagePosition: "center"
 ---
 
 {{< lead >}}

@@ -8,7 +8,7 @@ showReadingTime: false
 showTableOfContents: true
 showWordCount: false
 showHero: true
-heroStyle: "basic"
+heroStyle: "big"
 imagePosition: "center"
 
 showComments: false

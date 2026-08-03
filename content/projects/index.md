@@ -10,7 +10,8 @@ showWordCount: false
 showComments: false
 showAuthor: false
 showHero: true
-heroStyle: "basic"
+heroStyle: "big"
+imagePosition: "center"
 ---
 
 {{< lead >}}
