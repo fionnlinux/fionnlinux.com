@@ -8,8 +8,10 @@ showReadingTime: false
 showTableOfContents: true
 showWordCount: false
 showHero: true
+heroStyle: "basic"
+imagePosition: "center"
+
 showComments: false
-heroStyle: "background"
 ---
 
 ## Who I Am

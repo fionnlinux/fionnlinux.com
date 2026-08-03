@@ -9,7 +9,8 @@ showWordCount: false
 showComments: false
 showAuthor: false
 showHero: true
-background: "img/background.svg"
+heroStyle: "big"
+imagePosition: "center"
 ---
 
 {{< lead >}}
