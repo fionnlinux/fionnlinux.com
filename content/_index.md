@@ -15,5 +15,5 @@ Documenting the journey from the terminal to cloud infrastructure — Linux foun
 {{< /lead >}}
 
 {{< button pageRef="series/comptia-network+" >}}
-Network+ Study Series Starts Here
+Network+ Study Series Starts Here {{< icon "chevron-right" >}}
 {{< /button >}}
