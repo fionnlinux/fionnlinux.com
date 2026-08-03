@@ -75,7 +75,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showDateUpdated = false
   showAuthor = true
   showHero = false
-  heroStyle = "big"
+  heroStyle = "basic"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
@@ -98,7 +98,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [list]
   showHero = true
-  heroStyle = "big"
+  heroStyle = "basic"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = true
   showBreadcrumbs = false
@@ -130,7 +130,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [term]
   showHero = true
-  heroStyle = "big"
+  heroStyle = "basic"
   layoutBackgroundBlur = true
   layoutBackgroundHeaderSpace = false
   showBreadcrumbs = false
