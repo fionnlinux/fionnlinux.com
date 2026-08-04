@@ -69,7 +69,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## {{< icon "layers" >}} Infrastructure as Code and Automation
+## {{< icon "settings" >}} Infrastructure as Code and Automation
 
 ### Documentation
 
