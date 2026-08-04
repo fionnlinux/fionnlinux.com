@@ -42,7 +42,7 @@ Foundation certification. The starting point.
 Hardware, operating systems, troubleshooting, and core support skills. The generalist baseline.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="pencil" header="CompTIA Network+" badge="In Progress" >}}
+{{< timelineItem icon="loader" header="CompTIA Network+" badge="In Progress" >}}
 Networking fundamentals — TCP/IP, subnetting, routing, switching, and network security.
 {{< /timelineItem >}}
 
@@ -58,7 +58,7 @@ Microsoft Azure fundamentals — cloud concepts, core services, and the foundati
 Red Hat Certified System Administrator on RHEL 10. The Linux foundation everything else is built on.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="microsoft" header="AZ-104" badge="Planned" subheader="Azure Administrator" >}}
+{{< timelineItem icon="server" header="AZ-104" badge="Planned" subheader="Azure Administrator" >}}
 Azure Administrator Associate — managing and governing Azure infrastructure, and the natural next step after AZ-900.
 {{< /timelineItem >}}
 
