@@ -19,7 +19,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Linux
+## {{< icon "terminal" >}} Linux
 
 ### Documentation
 
@@ -47,7 +47,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Cloud
+## {{< icon "cloud" >}} Cloud
 
 ### Documentation
 
@@ -69,7 +69,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Infrastructure as Code and Automation
+## {{< icon "layers" >}} Infrastructure as Code and Automation
 
 ### Documentation
 
@@ -83,7 +83,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Networking
+## {{< icon "wifi" >}} Networking
 
 ### Documentation
 
@@ -96,7 +96,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Security
+## {{< icon "shield" >}} Security
 
 ### Documentation and Reference
 
@@ -105,7 +105,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Certifications and Study
+## {{< icon "books" >}} Certifications and Study
 
 ### YouTube
 
@@ -114,7 +114,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Scripting and Automation
+## {{< icon "code" >}} Scripting and Automation
 
 ### Python
 
@@ -130,7 +130,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Containers
+## {{< icon "layers" >}} Containers
 
 ### Documentation
 
@@ -139,7 +139,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Development Tools
+## {{< icon "tool" >}} Development Tools
 
 ### Version Control
 
@@ -153,7 +153,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Site Building
+## {{< icon "browser" >}} Site Building
 
 ### Documentation
 
@@ -167,7 +167,7 @@ A curated list of highly regarded tools, documentation, and learning resources f
 
 ---
 
-## Tools I Use Daily
+## {{< icon "home" >}} Tools I Use Daily
 
 - **[Tor Browser](https://www.torproject.org)** — privacy focused browser that routes traffic through the Tor network. Used alongside Firefox for situations requiring stronger anonymity.
 - **[Bitwarden](https://bitwarden.com)** — open source password manager. The single most impactful security tool most people are not using. Self-hostable if you want full control.
