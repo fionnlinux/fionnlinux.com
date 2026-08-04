@@ -92,4 +92,5 @@ a.bg-primary-600 svg, a.bg-primary-800 svg {
   width: 1.6em;
   height: 1.6em;
   flex-shrink: 0;
+  image-rendering: pixelated;
 }
