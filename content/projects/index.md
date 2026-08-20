@@ -2,7 +2,7 @@
 title: "Projects"
 date: 2026-05-19
 draft: false
-description: "Real repos built alongside my studies — this site, dotfiles, Python and Bash scripting, and the homelab projects still to come."
+description: "Real repos built alongside my studies — this site, dotfiles, Python and Bash scripting, homelab services, and the projects still to come."
 showDate: false
 showReadingTime: false
 showTableOfContents: true
@@ -25,7 +25,6 @@ This site itself. Built with Hugo static site generator and the Blowfish theme, 
 **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
 
 {{< github repo="fionnlinux/fionnlinux.com" >}}
-
 [View on Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com)
 
 ---
@@ -37,7 +36,6 @@ My personal dotfiles, version controlled and publicly mirrored on GitHub and Cod
 **Stack:** Vim, Bash, Git
 
 {{< github repo="fionnlinux/dotfiles" >}}
-
 [View on Codeberg](https://codeberg.org/fionnlinux/dotfiles)
 
 ---
@@ -49,7 +47,6 @@ A collection of Python projects written while learning to programme. Started sma
 **Language:** Python 3
 
 {{< github repo="fionnlinux/python-projects" >}}
-
 [View on Codeberg](https://codeberg.org/fionnlinux/python-projects)
 
 ---
@@ -61,8 +58,18 @@ A collection of bash scripts for Linux administration and automation, built on F
 **Stack:** Bash, Linux, GNU coreutils
 
 {{< github repo="fionnlinux/bash-toolkit" >}}
-
 [View on Codeberg](https://codeberg.org/fionnlinux/bash-toolkit)
+
+---
+
+## homelab-services
+
+Self-hosted services running on my homelab, defined as rootless Podman Quadlets and managed natively by systemd. Currently runs Ollama with GPU passthrough for local LLM inference, and AdGuard Home for DNS filtering. Each service's README documents the real troubleshooting behind it — rootless port binding under Podman's pasta networking, SELinux container labelling, and deliberate localhost-only scoping until there's a genuine reason to expose a service to the wider network.
+
+**Stack:** Podman, Quadlet, systemd, SELinux
+
+{{< github repo="fionnlinux/homelab-services" >}}
+[View on Codeberg](https://codeberg.org/fionnlinux/homelab-services)
 
 ---
 
