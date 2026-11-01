@@ -189,14 +189,23 @@ a.inline-flex.rounded-xl.px-5.py-3[href^="mailto:"] {
   flex-direction: column;
 }
 
-.not-prose.grid article.group > span.inline-flex {
-  align-self: center;
+.not-prose.grid article.group > span.inline-flex,
+.not-prose.grid article.group > a {
+  align-self: flex-start;
 }
 
 .not-prose.grid article.group > a {
-  align-self: center;
   margin-top: auto;
   padding-top: 1.25rem;
+}
+
+/* From the sm breakpoint up the card content is centred; on phones it stays
+   left-aligned, like Blowfish's own homepage. */
+@media (min-width: 640px) {
+  .not-prose.grid article.group > span.inline-flex,
+  .not-prose.grid article.group > a {
+    align-self: center;
+  }
 }
 
 /* Homepage stat and feature descriptions: slightly larger, and brighter in
