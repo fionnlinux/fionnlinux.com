@@ -31,7 +31,7 @@ This site itself. Built with Hugo static site generator and the Blowfish theme, 
 
 ## dotfiles
 
-My personal dotfiles, version controlled and publicly mirrored on GitHub and Codeberg. The goal is a stateless, reproducible environment — any machine running Fedora or Rocky Linux can be brought to my exact configuration from a single clone. Documents how I work, how my tools are configured, and evolves alongside my Linux studies.
+My personal dotfiles, version controlled and publicly mirrored on GitHub and Codeberg. The goal is a reproducible environment, so a fresh Fedora or AlmaLinux machine can be brought close to my setup from a single clone. Documents how I work, how my tools are configured, and evolves alongside my Linux studies.
 
 **Stack:** Vim, Bash, Git
 
@@ -53,7 +53,7 @@ A collection of Python projects written while learning to programme. Started sma
 
 ## bash-toolkit
 
-A collection of bash scripts for Linux administration and automation, built on Fedora Linux. Scripts are written to be readable, well-commented, and RHCSA-aligned. Actively growing alongside my Linux studies.
+A collection of bash scripts for Linux administration and automation, built on Fedora Linux. Scripts are written to be readable, well-commented, and RHCSA-aligned. Actively growing alongside my Linux studies, and the scripts from the later parts of my planned Learning Bash series will land here.
 
 **Stack:** Bash, Linux, GNU coreutils
 
@@ -75,10 +75,10 @@ Self-hosted services running on my homelab, defined as rootless Podman Quadlets 
 
 ## Coming Soon
 
+### uptime-kuma
+
+A self-hosted monitoring dashboard on an AlmaLinux VM, run in Podman and managed by systemd. My first attempt, on Azure Container Apps, taught me why a monitoring tool needs a machine that stays on, so this is the second try.
+
 ### ansible-homelab
 
-Configuration management for a mixed RHEL/Ubuntu homelab fleet, launching alongside the blog walkthrough series.
-
-### terraform-lab
-
-Infrastructure as code for provisioning and managing cloud resources on Azure.
+Configuration management for my homelab, starting with keeping my kids' two Zorin OS computers updated from my laptop with one command, and growing from there. It will be written up as a blog walkthrough.
