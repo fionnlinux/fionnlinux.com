@@ -44,7 +44,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [seo]
 
 [header]
-  layout = "fixed-fill-blur"
+  layout = "floating"
   showTitle = false
 
 [footer]
@@ -55,19 +55,20 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showScrollToTop = true
 
 [homepage]
-  layout = "background"
+  layout = "landing"
   homepageImage = "img/background.svg"
   showRecent = true
-  showRecentItems = 3
+  showRecentItems = 9
   showMoreLink = true
   showMoreLinkDest = "/posts/"
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = true
   disableHeroImageFilter = false
 
 [article]
   showDate = true
+  showReadingProgress = true
   showViews = false
   showComments = true
   showLikes = false
@@ -109,8 +110,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCards = false
   orderByWeight = true
   groupByYear = true
-  cardView = false
-  cardViewScreenWidth = true
+  cardView = true
+  cardViewScreenWidth = false
   constrainItemsWidth = false
   showTaxonomies = true
 

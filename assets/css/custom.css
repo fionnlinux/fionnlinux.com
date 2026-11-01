@@ -1,6 +1,21 @@
-/* Press Start 2P — loaded via extend-head.html */
+/* Fonts. Press Start 2P is loaded in extend-head.html. Roboto Mono is
+   self-hosted from static/fonts. */
 
-/* Nav wordmark */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("/fonts/roboto-mono-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Pixel chevrons, defined once and used by the TOC and series dropdowns. */
+:root {
+  --pixel-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-11-3H9v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-2-2h-2V9h2v2Zm-2-2H9V7h2v2Zm9-5H4V2h16v2Z'/%3E%3C/svg%3E");
+  --pixel-chevron-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-5h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7V9h2v2Zm8-2v2h-2V9h2Zm3-5H4V2h16v2Z'/%3E%3C/svg%3E");
+}
+
+/* Press Start 2P: nav wordmark */
 a.text-base.font-medium,
 span.text-base.font-medium {
   font-family: 'Press Start 2P', monospace;
@@ -8,21 +23,14 @@ span.text-base.font-medium {
   letter-spacing: 0.03em;
 }
 
-/* Homepage H1 (~/fionnlinux) */
-h1.mb-2.font-extrabold {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 1.75rem;
+/* Press Start 2P: tagline above the homepage headline */
+.landing-rise.mb-5 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
-@media (min-width: 768px) {
-  h1.mb-2.font-extrabold {
-    font-size: 2.25rem;
-    line-height: 1.7;
-  }
-}
-
-/* Post title H1s */
+/* Press Start 2P: page and post titles */
 h1.mt-0.text-4xl.font-extrabold,
 h1.mt-5.text-4xl.font-extrabold {
   font-family: 'Press Start 2P', monospace !important;
@@ -38,7 +46,11 @@ h1.mt-5.text-4xl.font-extrabold {
   }
 }
 
-/* TOC hover underline */
+/* Links, thumbnails and article layout */
+a:hover {
+  text-decoration: underline;
+}
+
 #TableOfContents ul li a:hover {
   text-decoration: underline;
   text-decoration-color: rgb(var(--color-primary-300));
@@ -46,25 +58,8 @@ h1.mt-5.text-4xl.font-extrabold {
   text-decoration-thickness: 3px;
 }
 
-/* Site-wide link hover */
-a:hover {
-  text-decoration: underline;
-}
-
-nav.mx-auto span {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 1.1rem;
-  line-height: 2.5;
-}
-
 .thumbnail img {
   object-fit: contain !important;
-}
-
-.nested-menu span.text-sm.font-sm {
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 0.65rem;
-  letter-spacing: 0.03em;
 }
 
 @media (max-width: 768px) {
@@ -73,7 +68,7 @@ nav.mx-auto span {
     height: auto !important;
     max-height: none !important;
   }
-  
+
   main#main-content figure img.single_hero_round {
     width: 100% !important;
     height: auto !important;
@@ -82,81 +77,45 @@ nav.mx-auto span {
   }
 }
 
-a.bg-primary-600, a.bg-primary-800 {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 0.4em;
-}
-
-a.bg-primary-600 svg, a.bg-primary-800 svg {
-  width: 1.6em;
-  height: 1.6em;
-  flex-shrink: 0;
-  image-rendering: pixelated;
-}
-
-/* Hide native details/summary triangle */
+/* Pixel chevrons for the TOC and series dropdowns: right when closed, down
+   when open. These replace the browser's native triangle. */
 details.toc-inside summary,
-details.toc-right summary {
-  list-style: none;
-}
-details.toc-inside summary::-webkit-details-marker,
-details.toc-right summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Add pixel chevron via content — down when open, right when closed */
-details.toc-inside summary::before,
-details.toc-right summary::before {
-  content: '';
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.4em;
-  background-color: currentColor;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-11-3H9v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-2-2h-2V9h2v2Zm-2-2H9V7h2v2Zm9-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-11-3H9v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-2-2h-2V9h2v2Zm-2-2H9V7h2v2Zm9-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  vertical-align: middle;
-}
-
-details[open].toc-inside summary::before,
-details[open].toc-right summary::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-5h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7V9h2v2Zm8-2v2h-2V9h2Zm3-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-5h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7V9h2v2Zm8-2v2h-2V9h2Zm3-5H4V2h16v2Z'/%3E%3C/svg%3E");
-}
-
-/* Hide native triangle on series module */
+details.toc-right summary,
 details.mt-2.mb-5 summary {
   list-style: none;
 }
+
+details.toc-inside summary::-webkit-details-marker,
+details.toc-right summary::-webkit-details-marker,
 details.mt-2.mb-5 summary::-webkit-details-marker {
   display: none;
 }
 
-/* Pixel chevron — right when closed, down when open */
+details.toc-inside summary::before,
+details.toc-right summary::before,
 details.mt-2.mb-5 summary::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 1em;
   height: 1em;
   margin-right: 0.4em;
   background-color: currentColor;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-11-3H9v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-2-2h-2V9h2v2Zm-2-2H9V7h2v2Zm9-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-11-3H9v-2h2v2Zm2-2h-2v-2h2v2Zm2-2h-2v-2h2v2Zm-2-2h-2V9h2v2Zm-2-2H9V7h2v2Zm9-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  -webkit-mask: var(--pixel-chevron-right) center / contain no-repeat;
+  mask: var(--pixel-chevron-right) center / contain no-repeat;
   vertical-align: middle;
 }
 
+details[open].toc-inside summary::before,
+details[open].toc-right summary::before,
 details[open].mt-2.mb-5 summary::before {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-5h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7V9h2v2Zm8-2v2h-2V9h2Zm3-5H4V2h16v2Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16Zm-9-5h-2v-2h2v2Zm-2-2H9v-2h2v2Zm4 0h-2v-2h2v2Zm-6-2H7V9h2v2Zm8-2v2h-2V9h2Zm3-5H4V2h16v2Z'/%3E%3C/svg%3E");
+  -webkit-mask-image: var(--pixel-chevron-down);
+  mask-image: var(--pixel-chevron-down);
+}
+
+/* Icons: nav icons, and icons in headings on the Resources page */
+div.main-menu span.icon svg {
+  width: 1.7em;
+  height: 1.7em;
 }
 
 .article-content h2 span.icon {
@@ -170,8 +129,66 @@ details[open].mt-2.mb-5 summary::before {
   height: 100%;
 }
 
-/* Nav icons — search, dark/light toggle, etc */
-div.main-menu span.icon svg {
-  width: 1.7em;
-  height: 1.7em;
+/* Buttons made with the button shortcode inside page content, such as the
+   Resources page email button: align the icon with the text. */
+.article-content a.bg-primary-600,
+.article-content a.bg-primary-800 {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.article-content a.bg-primary-600 svg,
+.article-content a.bg-primary-800 svg {
+  width: 1.6em;
+  height: 1.6em;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+/* Homepage buttons: a leading pixel icon that identifies the destination,
+   followed by the chevron the theme already adds. The icon takes the button's
+   text colour. 1.5rem is one pixel per CSS pixel on the 24px icon grid, so
+   the edges stay sharp. */
+a.inline-flex.rounded-xl.px-5.py-3::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask: var(--btn-icon) center / contain no-repeat;
+  mask: var(--btn-icon) center / contain no-repeat;
+}
+
+a.inline-flex.rounded-xl.px-5.py-3[href="/series/comptia-network+/"] {
+  --btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M8 20H2v-6h2v-2h4v8Zm7 0H9v-8h2v6h2v-6h-2v-2h4v10Zm7 0h-6V6h2v12h2V6h-2V4h4v16Z'/%3E%3C/svg%3E");
+}
+
+a.inline-flex.rounded-xl.px-5.py-3[href="/posts/"] {
+  --btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M20 22H4v-2h16v2ZM4 20H2V4h2v16Zm18 0h-2V4h2v16ZM9 17H7v-2h2v2Zm4 0h-2v-4h2v4Zm4 0h-2v-6h2v6Zm-6-4H7v-2h4v2Zm4-2h-2V9h2v2Zm-2-2H7V7h6v2Zm7-5H4V2h16v2Z'/%3E%3C/svg%3E");
+}
+
+a.inline-flex.rounded-xl.px-5.py-3[href^="https://github.com/"] {
+  --btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='black' d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/%3E%3C/svg%3E");
+}
+
+a.inline-flex.rounded-xl.px-5.py-3[href^="mailto:"] {
+  --btn-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M6 8h2v2H6zm2 2h2v2H8zm10-2h-2v2h2zm-2 2h-2v2h2zm-6 2h4v2h-4zM2 6h2v12H2zm18 0h2v12h-2zM4 4h16v2H4zm0 14h16v2H4z'/%3E%3C/svg%3E");
+}
+
+/* Homepage feature cards: the theme draws icons at 1em (16px), which blurs a
+   24px pixel icon. A 1.5rem font size on the tile makes the icon 24px. */
+.not-prose.grid article.group > span.inline-flex {
+  font-size: 1.5rem;
+}
+
+/* ROBOTO MONO TRIAL: the whole site. Page and post titles, the wordmark and
+   the homepage tagline above keep Press Start 2P. To undo, delete everything
+   from here down. */
+body,
+code,
+kbd,
+pre,
+samp {
+  font-family: "Roboto Mono", ui-monospace, monospace;
 }
