@@ -239,3 +239,12 @@ pre,
 samp {
   font-family: "Roboto Mono", ui-monospace, monospace;
 }
+
+@media (min-width: 769px) {
+  main#main-content figure img.single_hero_round {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+}
