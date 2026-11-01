@@ -50,7 +50,7 @@ Networking fundamentals — TCP/IP, subnetting, routing, switching, and network 
 Security concepts, threat analysis, incident response, and cryptography.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="tool" header="MD-102" badge="Optional" subheader="Endpoint Administrator" >}}
+{{< timelineItem icon="monitor" header="MD-102" badge="Optional" subheader="Endpoint Administrator" >}}
 Deploying and managing Windows devices — the hands-on side of everyday IT support.
 {{< /timelineItem >}}
 
