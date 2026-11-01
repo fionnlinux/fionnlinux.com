@@ -2,7 +2,7 @@
 title: "The Beauty of DNS — Why One System Filters Everything You Connect To"
 date: 2026-07-01T00:00:00+01:00
 draft: false
-description: "Record types, zones, recursion, and the security extensions layered on top — DNS explained the way I wish someone had explained it to me, grounded in choosing NextDNS over browser extensions and blocklists."
+description: "How DNS works: record types, zones, recursion and the security extensions, explained the way I wish it had been to me, using NextDNS as the example."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 18

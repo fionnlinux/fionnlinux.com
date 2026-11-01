@@ -2,7 +2,7 @@
 title: "The Service Running Every Time I Connect to a Network — DHCP, SLAAC, and Keeping Clocks in Sync"
 date: 2026-07-03T00:00:00+01:00
 draft: false
-description: "DHCP reservations, scope, lease time, relay, SLAAC, and why NTP, PTP, and NTS all exist — the parts of network addressing that happen automatically, explained by someone who has never once had to configure any of them."
+description: "DHCP reservations, scope, lease time and relay, SLAAC, and why NTP, PTP and NTS exist: network addressing that happens automatically, explained."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 19

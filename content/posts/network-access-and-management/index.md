@@ -2,7 +2,7 @@
 title: "Getting In and Managing It — VPNs, SSH, and the Other Ways Networks Let You Work Remotely"
 date: 2026-07-05T00:00:00+01:00
 draft: false
-description: "Site-to-site vs client-to-site VPNs, SSH and the other connection methods, jump boxes, and in-band vs out-of-band management — worked through ahead of an actual Ansible project that will need SSH into my own home server and the kids' laptops."
+description: "Site-to-site vs client-to-site VPNs, SSH, jump boxes, and in-band vs out-of-band management: the ways networks let you work on them remotely."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 20

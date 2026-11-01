@@ -2,7 +2,7 @@
 title: "From Router to Reverse Proxy — Understanding the Devices Behind a Network"
 date: 2026-06-04T00:00:00+01:00
 draft: false
-description: "Routers, switches, firewalls, IDS/IPS, proxies, load balancers and more. A tour of the appliances that make a network work, grounded in the ones I already run at home."
+description: "Routers, switches, firewalls, IDS/IPS, proxies and load balancers: what each network appliance does, grounded in the ones I already run at home."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 2

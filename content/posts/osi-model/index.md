@@ -2,7 +2,7 @@
 title: "Seven Layers, One Web Page, and a Movie Night That Would Not Start"
 date: 2026-06-03T00:00:00+01:00
 draft: false
-description: "The OSI model is just a list of names until you anchor each one to something real. Here is how it came together for me, explained through loading a web page and a movie night that would not start."
+description: "The OSI model is just a list of names until you anchor each layer to something real. All seven layers, a web page, a movie night and the mnemonic."
 tags: ["networking", "security", "comptia", "troubleshooting"]
 series: ["CompTIA Network+"]
 series_order: 1

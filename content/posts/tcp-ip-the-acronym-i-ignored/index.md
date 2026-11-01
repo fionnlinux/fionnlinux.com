@@ -1,8 +1,8 @@
 ---
-title: "TCP/IP — The Acronym I Ignored, and Why SOC Roles Demand It"
+title: "TCP/IP — The Acronym I Ignored, and What It Actually Means"
 date: 2026-06-01T00:00:00+01:00
 draft: false
-description: "TCP/IP shows up in every SOC job posting and every networking exam. Here is what it actually means — explained through a relative's website, a Podman container, and a twenty-year-old memory of a game server going down."
+description: "TCP/IP stands for Transmission Control Protocol/Internet Protocol. What it means, explained through a relative's website, a Podman container and a game server."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 4

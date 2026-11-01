@@ -2,7 +2,7 @@
 title: "IP Types and Traffic Types — Filling In the Gaps"
 date: 2026-06-11T00:00:00+01:00
 draft: false
-description: "ICMP, GRE, IPSec and the four traffic types — the smaller networking topics I had skipped over, learned well enough to recognise and explain."
+description: "ICMP, GRE, IPSec and the four traffic types: the smaller networking topics I had skipped, learned well enough to recognise and explain."
 tags: ["networking", "security", "comptia"]
 series: ["CompTIA Network+"]
 series_order: 6
