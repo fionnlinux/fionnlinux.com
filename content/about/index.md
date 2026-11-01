@@ -2,7 +2,7 @@
 title: "About"
 date: 2026-05-19
 draft: false
-description: "Linux practitioner building toward a cloud engineering role with a security-first mindset — the certifications, homelab, and background behind this site."
+description: "Working my way from manufacturing into IT, with Linux as the passion and cloud as the goal — the certifications, homelab, and background behind this site."
 showDate: false
 showReadingTime: false
 showTableOfContents: true
@@ -17,18 +17,18 @@ showComments: false
 ## Who I Am
 
 {{< lead >}}
-Linux practitioner building toward a cloud engineering role, with a security-first mindset. The goal is clear: Network+, Security+, AZ-900, RHCSA, and AZ-104 in sequence — Linux depth underpinning cloud infrastructure, with security running through everything.
+I'm working my way from manufacturing into IT, with cloud engineering as the long-term goal. Linux is the part I love most, and Windows and Microsoft products are the foundation of most workplaces, so I'm building both, with a security-first mindset running through all of it.
 {{< /lead >}}
 
 The site documents all of it — certs studied, labs built, infrastructure provisioned and torn down. Security thinking runs through everything here — not as a separate concern but as part of how I approach every system and decision.
 
-A four year electrical installation apprenticeship gave me a methodical approach to systems and fault finding. Years running production lines in manufacturing taught me how real operational environments work under pressure. That grounding informs how I think about Linux, infrastructure, and reliability — systems that have to work, not just work in the lab.
+A four year electrical installation apprenticeship gave me a methodical approach to systems and fault finding. Eight years in manufacturing since, two in production and six in the warehouse, taught me how real operational environments work under pressure. That grounding informs how I think about Linux, infrastructure, and reliability — systems that have to work, not just work in the lab.
 
-British-American dual citizen, eligible to work in the UK and US without sponsorship.
+British-American dual citizen, based in Pennsylvania, eligible to work in the UK and US without sponsorship.
 
 ## What This Site Is
 
-A working journal. Every certificate studied, homelab built, and command line tool configured gets documented here — the full [Network+ series]({{< ref "series/comptia-network+" >}}) is the first complete example, with more series added as I move through the rest of the list below. Written for anyone following a similar path — and for future me when I forget how I did something. If something I document saves someone else an hour of troubleshooting, that's reason enough to write it up.
+A working journal. Every certificate studied, homelab built, and command line tool configured gets documented here — the full [Network+ series]({{< ref "series/comptia-network+" >}}) is complete, with a beginner Bash series, Security+, and an A+ refresher planned. Linux and homelab posts appear along the way. Written for anyone following a similar path — and for future me when I forget how I did something. If something I document saves someone else an hour of troubleshooting, that's reason enough to write it up.
 
 ## The Journey
 
@@ -43,23 +43,27 @@ Hardware, operating systems, troubleshooting, and core support skills. The gener
 {{< /timelineItem >}}
 
 {{< timelineItem icon="loader" header="CompTIA Network+" badge="In Progress" >}}
-Networking fundamentals — TCP/IP, subnetting, routing, switching, and network security.
+Networking fundamentals — TCP/IP, subnetting, routing, switching, and network security. Retake planned by Christmas.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="shield" header="CompTIA Security+" badge="Planned" >}}
 Security concepts, threat analysis, incident response, and cryptography.
 {{< /timelineItem >}}
 
+{{< timelineItem icon="tool" header="MD-102" badge="Optional" subheader="Endpoint Administrator" >}}
+Deploying and managing Windows devices — the hands-on side of everyday IT support.
+{{< /timelineItem >}}
+
 {{< timelineItem icon="cloud" header="AZ-900" badge="Planned" subheader="Introduction to Cloud Infrastructure" >}}
 Microsoft Azure fundamentals — cloud concepts, core services, and the foundation for the Azure administrator path.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="code" header="RHCSA EX200" badge="Planned" subheader="RHEL 10" >}}
-Red Hat Certified System Administrator on RHEL 10. The Linux foundation everything else is built on.
-{{< /timelineItem >}}
-
 {{< timelineItem icon="server" header="AZ-104" badge="Planned" subheader="Azure Administrator" >}}
 Azure Administrator Associate — managing and governing Azure infrastructure, and the natural next step after AZ-900.
+{{< /timelineItem >}}
+
+{{< timelineItem icon="code" header="RHCSA EX200" badge="Planned" subheader="RHEL 10" >}}
+Red Hat Certified System Administrator on RHEL 10. Deep Linux administration, with Red Hat topics along the way as standalone posts.
 {{< /timelineItem >}}
 
 {{< /timeline >}}
@@ -69,8 +73,8 @@ Azure Administrator Associate — managing and governing Azure infrastructure, a
 - **Daily driver:** Fedora KDE
 - **Servers:** AlmaLinux
 - **Containers:** Podman (rootless)
-- **Homelab goals:** OPNsense, WireGuard, Terraform, Ansible, K3s
-- **Learning:** Infrastructure as Code, cloud networking, Python, Bash
+- **Homelab:** AdGuard Home, Uptime Kuma (being rebuilt on AlmaLinux), with Ansible next
+- **Learning:** Bash, Python, Windows and Microsoft administration, Linux administration
 - **Philosophy:** Self-hosted, open source, privacy first
 - **This site:** Hugo + Blowfish theme, source on [GitHub](https://github.com/fionnlinux/fionnlinux.com) and [Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com), deployed via GitHub Actions to GitHub Pages
 

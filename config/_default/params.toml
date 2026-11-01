@@ -12,7 +12,7 @@ autoSwitchAppearance = true
 
 [author]
   name = "fionnlinux"
-  bio = "Linux foundations, cloud infrastructure, and a security-first mindset. Documenting the journey in public."
+  bio = "Working my way from manufacturing into IT. Linux, networking, security and cloud, learning in public."
   links = [
     {github = "https://github.com/fionnlinux"},
     {codeberg = "https://codeberg.org/fionnlinux"},
