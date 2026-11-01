@@ -182,6 +182,44 @@ a.inline-flex.rounded-xl.px-5.py-3[href^="mailto:"] {
   font-size: 1.5rem;
 }
 
+/* Homepage feature cards: keep the link at the bottom of every card, so the
+   links line up whatever the description length. */
+.not-prose.grid article.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.not-prose.grid article.group > span.inline-flex {
+  align-self: center;
+}
+
+.not-prose.grid article.group > a {
+  align-self: center;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+/* Homepage stat and feature descriptions: slightly larger, and brighter in
+   dark mode. */
+.not-prose.grid div.mt-2.text-sm.leading-6 {
+  font-size: 0.9375rem;
+}
+
+html.dark .not-prose.grid div.mt-2.text-sm.leading-6 {
+  color: rgb(var(--color-neutral-300));
+}
+
+/* Card titles in the Recent section and on list pages: a little smaller,
+   because a wide font wraps long titles onto many lines. */
+.article-link--card header a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.thumbnail_card img {
+  padding: 0.5rem;
+}
+
 /* ROBOTO MONO TRIAL: the whole site. Page and post titles, the wordmark and
    the homepage tagline above keep Press Start 2P. To undo, delete everything
    from here down. */

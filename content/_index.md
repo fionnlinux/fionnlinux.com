@@ -15,9 +15,9 @@ heroButtons:
 ---
 
 {{< stats >}}
-{{< stat value="31" label="Network+ posts" >}}Every N10-009 objective, worked through one post at a time.{{< /stat >}}
+{{< stat value="31" label="Network+ posts" >}}Every objective, one post at a time.{{< /stat >}}
 {{< stat value="2" label="Certs earned" >}}CompTIA ITF+ and A+, with Network+ next.{{< /stat >}}
-{{< stat value="8" label="Years in industry" >}}Manufacturing: production first, then warehouse and logistics. Now working towards IT.{{< /stat >}}
+{{< stat value="8" label="Years in industry" >}}Production, then warehouse. Now working towards IT.{{< /stat >}}
 {{< /stats >}}
 
 {{< feature-grid >}}
