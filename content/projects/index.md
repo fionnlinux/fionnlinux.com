@@ -24,7 +24,7 @@ This site itself. Built with Hugo static site generator and the Blowfish theme, 
 
 **Stack:** Hugo, Blowfish, GitHub Actions, GitHub Pages
 
-[View on GitHub](https://github.com/fionnlinux/fionnlinux.com) · [View on Codeberg](https://codeberg.org/fionnlinux/fionnlinux.com)
+{{< cta url="https://github.com/fionnlinux/fionnlinux.com" label="GitHub" >}} {{< cta url="https://codeberg.org/fionnlinux/fionnlinux.com" label="Codeberg" style="outline" >}}
 
 ---
 
@@ -34,7 +34,7 @@ My personal dotfiles, version controlled and publicly mirrored on GitHub and Cod
 
 **Stack:** Vim, Bash, Git
 
-[View on GitHub](https://github.com/fionnlinux/dotfiles) · [View on Codeberg](https://codeberg.org/fionnlinux/dotfiles)
+{{< cta url="https://github.com/fionnlinux/dotfiles" label="GitHub" >}} {{< cta url="https://codeberg.org/fionnlinux/dotfiles" label="Codeberg" style="outline" >}}
 
 ---
 
@@ -44,7 +44,7 @@ A collection of Python projects written while learning to programme. Started sma
 
 **Stack:** Python 3
 
-[View on GitHub](https://github.com/fionnlinux/python-projects) · [View on Codeberg](https://codeberg.org/fionnlinux/python-projects)
+{{< cta url="https://github.com/fionnlinux/python-projects" label="GitHub" >}} {{< cta url="https://codeberg.org/fionnlinux/python-projects" label="Codeberg" style="outline" >}}
 
 ---
 
@@ -54,7 +54,7 @@ A collection of Bash scripts for Linux administration and automation, built on F
 
 **Stack:** Bash, Linux, GNU coreutils
 
-[View on GitHub](https://github.com/fionnlinux/bash-toolkit) · [View on Codeberg](https://codeberg.org/fionnlinux/bash-toolkit)
+{{< cta url="https://github.com/fionnlinux/bash-toolkit" label="GitHub" >}} {{< cta url="https://codeberg.org/fionnlinux/bash-toolkit" label="Codeberg" style="outline" >}}
 
 ---
 
@@ -68,7 +68,7 @@ Self-hosted services running on my homelab, defined as rootless Podman Quadlets 
 
 **Stack:** Podman, Quadlet, systemd, SELinux
 
-[View on GitHub](https://github.com/fionnlinux/homelab-services) · [View on Codeberg](https://codeberg.org/fionnlinux/homelab-services)
+{{< cta url="https://github.com/fionnlinux/homelab-services" label="GitHub" >}} {{< cta url="https://codeberg.org/fionnlinux/homelab-services" label="Codeberg" style="outline" >}}
 
 ---
 
